@@ -19,8 +19,7 @@ public class Grid {
 	public Cell randomAvailableCell() {
 		ArrayList<Cell> availableCells = getAvailableCells();
 		if (availableCells.size() >= 1) {
-			return availableCells.get((int) Math.floor(Math.random()
-					* availableCells.size()));
+			return availableCells.get((int) Math.floor(Math.random() * availableCells.size()));
 		}
 		return null;
 	}
@@ -78,8 +77,7 @@ public class Grid {
 	}
 
 	public boolean isCellWithinBounds(Cell cell) {
-		return 0 <= cell.getX() && cell.getX() < field.length
-				&& 0 <= cell.getY() && cell.getY() < field[0].length;
+		return 0 <= cell.getX() && cell.getX() < field.length && 0 <= cell.getY() && cell.getY() < field[0].length;
 	}
 
 	public boolean isCellWithinBounds(int x, int y) {
@@ -100,8 +98,7 @@ public class Grid {
 				if (bufferField[xx][yy] == null) {
 					undoField[xx][yy] = null;
 				} else {
-					undoField[xx][yy] = new Tile(xx, yy,
-							bufferField[xx][yy].getValue());
+					undoField[xx][yy] = new Tile(xx, yy, bufferField[xx][yy].getValue());
 				}
 			}
 		}
@@ -113,8 +110,7 @@ public class Grid {
 				if (field[xx][yy] == null) {
 					bufferField[xx][yy] = null;
 				} else {
-					bufferField[xx][yy] = new Tile(xx, yy,
-							field[xx][yy].getValue());
+					bufferField[xx][yy] = new Tile(xx, yy, field[xx][yy].getValue());
 				}
 			}
 		}
@@ -126,8 +122,7 @@ public class Grid {
 				if (undoField[xx][yy] == null) {
 					field[xx][yy] = null;
 				} else {
-					field[xx][yy] = new Tile(xx, yy,
-							undoField[xx][yy].getValue());
+					field[xx][yy] = new Tile(xx, yy, undoField[xx][yy].getValue());
 				}
 			}
 		}

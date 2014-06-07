@@ -26,8 +26,7 @@ public class MainActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		view = new MainView(getBaseContext());
 
-		SharedPreferences settings = PreferenceManager
-				.getDefaultSharedPreferences(this);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		view.hasSaveState = settings.getBoolean("save_state", false);
 
 		if (savedInstanceState != null) {
@@ -71,8 +70,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void save() {
-		SharedPreferences settings = PreferenceManager
-				.getDefaultSharedPreferences(this);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		SharedPreferences.Editor editor = settings.edit();
 		Tile[][] field = view.game.grid.field;
 		Tile[][] undoField = view.game.grid.undoField;
@@ -87,8 +85,7 @@ public class MainActivity extends Activity {
 				}
 
 				if (undoField[xx][yy] != null) {
-					editor.putInt(UNDO_GRID + xx + " " + yy,
-							undoField[xx][yy].getValue());
+					editor.putInt(UNDO_GRID + xx + " " + yy, undoField[xx][yy].getValue());
 				} else {
 					editor.putInt(UNDO_GRID + xx + " " + yy, 0);
 				}
@@ -112,8 +109,7 @@ public class MainActivity extends Activity {
 		// Stopping all animations
 		view.game.aGrid.cancelAnimations();
 
-		SharedPreferences settings = PreferenceManager
-				.getDefaultSharedPreferences(this);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		for (int xx = 0; xx < view.game.grid.field.length; xx++) {
 			for (int yy = 0; yy < view.game.grid.field[0].length; yy++) {
 				int value = settings.getInt(xx + " " + yy, -1);
@@ -125,8 +121,7 @@ public class MainActivity extends Activity {
 
 				int undoValue = settings.getInt(UNDO_GRID + xx + " " + yy, -1);
 				if (undoValue > 0) {
-					view.game.grid.undoField[xx][yy] = new Tile(xx, yy,
-							undoValue);
+					view.game.grid.undoField[xx][yy] = new Tile(xx, yy, undoValue);
 				} else if (value == 0) {
 					view.game.grid.undoField[xx][yy] = null;
 				}
@@ -138,7 +133,6 @@ public class MainActivity extends Activity {
 		view.game.lastScore = settings.getLong(UNDO_SCORE, view.game.lastScore);
 		view.game.canUndo = settings.getBoolean(CAN_UNDO, view.game.canUndo);
 		view.game.gameState = settings.getInt(GAME_STATE, view.game.gameState);
-		view.game.lastGameState = settings.getInt(UNDO_GAME_STATE,
-				view.game.lastGameState);
+		view.game.lastGameState = settings.getInt(UNDO_GAME_STATE, view.game.lastGameState);
 	}
 }

@@ -22,8 +22,7 @@ public class MainGame {
 	public static final long MOVE_ANIMATION_TIME = MainView.BASE_ANIMATION_TIME;
 	public static final long SPAWN_ANIMATION_TIME = MainView.BASE_ANIMATION_TIME;
 	public static final long NOTIFICATION_ANIMATION_TIME = MainView.BASE_ANIMATION_TIME * 5;
-	public static final long NOTIFICATION_DELAY_TIME = MOVE_ANIMATION_TIME
-			+ SPAWN_ANIMATION_TIME;
+	public static final long NOTIFICATION_DELAY_TIME = MOVE_ANIMATION_TIME + SPAWN_ANIMATION_TIME;
 	private static final String HIGH_SCORE = "high score";
 
 	public static final int startingMaxValue = 2048;
@@ -109,23 +108,21 @@ public class MainGame {
 
 	private void spawnTile(Tile tile) {
 		grid.insertTile(tile);
-		aGrid.startAnimation(tile.getX(), tile.getY(), SPAWN_ANIMATION,
-				SPAWN_ANIMATION_TIME, MOVE_ANIMATION_TIME, null); // Direction:
-																	// -1 =
-																	// EXPANDING
+		aGrid.startAnimation(tile.getX(), tile.getY(), SPAWN_ANIMATION, SPAWN_ANIMATION_TIME, MOVE_ANIMATION_TIME, null); // Direction:
+																															// -1
+																															// =
+																															// EXPANDING
 	}
 
 	private void recordHighScore() {
-		SharedPreferences settings = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 		SharedPreferences.Editor editor = settings.edit();
 		editor.putLong(HIGH_SCORE, highScore);
 		editor.commit();
 	}
 
 	private long getHighScore() {
-		SharedPreferences settings = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 		return settings.getLong(HIGH_SCORE, -1);
 	}
 
@@ -230,12 +227,10 @@ public class MainGame {
 					Cell[] positions = findFarthestPosition(cell, vector);
 					Tile next = grid.getCellContent(positions[1]);
 
-					if (next != null && next.getValue() == tile.getValue()
-							&& next.getMergedFrom() == null) {
+					if (next != null && next.getValue() == tile.getValue() && next.getMergedFrom() == null) {
 						playSound(2, 1); // get ponit sound
 
-						Tile merged = new Tile(positions[1],
-								tile.getValue() * 2);
+						Tile merged = new Tile(positions[1], tile.getValue() * 2);
 						Tile[] temp = { tile, next };
 						merged.setMergedFrom(temp);
 
@@ -246,14 +241,13 @@ public class MainGame {
 						tile.updatePosition(positions[1]);
 
 						int[] extras = { xx, yy };
-						aGrid.startAnimation(merged.getX(), merged.getY(),
-								MOVE_ANIMATION, MOVE_ANIMATION_TIME, 0, extras); // Direction:
-																					// 0
-																					// =
-																					// MOVING
-																					// MERGED
-						aGrid.startAnimation(merged.getX(), merged.getY(),
-								MERGE_ANIMATION, SPAWN_ANIMATION_TIME,
+						aGrid.startAnimation(merged.getX(), merged.getY(), MOVE_ANIMATION, MOVE_ANIMATION_TIME, 0,
+								extras); // Direction:
+											// 0
+											// =
+											// MOVING
+											// MERGED
+						aGrid.startAnimation(merged.getX(), merged.getY(), MERGE_ANIMATION, SPAWN_ANIMATION_TIME,
 								MOVE_ANIMATION_TIME, null);
 
 						// Update the score
@@ -269,8 +263,7 @@ public class MainGame {
 					} else {
 						moveTile(tile, positions[0]);
 						int[] extras = { xx, yy, 0 };
-						aGrid.startAnimation(positions[0].getX(),
-								positions[0].getY(), MOVE_ANIMATION,
+						aGrid.startAnimation(positions[0].getX(), positions[0].getY(), MOVE_ANIMATION,
 								MOVE_ANIMATION_TIME, 0, extras); // Direction: 1
 																	// = MOVING
 																	// NO MERGE
@@ -301,8 +294,7 @@ public class MainGame {
 	}
 
 	private void endGame() {
-		aGrid.startAnimation(-1, -1, FADE_GLOBAL_ANIMATION,
-				NOTIFICATION_ANIMATION_TIME, NOTIFICATION_DELAY_TIME, null);
+		aGrid.startAnimation(-1, -1, FADE_GLOBAL_ANIMATION, NOTIFICATION_ANIMATION_TIME, NOTIFICATION_DELAY_TIME, null);
 		if (score >= highScore) {
 			highScore = score;
 			recordHighScore();
@@ -349,10 +341,8 @@ public class MainGame {
 		Cell nextCell = new Cell(cell.getX(), cell.getY());
 		do {
 			previous = nextCell;
-			nextCell = new Cell(previous.getX() + vector.getX(),
-					previous.getY() + vector.getY());
-		} while (grid.isCellWithinBounds(nextCell)
-				&& grid.isCellAvailable(nextCell));
+			nextCell = new Cell(previous.getX() + vector.getX(), previous.getY() + vector.getY());
+		} while (grid.isCellWithinBounds(nextCell) && grid.isCellAvailable(nextCell));
 
 		Cell[] answer = { previous, nextCell };
 		return answer;
@@ -372,13 +362,11 @@ public class MainGame {
 				if (tile != null) {
 					for (int direction = 0; direction < 4; direction++) {
 						Cell vector = getVector(direction);
-						Cell cell = new Cell(xx + vector.getX(), yy
-								+ vector.getY());
+						Cell cell = new Cell(xx + vector.getX(), yy + vector.getY());
 
 						Tile other = grid.getCellContent(cell);
 
-						if (other != null
-								&& other.getValue() == tile.getValue()) {
+						if (other != null && other.getValue() == tile.getValue()) {
 							return true;
 						}
 					}
@@ -423,11 +411,9 @@ public class MainGame {
 	}
 
 	private void playSound(int sound, int number) {
-		AudioManager am = (AudioManager) mView.getContext().getSystemService(
-				Context.AUDIO_SERVICE);
+		AudioManager am = (AudioManager) mView.getContext().getSystemService(Context.AUDIO_SERVICE);
 		float audioMaxVolumn = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-		float audioCurrentVolumn = am
-				.getStreamVolume(AudioManager.STREAM_MUSIC);
+		float audioCurrentVolumn = am.getStreamVolume(AudioManager.STREAM_MUSIC);
 		float volumnRatio = audioCurrentVolumn / audioMaxVolumn;
 		soudPool.play(spMap.get(sound), volumnRatio, volumnRatio, 1, number, 1);
 	}
