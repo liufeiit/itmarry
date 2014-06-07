@@ -466,8 +466,12 @@ public class MainView extends View {
 		cellTextSize = textSize * 0.9f;
 		titleTextSize = textSize / 3;
 		bodyTextSize = (int) (textSize / 1.5);
-		instructionsTextSize = (int) (textSize / 1.8);
-		headerTextSize = textSize * 2;
+		// TODO
+//		instructionsTextSize = (int) (textSize / 1.8);
+		instructionsTextSize = (int) (textSize / 2.0);
+		// TODO
+//		headerTextSize = textSize * 2;
+		headerTextSize = (int) (textSize * 1.5);
 		gameOverTextSize = textSize * 2;
 		textPaddingSize = (int) (textSize / 3);
 		iconPaddingSize = (int) (textSize / 5);
