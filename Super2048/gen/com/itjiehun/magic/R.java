@@ -66,19 +66,18 @@ public final class R {
         public static final int win=0x7f040004;
     }
     public static final class string {
-        public static final int action_settings=0x7f070003;
+        public static final int action_settings=0x7f070002;
         public static final int app_name=0x7f070000;
-        public static final int endless=0x7f07000c;
-        public static final int for_now=0x7f07000b;
-        public static final int game_over=0x7f070009;
-        public static final int go_on=0x7f07000a;
+        public static final int endless=0x7f07000b;
+        public static final int for_now=0x7f07000a;
+        public static final int game_over=0x7f070008;
+        public static final int go_on=0x7f070009;
         public static final int header=0x7f070001;
-        public static final int hello_world=0x7f070002;
-        public static final int high_score=0x7f070005;
-        public static final int instructions=0x7f070007;
-        public static final int new_game=0x7f070004;
-        public static final int score=0x7f070006;
-        public static final int you_win=0x7f070008;
+        public static final int high_score=0x7f070004;
+        public static final int instructions=0x7f070006;
+        public static final int new_game=0x7f070003;
+        public static final int score=0x7f070005;
+        public static final int you_win=0x7f070007;
     }
     public static final class style {
         /** 
