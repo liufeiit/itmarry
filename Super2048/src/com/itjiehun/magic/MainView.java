@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
@@ -159,18 +160,40 @@ public class MainView extends View {
 		canvas.drawText(text, sX + cellSize / 2, sY + cellSize / 2 - textShiftY, paint);
 		*/
 		
-		/*Drawable image = getResources().getDrawable(R.drawable.cell_rectangle_2_img);
+		/*
+		Drawable image = getResources().getDrawable(R.drawable.cell_rectangle_2_img);
 		Rect srcRect = new Rect(0, 0, image.getIntrinsicWidth(), image.getIntrinsicHeight());
 		Rect dstRect = new Rect(srcRect);
 		Bitmap bitmap = Bitmap.createBitmap(image.getIntrinsicWidth(),
 		image.getIntrinsicHeight(), Bitmap.Config.ALPHA_8);
 		canvas = new Canvas();
 		canvas.drawBitmap(bitmap, srcRect, dstRect, null);
-		invalidate();*/
+		invalidate();
+		*/
 		
+		/*
 		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img); 
-//		canvas.drawColor(Color.BLACK); 
-		canvas.drawBitmap(bmp, 10, 10, null); 
+		canvas.drawColor(Color.BLACK); 
+		canvas.drawBitmap(bmp, 10, 10, null);
+		*/
+		
+		/*
+		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
+		Matrix matrix = new Matrix();
+		// matrix.postScale(0.9f, 0.9f);
+		matrix.postScale(1.0f, 1.0f);
+		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
+		canvas.drawColor(Color.BLACK);
+		canvas.drawBitmap(dstbmp, 10, 10, null);
+		*/
+		
+		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
+		Matrix matrix = new Matrix();
+		matrix.postScale(1.0f, 1.0f);
+		matrix.postRotate(45);
+		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
+		canvas.drawColor(Color.BLACK);
+		canvas.drawBitmap(dstbmp, 10, 10, null);
 		
 	}
 
