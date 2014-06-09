@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -187,14 +188,37 @@ public class MainView extends View {
 		canvas.drawBitmap(dstbmp, 10, 10, null);
 		*/
 		
-		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
+		/*Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
 		Matrix matrix = new Matrix();
 		matrix.postScale(1.0f, 1.0f);
 		matrix.postRotate(45);
 		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
 		canvas.drawColor(Color.BLACK);
+		canvas.drawBitmap(dstbmp, 10, 10, null);*/
+		
+		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
+		Matrix matrix = new Matrix();
+		matrix.postScale(1.0f, 1.0f);
+		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
+		canvas.drawColor(Color.BLACK);
 		canvas.drawBitmap(dstbmp, 10, 10, null);
 		
+	}
+	
+	private Bitmap createBitmap(int w, int h, Bitmap watermark) {
+		int ww = watermark.getWidth();
+		int wh = watermark.getHeight();
+		// create the new blank bitmap
+		Bitmap newb = Bitmap.createBitmap(w, h, Config.ARGB_8888);// 创建一个新的和SRC长度宽度一样的位图
+		Canvas cv = new Canvas(newb);
+		// draw src into cv.drawBitmap( src, 0, 0, null );//在 0，0坐标开始画入src
+		// draw watermark into
+		cv.drawBitmap(watermark, w - ww + 5, h - wh + 5, null);// 在src的右下角画入水印
+		// save all clip
+		cv.save(Canvas.ALL_SAVE_FLAG);// 保存
+		// store
+		cv.restore();// 存储
+		return newb;
 	}
 
 	private void drawScoreText(Canvas canvas) {
