@@ -1,16 +1,18 @@
 package com.itjiehun.magic;
 
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
-
-import java.util.ArrayList;
 
 public class MainView extends View {
 
@@ -146,7 +148,30 @@ public class MainView extends View {
 		} else {
 			paint.setColor(TEXT_BLACK);
 		}
-		canvas.drawText("" + value, sX + cellSize / 2, sY + cellSize / 2 - textShiftY, paint);
+		// TODO 此处修改图片
+		/*
+		String text = String.valueOf(value);
+		if(value == 2) {
+			text = "唐";
+		} else if(value == 4) {
+			text = "宋";
+		}
+		canvas.drawText(text, sX + cellSize / 2, sY + cellSize / 2 - textShiftY, paint);
+		*/
+		
+		/*Drawable image = getResources().getDrawable(R.drawable.cell_rectangle_2_img);
+		Rect srcRect = new Rect(0, 0, image.getIntrinsicWidth(), image.getIntrinsicHeight());
+		Rect dstRect = new Rect(srcRect);
+		Bitmap bitmap = Bitmap.createBitmap(image.getIntrinsicWidth(),
+		image.getIntrinsicHeight(), Bitmap.Config.ALPHA_8);
+		canvas = new Canvas();
+		canvas.drawBitmap(bitmap, srcRect, dstRect, null);
+		invalidate();*/
+		
+		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img); 
+//		canvas.drawColor(Color.BLACK); 
+		canvas.drawBitmap(bmp, 10, 10, null); 
+		
 	}
 
 	private void drawScoreText(Canvas canvas) {
