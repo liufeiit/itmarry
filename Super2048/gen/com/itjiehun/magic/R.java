@@ -60,6 +60,7 @@ public final class R {
         public static final int sheep=0x7f02001f;
         public static final int snake=0x7f020020;
         public static final int tiger=0x7f020021;
+        public static final int top=0x7f020022;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0000;

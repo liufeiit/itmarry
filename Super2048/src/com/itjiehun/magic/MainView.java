@@ -161,7 +161,8 @@ public class MainView extends View {
 			monkey = BitmapFactory.decodeResource(getResources(), R.drawable.monkey),
 			chicken = BitmapFactory.decodeResource(getResources(), R.drawable.chicken),
 			dog = BitmapFactory.decodeResource(getResources(), R.drawable.dog),
-			pig = BitmapFactory.decodeResource(getResources(), R.drawable.pig)
+			pig = BitmapFactory.decodeResource(getResources(), R.drawable.pig),
+			top = BitmapFactory.decodeResource(getResources(), R.drawable.top)
 			;
 	
 	public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) { 
@@ -215,6 +216,7 @@ public class MainView extends View {
 		}
 	}
 	
+	
 	/**
 	 * 1鼠 2牛 3虎 4兔 5龙 6蛇 7马 8羊 9猴 10鸡 11狗 12猪
 	 */
@@ -256,9 +258,9 @@ public class MainView extends View {
 			return pig;
 		}
 		if(8192 == value) {
-			return pig;
+			return top;
 		}
-		return pig;
+		return top;
 	}
 
 	void drawCellText(Canvas canvas, int value, int sX, int sY) {
