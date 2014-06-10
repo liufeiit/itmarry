@@ -1,15 +1,16 @@
 package com.itjiehun.magic;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.preference.PreferenceManager;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
 
 public class MainGame {
 
@@ -399,6 +400,7 @@ public class MainGame {
 		return !(gameState == GAME_ENDLESS || gameState == GAME_ENDLESS_WON);
 	}
 
+	@SuppressLint("UseSparseArrays")
 	private void initSoundPool() {
 		soudPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
 		spMap = new HashMap<Integer, Integer>();

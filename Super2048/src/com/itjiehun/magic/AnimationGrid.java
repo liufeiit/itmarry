@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class AnimationGrid {
 	public ArrayList<AnimationCell>[][] field;
-	int activeAnimations = 0;
+	private int activeAnimations = 0;
 	boolean oneMoreFrame = false;
 	public ArrayList<AnimationCell> globalAnimation = new ArrayList<AnimationCell>();
 

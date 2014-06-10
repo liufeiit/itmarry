@@ -22,7 +22,7 @@ public class InputListener implements View.OnTouchListener {
 	private int veryLastDirection = 1;
 	private boolean hasMoved = false;
 
-	MainView mView;
+	private MainView mView;
 
 	public InputListener(MainView view) {
 		super();

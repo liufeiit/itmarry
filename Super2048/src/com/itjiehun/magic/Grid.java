@@ -3,7 +3,6 @@ package com.itjiehun.magic;
 import java.util.ArrayList;
 
 public class Grid {
-
 	public Tile[][] field;
 	public Tile[][] undoField;
 	private Tile[][] bufferField;

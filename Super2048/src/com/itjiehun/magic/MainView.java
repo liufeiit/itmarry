@@ -19,7 +19,7 @@ import android.view.View;
 public class MainView extends View {
 
 	// Internal variables
-	Paint paint = new Paint();
+	private Paint paint = new Paint();
 	public MainGame game;
 	public boolean hasSaveState = false;
 	private final int numCellTypes = 14;
@@ -80,22 +80,22 @@ public class MainView extends View {
 	private String forNowText;
 	private String endlessModeText;
 
-	long lastFPSTime = System.nanoTime();
-	long currentTime = System.nanoTime();
+	private long lastFPSTime = System.nanoTime();
+	private long currentTime = System.nanoTime();
 
-	float titleTextSize;
-	float bodyTextSize;
-	float headerTextSize;
-	float instructionsTextSize;
-	float gameOverTextSize;
+	private float titleTextSize;
+	private float bodyTextSize;
+	private float headerTextSize;
+	private float instructionsTextSize;
+	private float gameOverTextSize;
 
 	boolean refreshLastTime = true;
 
-	static final int BASE_ANIMATION_TIME = 100000000;
+	public static final int BASE_ANIMATION_TIME = 100000000;
 
-	static final float MERGING_ACCELERATION = (float) -0.5;
-	static final float INITIAL_VELOCITY = (1 - MERGING_ACCELERATION) / 4;
-
+	private static final float MERGING_ACCELERATION = (float) -0.5;
+	private static final float INITIAL_VELOCITY = (1 - MERGING_ACCELERATION) / 4;
+	
 	@Override
 	public void onDraw(Canvas canvas) {
 		// Reset the transparency of the screen
@@ -632,5 +632,4 @@ public class MainView extends View {
 		setOnTouchListener(new InputListener(this));
 		game.newGame();
 	}
-
 }

@@ -2,14 +2,17 @@ package com.itjiehun.magic;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.Window;
 
+import com.itjiehun.magic.umeng.UmengStatic;
+import com.umeng.analytics.MobclickAgent;
+
 public class MainActivity extends Activity {
 
-	MainView view;
+	private MainView view;
 	public static final String WIDTH = "width";
 	public static final String HEIGHT = "height";
 	public static final String SCORE = "score";
@@ -35,6 +38,7 @@ public class MainActivity extends Activity {
 			}
 		}
 		setContentView(view);
+		MobclickAgent.onResume(this, UmengStatic.UMENG_APPKEY, UmengStatic.UMENG_CHANNEL);
 	}
 
 	@Override
@@ -67,6 +71,9 @@ public class MainActivity extends Activity {
 	protected void onPause() {
 		super.onPause();
 		save();
+		// 保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息
+		MobclickAgent.onPageEnd("Super2048SplashScreen");
+		MobclickAgent.onPause(this);
 	}
 
 	private void save() {
@@ -103,6 +110,8 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		load();
+		MobclickAgent.onPageStart("Super2048SplashScreen"); // 统计页面
+		MobclickAgent.onResume(this);
 	}
 
 	private void load() {
