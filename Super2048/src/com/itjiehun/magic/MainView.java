@@ -142,8 +142,91 @@ public class MainView extends View {
 		draw.setBounds(startingX, startingY, endingX, endingY);
 		draw.draw(canvas);
 	}
+	
+	private final Bitmap 
+			mouse = BitmapFactory.decodeResource(getResources(), R.drawable.mouse),
+			cow = BitmapFactory.decodeResource(getResources(), R.drawable.cow),
+			tiger = BitmapFactory.decodeResource(getResources(), R.drawable.tiger),
+			rabbit = BitmapFactory.decodeResource(getResources(), R.drawable.rabbit),
+			dragon = BitmapFactory.decodeResource(getResources(), R.drawable.dragon),
+			snake = BitmapFactory.decodeResource(getResources(), R.drawable.snake),
+			horse = BitmapFactory.decodeResource(getResources(), R.drawable.horse),
+			sheep = BitmapFactory.decodeResource(getResources(), R.drawable.sheep),
+			monkey = BitmapFactory.decodeResource(getResources(), R.drawable.monkey),
+			chicken = BitmapFactory.decodeResource(getResources(), R.drawable.chicken),
+			dog = BitmapFactory.decodeResource(getResources(), R.drawable.dog),
+			pig = BitmapFactory.decodeResource(getResources(), R.drawable.pig)
+			;
+	
+	private void createBitmapCells() {
+		paint.setTextSize(cellTextSize);
+		paint.setTextAlign(Paint.Align.CENTER);
+		Resources resources = getResources();
+		for (int xx = 0; xx < bitmapCell.length; xx++) {
+			Bitmap bitmap = Bitmap.createBitmap(cellSize, cellSize, Bitmap.Config.ARGB_8888);
+			Canvas canvas = new Canvas(bitmap);
+			drawDrawable(canvas, cellRectangle[xx], 0, 0, cellSize, cellSize);
+			int value = (int) Math.pow(2, xx);
+			if (value >= 8) {
+				paint.setColor(TEXT_WHITE);
+			} else {
+				paint.setColor(TEXT_BLACK);
+			}
+			canvas.drawBitmap(getBitmap(value), 10, 10, paint);
+			
+//			drawCellText(canvas, value, 0, 0);
+			
+			bitmapCell[xx] = new BitmapDrawable(resources, bitmap);
+		}
+	}
+	
+	/**
+	 * 1鼠 2牛 3虎 4兔 5龙 6蛇 7马 8羊 9猴 10鸡 11狗 12猪
+	 */
+	private Bitmap getBitmap(int value) {
+		if(2 == value) {
+			return mouse;
+		}
+		if(4 == value) {
+			return cow;
+		}
+		if(8 == value) {
+			return tiger;
+		}
+		if(16 == value) {
+			return rabbit;
+		}
+		if(32 == value) {
+			return dragon;
+		}
+		if(64 == value) {
+			return snake;
+		}
+		if(128 == value) {
+			return horse;
+		}
+		if(256 == value) {
+			return sheep;
+		}
+		if(512 == value) {
+			return monkey;
+		}
+		if(1024 == value) {
+			return chicken;
+		}
+		if(2048 == value) {
+			return dog;
+		}
+		if(4096 == value) {
+			return pig;
+		}
+		if(8192 == value) {
+			return pig;
+		}
+		return pig;
+	}
 
-	private void drawCellText(Canvas canvas, int value, int sX, int sY) {
+	void drawCellText(Canvas canvas, int value, int sX, int sY) {
 		int textShiftY = centerText();
 		if (value >= 8) {
 			paint.setColor(TEXT_WHITE);
@@ -159,17 +242,6 @@ public class MainView extends View {
 			text = "宋";
 		}
 		canvas.drawText(text, sX + cellSize / 2, sY + cellSize / 2 - textShiftY, paint);
-		*/
-		
-		/*
-		Drawable image = getResources().getDrawable(R.drawable.cell_rectangle_2_img);
-		Rect srcRect = new Rect(0, 0, image.getIntrinsicWidth(), image.getIntrinsicHeight());
-		Rect dstRect = new Rect(srcRect);
-		Bitmap bitmap = Bitmap.createBitmap(image.getIntrinsicWidth(),
-		image.getIntrinsicHeight(), Bitmap.Config.ALPHA_8);
-		canvas = new Canvas();
-		canvas.drawBitmap(bitmap, srcRect, dstRect, null);
-		invalidate();
 		*/
 		
 		/*
@@ -196,7 +268,7 @@ public class MainView extends View {
 		canvas.drawColor(Color.BLACK);
 		canvas.drawBitmap(dstbmp, 10, 10, null);*/
 		
-		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
+		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cow);
 		Matrix matrix = new Matrix();
 		matrix.postScale(1.0f, 1.0f);
 		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
@@ -205,7 +277,8 @@ public class MainView extends View {
 		
 	}
 	
-	private Bitmap createBitmap(int w, int h, Bitmap watermark) {
+	// 水印
+	Bitmap createBitmap(int w, int h, Bitmap watermark) {
 		int ww = watermark.getWidth();
 		int wh = watermark.getHeight();
 		// create the new blank bitmap
@@ -475,19 +548,6 @@ public class MainView extends View {
 		drawBackgroundGrid(canvas);
 		drawInstructions(canvas);
 
-	}
-
-	private void createBitmapCells() {
-		paint.setTextSize(cellTextSize);
-		paint.setTextAlign(Paint.Align.CENTER);
-		Resources resources = getResources();
-		for (int xx = 0; xx < bitmapCell.length; xx++) {
-			Bitmap bitmap = Bitmap.createBitmap(cellSize, cellSize, Bitmap.Config.ARGB_8888);
-			Canvas canvas = new Canvas(bitmap);
-			drawDrawable(canvas, cellRectangle[xx], 0, 0, cellSize, cellSize);
-			drawCellText(canvas, (int) Math.pow(2, xx), 0, 0);
-			bitmapCell[xx] = new BitmapDrawable(resources, bitmap);
-		}
 	}
 
 	private void createOverlays() {
