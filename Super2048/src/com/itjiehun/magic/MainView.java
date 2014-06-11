@@ -26,6 +26,7 @@ public class MainView extends View {
 
 	// Internal variables
 	private Paint paint = new Paint();
+	private Paint paintCell = new Paint();
 	public MainGame game;
 	public boolean hasSaveState = false;
 	private final int numCellTypes = 14;
@@ -165,7 +166,7 @@ public class MainView extends View {
 			top = BitmapFactory.decodeResource(getResources(), R.drawable.top)
 			;
 	
-	public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) { 
+	public static Bitmap getRoundedCornerBitmap0(Bitmap bitmap, float roundPx) { 
 		  
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), 
                 bitmap.getHeight(), Config.ARGB_8888); 
@@ -191,6 +192,8 @@ public class MainView extends View {
 	private void createBitmapCells() {
 		paint.setTextSize(cellTextSize);
 		paint.setTextAlign(Paint.Align.CENTER);
+		paintCell.setTextSize(cellTextSize);
+		paintCell.setTextAlign(Paint.Align.CENTER);
 		Resources resources = getResources();
 		for (int xx = 0; xx < bitmapCell.length; xx++) {
 			Bitmap bitmap = Bitmap.createBitmap(cellSize, cellSize, Bitmap.Config.ARGB_8888);
@@ -199,16 +202,18 @@ public class MainView extends View {
 			int value = (int) Math.pow(2, xx);
 			if (value >= 8) {
 				paint.setColor(TEXT_WHITE);
+				paintCell.setColor(TEXT_WHITE);
 			} else {
 				paint.setColor(TEXT_BLACK);
+				paintCell.setColor(TEXT_BLACK);
 			}
 			
 			RectF dst = new RectF(0, 0, cellSize, cellSize);
-	        paint.setAntiAlias(true); 
+			paintCell.setAntiAlias(true); 
 	        canvas.drawARGB(0, 0, 0, 0); 
-	        canvas.drawRoundRect(dst, 20, 20, paint); 
-	        paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN)); 
-	        canvas.drawBitmap(getBitmap(value), null, dst, paint); 
+	        canvas.drawRoundRect(dst, 20, 20, paintCell); 
+	        paintCell.setXfermode(new PorterDuffXfermode(Mode.SRC_IN)); 
+	        canvas.drawBitmap(getBitmap(value), null, dst, paintCell); 
 			
 //			drawCellText(canvas, value, 0, 0);
 			
