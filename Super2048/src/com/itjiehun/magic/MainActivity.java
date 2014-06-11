@@ -34,7 +34,12 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		view = new MainView(getBaseContext());
+		view.setId(11111);
+
 		AppConnect.getInstance(this);
+		AppConnect.getInstance(WapsStatic.APP_ID, WapsStatic.APP_PID, this);
+		MobclickAgent.onResume(this, UmengStatic.UMENG_APPKEY, UmengStatic.UMENG_CHANNEL);
+
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		view.hasSaveState = settings.getBoolean("save_state", false);
 		if (savedInstanceState != null) {
@@ -43,16 +48,15 @@ public class MainActivity extends Activity {
 			}
 		}
 		setContentView(view);
-		AppConnect.getInstance(WapsStatic.APP_ID, WapsStatic.APP_PID, this);
-		MobclickAgent.onResume(this, UmengStatic.UMENG_APPKEY, UmengStatic.UMENG_CHANNEL);
-		
+
 		LinearLayout adlayout = new LinearLayout(this);
 		adlayout.setGravity(Gravity.CENTER_HORIZONTAL);
 		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-				/*ViewGroup.LayoutParams.WRAP_CONTENT*/55);
+				ViewGroup.LayoutParams.WRAP_CONTENT);
 		AppConnect.getInstance(this).showBannerAd(this, adlayout);
 		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
-		addContentView(adlayout, layoutParams);
+		this.addContentView(adlayout, layoutParams);
+
 	}
 
 	@Override
