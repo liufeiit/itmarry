@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.itjiehun.magic"
     android:installLocation="auto"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="3"
+    android:versionName="1.1.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -13,6 +13,9 @@
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
 
     <application
         android:allowBackup="true"
@@ -33,5 +36,9 @@
 	
     <meta-data android:value="5396666956240bde28001d2e" android:name="UMENG_APPKEY"/>
 	<meta-data android:value="umeng_ad_anl_ch_001" android:name="UMENG_CHANNEL"/>
+	
+	<meta-data android:name="APP_ID" android:value="504b8a14540c17008187807847143e9a"/>
+	<meta-data android:name="APP_PID" android:value="default"/>
+	
 
 </manifest>

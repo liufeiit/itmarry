@@ -4,10 +4,16 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import cn.waps.AppConnect;
 
 import com.itjiehun.magic.umeng.UmengStatic;
+import com.itjiehun.magic.waps.WapsStatic;
 import com.umeng.analytics.MobclickAgent;
 
 public class MainActivity extends Activity {
@@ -28,17 +34,25 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		view = new MainView(getBaseContext());
-
+		AppConnect.getInstance(this);
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		view.hasSaveState = settings.getBoolean("save_state", false);
-
 		if (savedInstanceState != null) {
 			if (savedInstanceState.getBoolean("hasState")) {
 				load();
 			}
 		}
 		setContentView(view);
+		AppConnect.getInstance(WapsStatic.APP_ID, WapsStatic.APP_PID, this);
 		MobclickAgent.onResume(this, UmengStatic.UMENG_APPKEY, UmengStatic.UMENG_CHANNEL);
+		
+		LinearLayout adlayout = new LinearLayout(this);
+		adlayout.setGravity(Gravity.CENTER_HORIZONTAL);
+		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+				/*ViewGroup.LayoutParams.WRAP_CONTENT*/55);
+		AppConnect.getInstance(this).showBannerAd(this, adlayout);
+		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
+		addContentView(adlayout, layoutParams);
 	}
 
 	@Override
@@ -74,6 +88,7 @@ public class MainActivity extends Activity {
 		// 保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息
 		MobclickAgent.onPageEnd("Super2048SplashScreen");
 		MobclickAgent.onPause(this);
+		AppConnect.getInstance(this).close();
 	}
 
 	private void save() {
