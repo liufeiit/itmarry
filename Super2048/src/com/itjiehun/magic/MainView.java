@@ -151,6 +151,7 @@ public class MainView extends View {
 	}
 	
 	private final Bitmap 
+			/********************************十二生肖************************************/
 			mouse = BitmapFactory.decodeResource(getResources(), R.drawable.mouse),
 			cow = BitmapFactory.decodeResource(getResources(), R.drawable.cow),
 			tiger = BitmapFactory.decodeResource(getResources(), R.drawable.tiger),
@@ -163,29 +164,40 @@ public class MainView extends View {
 			chicken = BitmapFactory.decodeResource(getResources(), R.drawable.chicken),
 			dog = BitmapFactory.decodeResource(getResources(), R.drawable.dog),
 			pig = BitmapFactory.decodeResource(getResources(), R.drawable.pig),
-			top = BitmapFactory.decodeResource(getResources(), R.drawable.top)
+			top = BitmapFactory.decodeResource(getResources(), R.drawable.top),
+			/*********************************十二生肖***********************************/
+
+			/********************************范冰冰************************************/
+			fbb_2 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_2),
+			fbb_4 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_4),
+			fbb_8 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_8),
+			fbb_16 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_16),
+			fbb_32 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_32),
+			fbb_64 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_64),
+			fbb_128 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_128),
+			fbb_256 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_256),
+			fbb_512 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_512),
+			fbb_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_1024),
+			fbb_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_2048),
+			fbb_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_4096),
+			fbb_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_8192)
+			/********************************范冰冰************************************/
 			;
 	
 	public static Bitmap getRoundedCornerBitmap0(Bitmap bitmap, float roundPx) { 
-		  
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), 
                 bitmap.getHeight(), Config.ARGB_8888); 
         Canvas canvas = new Canvas(output); 
-  
         final int color = 0xff424242; 
         final Paint paint = new Paint(); 
         final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight()); 
         final RectF rectF = new RectF(rect); 
-  
         paint.setAntiAlias(true); 
         canvas.drawARGB(0, 0, 0, 0); 
         paint.setColor(color); 
         canvas.drawRoundRect(rectF, roundPx, roundPx, paint); 
-  
         paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN)); 
-        
         canvas.drawBitmap(bitmap, rect, rect, paint); 
-  
         return output; 
     } 
 	
@@ -213,7 +225,7 @@ public class MainView extends View {
 	        canvas.drawARGB(0, 0, 0, 0); 
 	        canvas.drawRoundRect(dst, 20, 20, paintCell); 
 	        paintCell.setXfermode(new PorterDuffXfermode(Mode.SRC_IN)); 
-	        canvas.drawBitmap(getBitmap(value), null, dst, paintCell); 
+	        canvas.drawBitmap(getFBBBitmap(value), null, dst, paintCell); 
 			
 //			drawCellText(canvas, value, 0, 0);
 			
@@ -221,11 +233,54 @@ public class MainView extends View {
 		}
 	}
 	
+	// 范冰冰
+	private Bitmap getFBBBitmap(int value) {
+		if(2 == value) {
+			return fbb_2;
+		}
+		if(4 == value) {
+			return fbb_4;
+		}
+		if(8 == value) {
+			return fbb_8;
+		}
+		if(16 == value) {
+			return fbb_16;
+		}
+		if(32 == value) {
+			return fbb_32;
+		}
+		if(64 == value) {
+			return fbb_64;
+		}
+		if(128 == value) {
+			return fbb_128;
+		}
+		if(256 == value) {
+			return fbb_256;
+		}
+		if(512 == value) {
+			return fbb_512;
+		}
+		if(1024 == value) {
+			return fbb_1024;
+		}
+		if(2048 == value) {
+			return fbb_2048;
+		}
+		if(4096 == value) {
+			return fbb_4096;
+		}
+		if(8192 == value) {
+			return fbb_8192;
+		}
+		return top;
+	}
 	
 	/**
 	 * 1鼠 2牛 3虎 4兔 5龙 6蛇 7马 8羊 9猴 10鸡 11狗 12猪
 	 */
-	private Bitmap getBitmap(int value) {
+	private Bitmap getSXBitmap(int value) {
 		if(2 == value) {
 			return mouse;
 		}

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">十二生肖</string>
-    <string name="header">12生肖</string>
+    <string name="app_name">范小胖</string>
+    <string name="header">范小胖</string>
     <string name="action_settings">设置</string>
     <string name="new_game">重新开始</string>
     <string name="high_score">最高分</string>
     <string name="score">分数</string>
-    <string name="instructions">&#160;&#160;上下或者左右移动生肖，可以把两个相邻的生肖合并.</string>
+    <string name="instructions">&#160;&#160;上下或者左右移动头像，可以把两个相邻的头像合并.</string>
     <string name="you_win">You Win!</string>
     <string name="game_over">Game Over!</string>
     <string name="go_on">Tap to Continue</string>

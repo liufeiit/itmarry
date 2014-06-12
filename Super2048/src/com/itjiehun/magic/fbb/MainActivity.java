@@ -1,4 +1,4 @@
-package com.itjiehun.magic;
+package com.itjiehun.magic.fbb;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import cn.waps.AppConnect;
 
+import com.itjiehun.magic.MainView;
+import com.itjiehun.magic.Tile;
 import com.itjiehun.magic.umeng.UmengStatic;
 import com.itjiehun.magic.waps.WapsStatic;
 import com.umeng.analytics.MobclickAgent;
