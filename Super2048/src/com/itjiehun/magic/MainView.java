@@ -180,8 +180,24 @@ public class MainView extends View {
 			fbb_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_1024),
 			fbb_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_2048),
 			fbb_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_4096),
-			fbb_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_8192)
+			fbb_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_8192),
 			/********************************范冰冰************************************/
+			
+			/********************************金秀贤************************************/
+			jxx_2 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_2),
+			jxx_4 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_4),
+			jxx_8 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_8),
+			jxx_16 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_16),
+			jxx_32 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_32),
+			jxx_64 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_64),
+			jxx_128 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_128),
+			jxx_256 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_256),
+			jxx_512 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_512),
+			jxx_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_1024),
+			jxx_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_2048)
+//			jxx_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_4096),
+//			jxx_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_8192)
+			/********************************金秀贤************************************/
 			;
 	
 	public static Bitmap getRoundedCornerBitmap0(Bitmap bitmap, float roundPx) { 

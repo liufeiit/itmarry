@@ -65,15 +65,26 @@ public final class R {
         public static final int ic_action_settings=0x7f020024;
         public static final int ic_action_undo=0x7f020025;
         public static final int ic_launcher=0x7f020026;
-        public static final int light_up_rectangle=0x7f020027;
-        public static final int monkey=0x7f020028;
-        public static final int mouse=0x7f020029;
-        public static final int pig=0x7f02002a;
-        public static final int rabbit=0x7f02002b;
-        public static final int sheep=0x7f02002c;
-        public static final int snake=0x7f02002d;
-        public static final int tiger=0x7f02002e;
-        public static final int top=0x7f02002f;
+        public static final int jxx_1024=0x7f020027;
+        public static final int jxx_128=0x7f020028;
+        public static final int jxx_16=0x7f020029;
+        public static final int jxx_2=0x7f02002a;
+        public static final int jxx_2048=0x7f02002b;
+        public static final int jxx_256=0x7f02002c;
+        public static final int jxx_32=0x7f02002d;
+        public static final int jxx_4=0x7f02002e;
+        public static final int jxx_512=0x7f02002f;
+        public static final int jxx_64=0x7f020030;
+        public static final int jxx_8=0x7f020031;
+        public static final int light_up_rectangle=0x7f020032;
+        public static final int monkey=0x7f020033;
+        public static final int mouse=0x7f020034;
+        public static final int pig=0x7f020035;
+        public static final int rabbit=0x7f020036;
+        public static final int sheep=0x7f020037;
+        public static final int snake=0x7f020038;
+        public static final int tiger=0x7f020039;
+        public static final int top=0x7f02003a;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0000;
