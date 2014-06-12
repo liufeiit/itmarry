@@ -50,11 +50,11 @@ public class MainActivity extends Activity {
 		setContentView(view);
 
 		LinearLayout adlayout = new LinearLayout(this);
-		adlayout.setGravity(Gravity.CENTER_HORIZONTAL);
+		adlayout.setGravity(Gravity.BOTTOM);
 		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-				ViewGroup.LayoutParams.WRAP_CONTENT);
+				ViewGroup.LayoutParams.MATCH_PARENT);
 		AppConnect.getInstance(this).showBannerAd(this, adlayout);
-		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
+//		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
 		this.addContentView(adlayout, layoutParams);
 
 	}

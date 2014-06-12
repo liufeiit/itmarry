@@ -413,7 +413,9 @@ public class MainView extends View {
 		// Drawing the instructions
 		paint.setTextSize(instructionsTextSize);
 		paint.setTextAlign(Paint.Align.LEFT);
-		int textShiftY = centerText() * 5;
+		//TODO
+//		int textShiftY = centerText() * 5;
+		int textShiftY = centerText() * 2;
 		canvas.drawText(instructionsText, startingX, endingY - textShiftY + textPaddingSize, paint);
 	}
 
