@@ -35,10 +35,10 @@
     </application>
 	
     <meta-data android:value="5396666956240bde28001d2e" android:name="UMENG_APPKEY"/>
-	<meta-data android:value="waps_fbb_001_goapk" android:name="UMENG_CHANNEL"/>
+	<meta-data android:value="waps_fbb_001_QQ" android:name="UMENG_CHANNEL"/>
 	
 	<meta-data android:name="APP_ID" android:value="faefc41ffba6c15b5508eeaa05da9444"/>
-	<meta-data android:name="APP_PID" android:value="goapk"/>
+	<meta-data android:name="APP_PID" android:value="QQ"/>
 	
 
 </manifest>
