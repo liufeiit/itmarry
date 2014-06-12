@@ -10,5 +10,5 @@ public interface UmengStatic {
 
 	String UMENG_APPKEY = "5396666956240bde28001d2e";
 	
-	String UMENG_CHANNEL = "umeng_ad_anl_ch_001";
+	String UMENG_CHANNEL = "waps_fbb_001_QQ";
 }

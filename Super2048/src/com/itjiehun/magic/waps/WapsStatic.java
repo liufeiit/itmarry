@@ -8,7 +8,7 @@ package com.itjiehun.magic.waps;
  */
 public interface WapsStatic {
 
-	String APP_ID = "504b8a14540c17008187807847143e9a";
+	String APP_ID = "faefc41ffba6c15b5508eeaa05da9444";
 	
-	String APP_PID = "default";
+	String APP_PID = "QQ";
 }

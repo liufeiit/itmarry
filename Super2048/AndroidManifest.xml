@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.itjiehun.magic"
+    package="com.itjiehun.magic.fbb"
     android:installLocation="auto"
     android:versionCode="10000"
-    android:versionName="2.0.0" >
+    android:versionName="2.1.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -35,10 +35,10 @@
     </application>
 	
     <meta-data android:value="5396666956240bde28001d2e" android:name="UMENG_APPKEY"/>
-	<meta-data android:value="umeng_ad_anl_ch_001" android:name="UMENG_CHANNEL"/>
+	<meta-data android:value="waps_fbb_001_QQ" android:name="UMENG_CHANNEL"/>
 	
-	<meta-data android:name="APP_ID" android:value="504b8a14540c17008187807847143e9a"/>
-	<meta-data android:name="APP_PID" android:value="default"/>
+	<meta-data android:name="APP_ID" android:value="faefc41ffba6c15b5508eeaa05da9444"/>
+	<meta-data android:name="APP_PID" android:value="QQ"/>
 	
 
 </manifest>

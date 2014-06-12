@@ -12,6 +12,8 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.preference.PreferenceManager;
 
+import com.itjiehun.magic.fbb.R;
+
 public class MainGame {
 
 	public static final int SPAWN_ANIMATION = -1;
