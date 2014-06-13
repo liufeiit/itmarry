@@ -85,6 +85,19 @@ public final class R {
         public static final int snake=0x7f020038;
         public static final int tiger=0x7f020039;
         public static final int top=0x7f02003a;
+        public static final int zh_1=0x7f02003b;
+        public static final int zh_10=0x7f02003c;
+        public static final int zh_11=0x7f02003d;
+        public static final int zh_12=0x7f02003e;
+        public static final int zh_13=0x7f02003f;
+        public static final int zh_2=0x7f020040;
+        public static final int zh_3=0x7f020041;
+        public static final int zh_4=0x7f020042;
+        public static final int zh_5=0x7f020043;
+        public static final int zh_6=0x7f020044;
+        public static final int zh_7=0x7f020045;
+        public static final int zh_8=0x7f020046;
+        public static final int zh_9=0x7f020047;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0000;

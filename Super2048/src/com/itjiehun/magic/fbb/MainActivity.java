@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 
 		LinearLayout adlayout = new LinearLayout(this);
 		adlayout.setGravity(Gravity.BOTTOM);
-		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
 				ViewGroup.LayoutParams.MATCH_PARENT);
 		AppConnect.getInstance(this).showBannerAd(this, adlayout);
 //		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端

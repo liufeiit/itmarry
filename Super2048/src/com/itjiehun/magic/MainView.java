@@ -194,10 +194,26 @@ public class MainView extends View {
 			jxx_256 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_256),
 			jxx_512 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_512),
 			jxx_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_1024),
-			jxx_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_2048)
+			jxx_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_2048),
 //			jxx_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_4096),
 //			jxx_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_8192)
 			/********************************金秀贤************************************/
+			
+			/********************************甄嬛版************************************/
+			zh_2 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_1),
+			zh_4 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_2),
+			zh_8 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_3),
+			zh_16 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_4),
+			zh_32 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_5),
+			zh_64 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_6),
+			zh_128 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_7),
+			zh_256 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_8),
+			zh_512 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_9),
+			zh_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_10),
+			zh_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_11),
+			zh_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_12),
+			zh_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_13)
+			/********************************甄嬛版************************************/
 			;
 	
 	public static Bitmap getRoundedCornerBitmap0(Bitmap bitmap, float roundPx) { 
@@ -247,6 +263,49 @@ public class MainView extends View {
 			
 			bitmapCell[xx] = new BitmapDrawable(resources, bitmap);
 		}
+	}
+	
+	private Bitmap getZHBitmap(int value) {
+		if(2 == value) {
+			return zh_2;
+		}
+		if(4 == value) {
+			return zh_4;
+		}
+		if(8 == value) {
+			return zh_8;
+		}
+		if(16 == value) {
+			return zh_16;
+		}
+		if(32 == value) {
+			return zh_32;
+		}
+		if(64 == value) {
+			return zh_64;
+		}
+		if(128 == value) {
+			return zh_128;
+		}
+		if(256 == value) {
+			return zh_256;
+		}
+		if(512 == value) {
+			return zh_512;
+		}
+		if(1024 == value) {
+			return zh_1024;
+		}
+		if(2048 == value) {
+			return zh_2048;
+		}
+		if(4096 == value) {
+			return zh_4096;
+		}
+		if(8192 == value) {
+			return zh_8192;
+		}
+		return top;
 	}
 	
 	// 范冰冰
