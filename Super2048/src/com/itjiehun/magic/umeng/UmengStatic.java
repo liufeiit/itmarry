@@ -7,8 +7,10 @@ package com.itjiehun.magic.umeng;
  * @since 2014-6-10 下午1:41:05
  */
 public interface UmengStatic {
+	
+	String ADS_KEY = "hiapk_ads_key";
 
 	String UMENG_APPKEY = "5396666956240bde28001d2e";
 	
-	String UMENG_CHANNEL = "nearme";
+	String UMENG_CHANNEL = "hiapk";
 }

@@ -59,7 +59,9 @@ com.umeng.fb.model.Reply$STATUS: com.umeng.fb.model.Reply$STATUS valueOf(java.la
 com.umeng.fb.model.Reply$TYPE: com.umeng.fb.model.Reply$TYPE[] values()
 com.umeng.fb.model.Reply$TYPE: com.umeng.fb.model.Reply$TYPE valueOf(java.lang.String)
 com.umeng.update.UpdateDialogActivity
+com.umeng.update.UpdateDialogActivity: UpdateDialogActivity()
 com.umeng.update.net.DownloadingService
+com.umeng.update.net.DownloadingService: DownloadingService()
 com.umeng.update.net.i$a: com.umeng.update.net.i$a[] values()
 com.umeng.update.net.i$a: com.umeng.update.net.i$a valueOf(java.lang.String)
 com.umeng.update.net.j$b: com.umeng.update.net.j$b[] values()

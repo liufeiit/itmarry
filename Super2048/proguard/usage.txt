@@ -1706,6 +1706,7 @@ com.itjiehun.magic.fbb.MainActivity:
     public static final java.lang.String GAME_STATE
     public static final java.lang.String UNDO_GAME_STATE
 com.itjiehun.magic.fbb.R
+com.itjiehun.magic.fbb.R$anim
 com.itjiehun.magic.fbb.R$attr
 com.itjiehun.magic.fbb.R$color
 com.itjiehun.magic.fbb.R$dimen
@@ -1717,14 +1718,15 @@ com.itjiehun.magic.fbb.R$raw
 com.itjiehun.magic.fbb.R$string
 com.itjiehun.magic.fbb.R$style
 com.itjiehun.magic.fbb.package-info
+com.itjiehun.magic.jxx.package-info
 com.itjiehun.magic.umeng.UmengStatic
 com.itjiehun.magic.umeng.package-info
 com.itjiehun.magic.waps.WapsStatic
 com.itjiehun.magic.waps.package-info
+com.itjiehun.magic.zh.package-info
 com.umeng.analytics.AnalyticsConfig:
     7:7:public AnalyticsConfig()
     58:64:public static void setLocation(double,double)
-    68:74:public static void setReportPolicy(int,int)
 com.umeng.analytics.Gender:
     33:33:public int value()
     37:50:public static com.umeng.analytics.Gender getGender(int)
@@ -1761,9 +1763,7 @@ com.umeng.analytics.MobclickAgent:
     391:392:public static void onKVEventEnd(android.content.Context,java.lang.String,java.lang.String)
     405:411:public static varargs void onSocialEvent(android.content.Context,java.lang.String,com.umeng.analytics.social.UMPlatformData[])
     420:426:public static varargs void onSocialEvent(android.content.Context,com.umeng.analytics.social.UMPlatformData[])
-    436:437:public static java.lang.String getConfigParams(android.content.Context,java.lang.String)
     448:457:public static void updateOnlineConfig(android.content.Context,java.lang.String,java.lang.String)
-    463:464:public static void updateOnlineConfig(android.content.Context)
     474:497:public static void setUserID(android.content.Context,java.lang.String,java.lang.String,com.umeng.analytics.Gender,int)
     505:506:public static void onKillProcess(android.content.Context)
 com.umeng.analytics.MobclickAgentJSInterface
@@ -1800,7 +1800,6 @@ com.umeng.analytics.c:
     73:74:public void a(com.umeng.analytics.b)
     77:78:public void a(int)
     81:83:public void a(java.lang.String,java.lang.String)
-    86:95:void a(android.content.Context)
     98:99:void a(com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener)
     151:156:public void a(android.content.Context,java.lang.String,java.util.HashMap)
     159:175:void a(android.content.Context,java.lang.String)
@@ -1834,7 +1833,6 @@ com.umeng.analytics.f:
     private static final java.lang.String p
     57:66:public void a(java.lang.String,java.lang.String,int,int)
     74:93:public java.lang.Object[] b(android.content.Context)
-    116:123:public void a(int,int)
     244:244:private android.content.SharedPreferences k()
     252:252:public android.content.SharedPreferences h()
     256:256:public android.content.SharedPreferences i()
@@ -1846,8 +1844,6 @@ com.umeng.analytics.game.b$a
 com.umeng.analytics.game.c
 com.umeng.analytics.game.c$1
 com.umeng.analytics.game.c$2
-com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener:
-    public abstract void onDataReceived(org.json.JSONObject)
 com.umeng.analytics.onlineconfig.a:
     public static final java.lang.String a
     public static final java.lang.String b
@@ -1856,26 +1852,18 @@ com.umeng.analytics.onlineconfig.a:
     public static final java.lang.String e
     public static final java.lang.String f
     public static final java.lang.String g
-    50:60:public void a(android.content.Context)
     63:64:public void a(com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener)
     67:68:public void a()
-    71:72:public void a(com.umeng.analytics.onlineconfig.c)
     75:76:public void b()
-    79:80:private void a(org.json.JSONObject)
-    84:104:private org.json.JSONObject b(android.content.Context)
-    109:110:private java.lang.String c(android.content.Context)
-    114:125:private void a(android.content.Context,com.umeng.analytics.onlineconfig.b)
-    128:153:private void b(android.content.Context,com.umeng.analytics.onlineconfig.b)
-    78:78:static synthetic void a(com.umeng.analytics.onlineconfig.a,org.json.JSONObject)
-    82:82:static synthetic org.json.JSONObject a(com.umeng.analytics.onlineconfig.a,android.content.Context)
-    40:40:static synthetic com.umeng.analytics.onlineconfig.c a(com.umeng.analytics.onlineconfig.a)
-    113:113:static synthetic void a(com.umeng.analytics.onlineconfig.a,android.content.Context,com.umeng.analytics.onlineconfig.b)
-    127:127:static synthetic void b(com.umeng.analytics.onlineconfig.a,android.content.Context,com.umeng.analytics.onlineconfig.b)
-com.umeng.analytics.onlineconfig.a$a
-com.umeng.analytics.onlineconfig.a$b
-com.umeng.analytics.onlineconfig.b
-com.umeng.analytics.onlineconfig.c:
-    public abstract void a(int,long)
+com.umeng.analytics.onlineconfig.b:
+    private final java.lang.String f
+    private final java.lang.String g
+    private final java.lang.String h
+    private final java.lang.String i
+    private final java.lang.String j
+    35:44:public b(org.json.JSONObject)
+    48:66:private void a(org.json.JSONObject)
+    69:72:private void a()
 com.umeng.analytics.social.UMPlatformData
 com.umeng.analytics.social.UMPlatformData$GENDER
 com.umeng.analytics.social.UMPlatformData$GENDER$1
@@ -1943,48 +1931,20 @@ com.umeng.fb.model.UserInfo:
 com.umeng.fb.model.UserTitleReply:
     private static final java.lang.String j
 com.umeng.update.UmengUpdateAgent:
-    private static android.content.Context d
-    private static android.os.Handler f
     25:25:public UmengUpdateAgent()
     36:46:public static void setDefault()
-    49:50:public static void setUpdateCheckConfig(boolean)
     59:60:public static void setUpdateOnlyWifi(boolean)
-    69:70:public static void setUpdateAutoPopup(boolean)
     81:82:public static void setUpdateUIStyle(int)
     91:92:public static void setDeltaUpdate(boolean)
-    101:102:public static void setAppkey(java.lang.String)
-    111:112:public static void setChannel(java.lang.String)
     120:121:public static void setRichNotification(boolean)
     130:131:public static void setUpdateListener(com.umeng.update.UmengUpdateListener)
     141:142:public static void setDialogListener(com.umeng.update.UmengDialogButtonListener)
     152:153:public static void setDownloadListener(com.umeng.update.UmengDownloadListener)
-    156:161:private static void b(int,com.umeng.update.UpdateResponse)
     170:173:public static void silentUpdate(android.content.Context)
     182:185:public static void forceUpdate(android.content.Context)
-    194:197:public static void update(android.content.Context)
     211:215:public static void update(android.content.Context,java.lang.String,java.lang.String)
-    219:278:private static void b(android.content.Context)
-    295:322:private static void b(android.content.Context,com.umeng.update.UpdateResponse,int)
     334:335:public static void showUpdateDialog(android.content.Context,com.umeng.update.UpdateResponse)
     347:348:public static void showUpdateNotification(android.content.Context,com.umeng.update.UpdateResponse)
-    361:375:public static java.io.File downloadedFile(android.content.Context,com.umeng.update.UpdateResponse)
-    388:388:public static boolean isIgnore(android.content.Context,com.umeng.update.UpdateResponse)
-    502:642:private static boolean c(android.content.Context)
-    155:155:static synthetic void a(int,com.umeng.update.UpdateResponse)
-    30:30:static synthetic android.content.Context a()
-    292:292:static synthetic void a(android.content.Context,com.umeng.update.UpdateResponse,int)
-    30:30:static synthetic void a(android.content.Context)
-    26:26:static synthetic com.umeng.update.UmengUpdateListener b()
-com.umeng.update.UmengUpdateAgent$1
-com.umeng.update.UmengUpdateAgent$2
-com.umeng.update.UmengUpdateAgent$3
-com.umeng.update.UmengUpdateAgent$4
-com.umeng.update.UmengUpdateAgent$5
-com.umeng.update.UmengUpdateAgent$6
-com.umeng.update.UmengUpdateAgent$7
-com.umeng.update.UmengUpdateAgent$a
-com.umeng.update.UmengUpdateListener:
-    public abstract void onUpdateReturned(int,com.umeng.update.UpdateResponse)
 com.umeng.update.UpdateConfig:
     public static final java.lang.String a
     public static final java.lang.String b
@@ -1997,43 +1957,19 @@ com.umeng.update.UpdateConfig:
     public static final java.lang.String i
     private static final java.lang.String j
     private static final java.lang.String k
-    private static java.lang.String l
-    private static java.lang.String m
     12:12:public UpdateConfig()
-    42:43:public static void setAppkey(java.lang.String)
-    46:47:public static void setChannel(java.lang.String)
     50:51:public static void setDebug(boolean)
-    54:58:public static java.lang.String getAppkey(android.content.Context)
-    62:66:public static java.lang.String getChannel(android.content.Context)
-    76:81:public static java.lang.String getIgnoreMd5(android.content.Context)
-    85:85:public static boolean isUpdateOnlyWifi()
     89:90:public static void setUpdateOnlyWifi(boolean)
-    93:93:public static boolean isUpdateAutoPopup()
-    97:98:public static void setUpdateAutoPopup(boolean)
-    101:101:public static boolean isUpdateForce()
-    105:106:public static void setUpdateForce(boolean)
     113:114:public static void setDeltaUpdate(boolean)
-    121:122:public static void setSilentDownload(boolean)
-    125:125:public static int getStyle()
     129:130:public static void setStyle(int)
-    133:133:public static boolean isUpdateCheck()
-    137:138:public static void setUpdateCheck(boolean)
     145:146:public static void setRichNotification(boolean)
 com.umeng.update.UpdateResponse:
     private static final long a
-    public boolean hasUpdate
     public java.lang.String proto_ver
     65:67:public UpdateResponse(org.json.JSONObject)
     75:96:private void a(org.json.JSONObject)
 com.umeng.update.UpdateStatus
 com.umeng.update.a
-com.umeng.update.b
-com.umeng.update.c:
-    65:65:public boolean a()
-    178:191:public void a(android.content.Context,com.umeng.update.UpdateResponse,boolean,java.io.File)
-    242:275:public com.umeng.update.c$a b(android.content.Context,com.umeng.update.UpdateResponse,boolean,java.io.File)
-com.umeng.update.c$a
-com.umeng.update.d
 com.umeng.update.net.DownloadingService:
     static final int a
     static final int b
@@ -2125,8 +2061,6 @@ com.umeng.update.net.j$c
 com.umeng.update.util.DeltaUpdate:
     private static final java.lang.String b
     10:10:public DeltaUpdate()
-    19:19:public static boolean a()
-    39:44:public static java.lang.String b(android.content.Context)
 com.umeng.update.util.a
 com.umeng.update.util.c
 u.aly.A
@@ -2938,7 +2872,6 @@ u.aly.ai:
     680:688:public static int a(java.util.Date,java.util.Date)
 u.aly.aj:
     8:8:public aj()
-    50:53:public static void c(java.lang.String,java.lang.String,java.lang.Exception)
     56:59:public static void d(java.lang.String,java.lang.String)
     62:65:public static void d(java.lang.String,java.lang.String,java.lang.Exception)
 u.aly.ak
@@ -2948,15 +2881,17 @@ u.aly.al$b
 u.aly.am
 u.aly.an
 u.aly.an$a
-u.aly.ao
-u.aly.ap
-u.aly.aq
+u.aly.ao:
+    300:301:public u.aly.ao a(java.util.Map)
+u.aly.ap:
+    75:75:public java.lang.String d()
+u.aly.aq:
+    22:24:public aq(org.json.JSONObject)
 u.aly.ar
 u.aly.as
 u.aly.at
 u.aly.au:
     15:15:public au()
-    26:27:public static byte[] a(java.lang.String,java.lang.String)
     75:81:public static java.lang.String a(byte[],java.lang.String)
     85:102:public static byte[] b(byte[])
 u.aly.av:
@@ -2967,7 +2902,6 @@ u.aly.av:
     162:181:public static java.lang.String c(java.lang.String)
     192:195:public static void a(android.content.Context,java.lang.String)
     207:213:public static boolean b(android.content.Context,java.lang.String)
-    224:224:public static boolean d(java.lang.String)
     237:241:public static boolean e(java.lang.String)
     252:253:public static java.lang.String a()
     262:265:public static java.lang.String a(java.util.Date)
@@ -3050,10 +2984,8 @@ u.aly.i:
     private static final java.lang.String b
 u.aly.j:
     55:60:public void a()
-    314:316:public void a(int,long)
 u.aly.k:
     30:31:public void a(u.aly.o)
-    34:37:public void a(com.umeng.analytics.onlineconfig.a)
     52:57:public void a()
 u.aly.k$2
 u.aly.l:
@@ -3207,20 +3139,16 @@ u.upd.a:
     57:65:public static boolean a(java.lang.String,android.content.Context)
     76:77:public static boolean a(android.content.Context)
     87:90:public static boolean b(android.content.Context)
-    102:107:public static java.lang.String c(android.content.Context)
     119:123:public static java.lang.String d(android.content.Context)
     151:160:public static java.lang.String e(android.content.Context)
     172:180:public static java.lang.String[] a(javax.microedition.khronos.opengles.GL10)
     190:218:public static java.lang.String a()
-    229:257:public static java.lang.String f(android.content.Context)
     267:267:public static java.lang.String g(android.content.Context)
     278:287:public static java.lang.String h(android.content.Context)
     299:312:public static java.lang.String i(android.content.Context)
     411:420:public static int m(android.content.Context)
     431:451:public static java.lang.String[] n(android.content.Context)
     462:479:private static java.util.Locale x(android.content.Context)
-    489:511:public static java.lang.String o(android.content.Context)
-    522:534:public static java.lang.String p(android.content.Context)
     544:555:public static java.lang.String q(android.content.Context)
     565:597:public static int[] r(android.content.Context)
     602:608:private static int a(java.lang.Object,java.lang.String)
@@ -3229,15 +3157,11 @@ u.upd.a:
     647:650:public static java.lang.String c()
     662:666:public static java.util.Date a(java.lang.String)
     680:688:public static int a(java.util.Date,java.util.Date)
-    698:721:public static java.lang.String t(android.content.Context)
-    731:731:public static java.lang.String u(android.content.Context)
     753:755:public static boolean w(android.content.Context)
 u.upd.b:
     8:8:public b()
     56:59:public static void d(java.lang.String,java.lang.String)
     62:65:public static void d(java.lang.String,java.lang.String,java.lang.Exception)
-    68:71:public static void e(java.lang.String,java.lang.String)
-    74:80:public static void e(java.lang.String,java.lang.String,java.lang.Exception)
 u.upd.c:
     47:47:public int a(java.lang.String)
     91:91:public int e(java.lang.String)
@@ -3248,11 +3172,12 @@ u.upd.d$b
 u.upd.e
 u.upd.f
 u.upd.f$a
-u.upd.g
-u.upd.h
+u.upd.g:
+    300:301:public u.upd.g a(java.util.Map)
+u.upd.h:
+    75:75:public java.lang.String d()
 u.upd.i:
     22:24:public i(org.json.JSONObject)
-    26:28:public i()
 u.upd.j:
     8:8:public j()
     31:31:public static int f(android.content.Context)
@@ -3260,15 +3185,16 @@ u.upd.k:
     8:8:public k()
 u.upd.l:
     7:7:public l()
-u.upd.m
+u.upd.m:
+    15:15:public m()
+    75:81:public static java.lang.String a(byte[],java.lang.String)
+    85:102:public static byte[] b(byte[])
 u.upd.n:
     private static final java.lang.String b
     34:34:public n()
-    80:95:public static java.lang.String b(java.lang.String)
     146:158:public static java.lang.String a(android.content.Context,long)
     192:195:public static void a(android.content.Context,java.lang.String)
     207:213:public static boolean b(android.content.Context,java.lang.String)
-    224:224:public static boolean d(java.lang.String)
     237:241:public static boolean e(java.lang.String)
     276:287:public static java.lang.String a(java.io.InputStream)
     297:306:public static byte[] b(java.io.InputStream)

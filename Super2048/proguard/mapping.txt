@@ -2806,6 +2806,7 @@ com.umeng.analytics.AnalyticsConfig -> com.umeng.a.a:
     java.lang.String getAppkey(android.content.Context) -> a
     java.lang.String getChannel(android.content.Context) -> b
     double[] getLocation() -> a
+    void setReportPolicy(int,int) -> a
     int[] getReportPolicy(android.content.Context) -> c
 com.umeng.analytics.Gender -> com.umeng.a.b:
     com.umeng.analytics.Gender Male -> a
@@ -2831,6 +2832,8 @@ com.umeng.analytics.MobclickAgent -> com.umeng.a.f:
     void onPause(android.content.Context) -> a
     void onResume(android.content.Context) -> b
     void onResume(android.content.Context,java.lang.String,java.lang.String) -> a
+    java.lang.String getConfigParams(android.content.Context,java.lang.String) -> a
+    void updateOnlineConfig(android.content.Context) -> c
 com.umeng.analytics.ReportPolicy -> com.umeng.a.g:
 com.umeng.analytics.ReportPolicy$a -> com.umeng.a.h:
     boolean a(boolean) -> a
@@ -2866,12 +2869,13 @@ com.umeng.analytics.c -> com.umeng.a.p:
     u.aly.n g -> g
     u.aly.k h -> h
     boolean i -> i
-    void f(android.content.Context) -> c
+    void f(android.content.Context) -> d
     void a(java.lang.String) -> a
     void b(java.lang.String) -> b
-    void b(android.content.Context) -> a
-    void c(android.content.Context) -> b
-    void h(android.content.Context) -> d
+    void a(android.content.Context) -> a
+    void b(android.content.Context) -> b
+    void c(android.content.Context) -> c
+    void h(android.content.Context) -> e
     void a(java.lang.Throwable) -> a
     void a(com.umeng.analytics.c,android.content.Context) -> a
     void b(com.umeng.analytics.c,android.content.Context) -> b
@@ -2901,6 +2905,7 @@ com.umeng.analytics.f -> com.umeng.a.u:
     long e -> e
     com.umeng.analytics.f a(android.content.Context) -> a
     int[] a() -> a
+    void a(int,int) -> a
     byte[] b() -> b
     void a(byte[]) -> a
     void c() -> c
@@ -2908,8 +2913,9 @@ com.umeng.analytics.f -> com.umeng.a.u:
     void b(byte[]) -> b
     void e() -> e
     boolean f() -> f
-    java.lang.String m() -> g
-    java.lang.String n() -> h
+    android.content.SharedPreferences g() -> g
+    java.lang.String m() -> h
+    java.lang.String n() -> i
 com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener -> com.umeng.a.a.a:
 com.umeng.analytics.onlineconfig.a -> com.umeng.a.a.b:
     java.lang.String h -> a
@@ -2917,7 +2923,28 @@ com.umeng.analytics.onlineconfig.a -> com.umeng.a.a.b:
     java.lang.String j -> c
     com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener k -> d
     com.umeng.analytics.onlineconfig.c l -> e
-com.umeng.analytics.onlineconfig.c -> com.umeng.a.a.c:
+    void a(com.umeng.analytics.onlineconfig.c) -> a
+    org.json.JSONObject b(android.content.Context) -> b
+    void a$7144a1e1(com.umeng.analytics.onlineconfig.a) -> a
+    org.json.JSONObject a$868c027(android.content.Context) -> a
+    com.umeng.analytics.onlineconfig.c a(com.umeng.analytics.onlineconfig.a) -> b
+com.umeng.analytics.onlineconfig.a$a -> com.umeng.a.a.c:
+    org.json.JSONObject e -> e
+    com.umeng.analytics.onlineconfig.a a -> a
+    org.json.JSONObject a() -> a
+    java.lang.String b() -> b
+com.umeng.analytics.onlineconfig.a$b -> com.umeng.a.a.d:
+    android.content.Context a -> a
+    com.umeng.analytics.onlineconfig.a b -> b
+    void run() -> run
+com.umeng.analytics.onlineconfig.b -> com.umeng.a.a.e:
+    org.json.JSONObject a -> a
+    boolean b -> b
+    int c -> c
+    int d -> d
+    java.lang.String e -> e
+com.umeng.analytics.onlineconfig.c -> com.umeng.a.a.f:
+    void a(int,long) -> a
 com.umeng.fb.ContactActivity -> com.umeng.fb.ContactActivity:
     android.widget.ImageView b -> a
     android.widget.ImageView c -> b
@@ -3098,22 +3125,77 @@ com.umeng.update.UmengUpdateAgent -> com.umeng.update.c:
     com.umeng.update.UmengUpdateListener a -> a
     com.umeng.update.UmengDialogButtonListener b -> b
     com.umeng.update.UmengDownloadListener c -> c
-    com.umeng.update.c e -> d
+    android.content.Context d -> d
+    com.umeng.update.c e -> e
+    android.os.Handler f -> f
+    void setUpdateCheckConfig$1385ff() -> a
+    void setUpdateAutoPopup$1385ff() -> b
+    void setAppkey(java.lang.String) -> a
+    void setChannel(java.lang.String) -> b
+    void b(int,com.umeng.update.UpdateResponse) -> b
+    void update(android.content.Context) -> a
+    java.io.File downloadedFile(android.content.Context,com.umeng.update.UpdateResponse) -> a
     void a(int,android.content.Context,com.umeng.update.UpdateResponse,java.io.File) -> a
-com.umeng.update.UmengUpdateListener -> com.umeng.update.d:
-com.umeng.update.UpdateConfig -> com.umeng.update.e:
-    boolean n -> a
-    boolean o -> b
-    boolean p -> c
-    boolean q -> d
-    boolean r -> e
-    boolean s -> f
-    boolean t -> g
-    int u -> h
+    void startDownload(android.content.Context,com.umeng.update.UpdateResponse) -> b
+    boolean c(android.content.Context) -> b
+    void a(int,com.umeng.update.UpdateResponse) -> a
+    android.content.Context a() -> c
+    void a(android.content.Context,com.umeng.update.UpdateResponse,int) -> a
+    void a$faab20d() -> d
+    com.umeng.update.UmengUpdateListener b() -> e
+com.umeng.update.UmengUpdateAgent$1 -> com.umeng.update.d:
+    void handleMessage(android.os.Message) -> handleMessage
+com.umeng.update.UmengUpdateAgent$2 -> com.umeng.update.e:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$3 -> com.umeng.update.f:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$4 -> com.umeng.update.g:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$5 -> com.umeng.update.h:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$6 -> com.umeng.update.i:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$7 -> com.umeng.update.j:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$a -> com.umeng.update.k:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateListener -> com.umeng.update.l:
+com.umeng.update.UpdateConfig -> com.umeng.update.m:
+    java.lang.String l -> a
+    java.lang.String m -> b
+    boolean n -> c
+    boolean o -> d
+    boolean p -> e
+    boolean q -> f
+    boolean r -> g
+    boolean s -> h
+    boolean t -> i
+    int u -> j
+    void setAppkey(java.lang.String) -> a
+    void setChannel(java.lang.String) -> b
+    java.lang.String getAppkey(android.content.Context) -> a
+    java.lang.String getChannel(android.content.Context) -> b
     void saveIgnoreMd5(android.content.Context,java.lang.String) -> a
-    boolean isDeltaUpdate() -> a
-    boolean isSilentDownload() -> b
-    boolean isRichNotification() -> c
+    java.lang.String getIgnoreMd5(android.content.Context) -> c
+    boolean isUpdateOnlyWifi() -> a
+    boolean isUpdateAutoPopup() -> b
+    void setUpdateAutoPopup$1385ff() -> c
+    boolean isUpdateForce() -> d
+    void setUpdateForce$1385ff() -> e
+    boolean isDeltaUpdate() -> f
+    boolean isSilentDownload() -> g
+    void setSilentDownload$1385ff() -> h
+    int getStyle() -> i
+    boolean isUpdateCheck() -> j
+    void setUpdateCheck$1385ff() -> k
+    boolean isRichNotification() -> l
 com.umeng.update.UpdateDialogActivity -> com.umeng.update.UpdateDialogActivity:
     int a -> a
     com.umeng.update.UpdateResponse b -> b
@@ -3121,26 +3203,32 @@ com.umeng.update.UpdateDialogActivity -> com.umeng.update.UpdateDialogActivity:
     java.io.File d -> d
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy
-com.umeng.update.UpdateDialogActivity$1 -> com.umeng.update.f:
+com.umeng.update.UpdateDialogActivity$1 -> com.umeng.update.n:
     com.umeng.update.UpdateDialogActivity a -> a
     int b -> b
     int c -> c
     void onClick(android.view.View) -> onClick
-com.umeng.update.UpdateDialogActivity$2 -> com.umeng.update.g:
+com.umeng.update.UpdateDialogActivity$2 -> com.umeng.update.o:
     com.umeng.update.UpdateDialogActivity a -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.umeng.update.UpdateResponse -> com.umeng.update.h:
-    java.lang.String updateLog -> a
-    java.lang.String version -> b
-    java.lang.String path -> c
-    java.lang.String origin -> d
-    java.lang.String new_md5 -> e
-    java.lang.String size -> f
-    java.lang.String target_size -> g
-    boolean delta -> h
-    java.lang.String patch_md5 -> i
+com.umeng.update.UpdateResponse -> com.umeng.update.p:
+    boolean hasUpdate -> a
+    java.lang.String updateLog -> b
+    java.lang.String version -> c
+    java.lang.String path -> d
+    java.lang.String origin -> e
+    java.lang.String new_md5 -> f
+    java.lang.String size -> g
+    java.lang.String target_size -> h
+    boolean delta -> i
+    java.lang.String patch_md5 -> j
     java.lang.String a(android.content.Context,boolean) -> a
-com.umeng.update.c -> com.umeng.update.i:
+com.umeng.update.b -> com.umeng.update.q:
+    android.content.Context a -> a
+    java.lang.String[] b -> b
+    java.lang.String c -> c
+    com.umeng.update.UpdateResponse b() -> a
+com.umeng.update.c -> com.umeng.update.r:
     java.lang.String a -> a
     java.lang.String b -> b
     com.umeng.update.UmengDownloadListener c -> c
@@ -3153,13 +3241,29 @@ com.umeng.update.c -> com.umeng.update.i:
     com.umeng.update.net.a j -> j
     boolean k -> k
     void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.umeng.update.UmengDownloadListener) -> a
-    void b() -> a
-    void c() -> b
+    boolean a() -> a
+    void b() -> b
+    void c() -> c
     void a(com.umeng.update.net.a) -> a
-    void d() -> c
-    void a$13462e() -> d
+    void d() -> d
+    void a$13462e() -> e
     void a$3e6d811f$4f708078(int) -> a
     void b(int) -> b
+com.umeng.update.c$a -> com.umeng.update.s:
+    java.lang.String e -> e
+    java.lang.String f -> f
+    com.umeng.update.c a -> a
+    com.umeng.update.c$a a(java.lang.CharSequence) -> a
+    com.umeng.update.c$a b(java.lang.CharSequence) -> b
+    com.umeng.update.c$a c(java.lang.CharSequence) -> c
+    android.app.Notification a() -> a
+com.umeng.update.d -> com.umeng.update.t:
+    java.lang.String d -> d
+    java.lang.String e -> e
+    org.json.JSONObject f -> f
+    org.json.JSONObject a(android.content.Context) -> a
+    org.json.JSONObject a() -> a
+    java.lang.String b() -> b
 com.umeng.update.net.DownloadingService -> com.umeng.update.net.DownloadingService:
     java.lang.String t -> d
     android.app.NotificationManager u -> e
@@ -3358,8 +3462,8 @@ com.umeng.update.net.c$c -> com.umeng.update.net.t:
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
 com.umeng.update.net.d -> com.umeng.update.net.u:
-    void d() -> c
-    void a$13462e() -> d
+    void d() -> d
+    void a$13462e() -> e
     void a$3e6d811f$4f708078(int) -> a
     void b(int) -> b
 com.umeng.update.net.e -> com.umeng.update.net.v:
@@ -3389,20 +3493,22 @@ com.umeng.update.net.j$1 -> com.umeng.update.net.y:
     void run() -> run
 com.umeng.update.util.DeltaUpdate -> com.umeng.update.util.DeltaUpdate:
     boolean a -> a
+    boolean a() -> a
     int a(java.lang.String,java.lang.String,java.lang.String) -> a
     java.lang.String a(android.content.Context) -> a
+    java.lang.String b(android.content.Context) -> b
     int bspatch(java.lang.String,java.lang.String,java.lang.String) -> bspatch
 com.umeng.update.util.b -> com.umeng.update.util.a:
-    android.content.Context b -> a
-    android.app.Notification c -> b
-    android.app.Notification$Builder d -> c
+    android.content.Context b -> b
+    android.app.Notification c -> c
+    android.app.Notification$Builder d -> d
     void e() -> e
     com.umeng.update.util.b b(android.widget.RemoteViews) -> b
     com.umeng.update.util.b a(android.app.PendingIntent) -> a
     com.umeng.update.util.b a(boolean) -> a
     com.umeng.update.util.b b(boolean) -> b
-    com.umeng.update.util.b a$246c5e25() -> f
-    com.umeng.update.util.b d(java.lang.CharSequence) -> c
+    com.umeng.update.util.b a(int) -> b
+    com.umeng.update.util.b d(java.lang.CharSequence) -> d
     com.umeng.update.util.b a(long) -> a
 u.aly.C -> a.a.a:
     java.lang.String a(java.lang.Throwable) -> a
@@ -5105,63 +5211,82 @@ u.aly.aj -> a.a.fn:
     void b(java.lang.String,java.lang.String) -> b
     void b(java.lang.String,java.lang.String,java.lang.Exception) -> b
     void c(java.lang.String,java.lang.String) -> c
+    void c(java.lang.String,java.lang.String,java.lang.Exception) -> c
     void e(java.lang.String,java.lang.String) -> d
-    void e(java.lang.String,java.lang.String,java.lang.Exception) -> c
-u.aly.au -> a.a.fo:
+    void e(java.lang.String,java.lang.String,java.lang.Exception) -> d
+u.aly.ao -> a.a.fo:
+    java.lang.String a -> a
+    java.util.Map b -> b
+    u.aly.aq a(u.aly.ap,java.lang.Class) -> a
+    org.json.JSONObject a(java.lang.String,org.json.JSONObject) -> a
+    java.lang.String a(java.io.InputStream) -> a
+    org.json.JSONObject a(java.lang.String) -> a
+    org.apache.http.params.HttpParams b() -> a
+u.aly.ap -> a.a.fp:
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    org.json.JSONObject a() -> a
+    java.lang.String b() -> b
+    java.lang.String c() -> c
+    void a(java.lang.String) -> a
+u.aly.aq -> a.a.fq:
+u.aly.au -> a.a.fr:
     int a -> a
     byte[] a(byte[]) -> a
-u.aly.av -> a.a.fp:
+u.aly.av -> a.a.fs:
     java.lang.String a -> a
     java.lang.String a(java.lang.String) -> a
     java.lang.String b(java.lang.String) -> b
+    boolean d(java.lang.String) -> c
     java.lang.String a(java.io.InputStream) -> a
     byte[] b(java.io.InputStream) -> b
     void a(java.io.File,byte[]) -> a
     void c(java.io.InputStream) -> c
     void a(java.io.OutputStream) -> a
-u.aly.aw -> a.a.fq:
+u.aly.aw -> a.a.ft:
     boolean a(byte,int) -> a
-u.aly.ax -> a.a.fr:
+u.aly.ax -> a.a.fu:
     short[] a -> a
     int b -> b
     short a() -> a
     void a(short) -> a
     void c() -> b
     java.lang.String toString() -> toString
-u.aly.az -> a.a.fs:
+u.aly.az -> a.a.fv:
     void a(u.aly.aY) -> a
     void b(u.aly.aY) -> b
-u.aly.b -> a.a.ft:
+u.aly.b -> a.a.fw:
     android.content.Context b -> a
     java.lang.String f() -> g
-u.aly.ba -> a.a.fu:
+u.aly.ba -> a.a.fx:
     u.aly.aY a(u.aly.bm) -> a
-u.aly.bb -> a.a.fv:
+u.aly.bb -> a.a.fy:
     int a -> a
     void a(u.aly.aY,byte) -> a
     void a(u.aly.aY,byte,int) -> a
-u.aly.bc -> a.a.fw:
+u.aly.bc -> a.a.fz:
     byte a -> a
     int b -> b
-u.aly.bd -> a.a.fx:
+u.aly.bd -> a.a.ga:
     java.lang.String a -> a
-u.aly.be -> a.a.fy:
+u.aly.be -> a.a.gb:
     java.lang.Class D() -> s
     void a(java.util.BitSet,int) -> a
     java.util.BitSet b(int) -> b
-u.aly.bg -> a.a.fz:
+u.aly.bg -> a.a.gc:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.bh -> a.a.ga:
+u.aly.bh -> a.a.gd:
     u.aly.bg b() -> a
-u.aly.bi -> a.a.gb:
-u.aly.bj -> a.a.gc:
-u.aly.bk -> a.a.gd:
+u.aly.bi -> a.a.ge:
+u.aly.bj -> a.a.gf:
+u.aly.bk -> a.a.gg:
     java.io.InputStream a -> a
     java.io.OutputStream b -> b
     int a(byte[],int,int) -> a
     void b(byte[],int,int) -> b
-u.aly.bl -> a.a.ge:
+u.aly.bl -> a.a.gh:
     byte[] a -> a
     int b -> b
     int c -> c
@@ -5173,7 +5298,7 @@ u.aly.bl -> a.a.ge:
     int g() -> c
     int h() -> d
     void a(int) -> a
-u.aly.bm -> a.a.gf:
+u.aly.bm -> a.a.gi:
     int a(byte[],int,int) -> a
     int d$1cf967b1(byte[],int) -> b
     void b(byte[]) -> a
@@ -5182,9 +5307,9 @@ u.aly.bm -> a.a.gf:
     int g() -> c
     int h() -> d
     void a(int) -> a
-u.aly.bn -> a.a.gg:
+u.aly.bn -> a.a.gj:
     int f -> a
-u.aly.c -> a.a.gh:
+u.aly.c -> a.a.gk:
     byte[] a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -5205,7 +5330,7 @@ u.aly.c -> a.a.gh:
     byte[] a(byte[]) -> a
     java.lang.String b(byte[]) -> b
     byte[] b(java.lang.String) -> a
-u.aly.d -> a.a.gi:
+u.aly.d -> a.a.gl:
     java.lang.String a -> a
     java.io.File b -> b
     u.aly.S c -> c
@@ -5220,10 +5345,10 @@ u.aly.d -> a.a.gi:
     void e() -> d
     void f() -> f
     u.aly.S h() -> g
-u.aly.e -> a.a.gj:
+u.aly.e -> a.a.gm:
     android.content.Context b -> a
     java.lang.String f() -> g
-u.aly.f -> a.a.gk:
+u.aly.f -> a.a.gn:
     byte[] b -> a
     u.aly.T c -> b
     android.content.Context d -> c
@@ -5232,21 +5357,21 @@ u.aly.f -> a.a.gk:
     u.aly.T a() -> a
     void b() -> b
     void c() -> c
-u.aly.g -> a.a.gl:
+u.aly.g -> a.a.go:
     android.content.Context b -> a
     java.lang.String f() -> g
-u.aly.h -> a.a.gm:
+u.aly.h -> a.a.gp:
     u.aly.d a -> a
     u.aly.f b -> b
     u.aly.d a(android.content.Context) -> a
     u.aly.f b(android.content.Context) -> b
-u.aly.i -> a.a.gn:
+u.aly.i -> a.a.gq:
     java.util.regex.Pattern c -> a
     android.content.Context d -> b
     java.lang.String f() -> g
     java.lang.String g() -> h
     java.io.File h() -> i
-u.aly.j -> a.a.go:
+u.aly.j -> a.a.gr:
     u.aly.q a -> a
     u.aly.r b -> b
     com.umeng.analytics.ReportPolicy$e c -> c
@@ -5261,46 +5386,49 @@ u.aly.j -> a.a.go:
     byte[] c() -> b
     u.aly.af a(byte[]) -> a
     byte[] a(u.aly.af) -> a
-u.aly.k -> a.a.gp:
+    void a(int,int) -> a
+    void a(int,long) -> a
+u.aly.k -> a.a.gs:
     u.aly.o a -> a
     android.content.Context b -> b
     u.aly.k c -> c
     u.aly.k a(android.content.Context) -> a
+    void a(com.umeng.analytics.onlineconfig.a) -> a
     void a(u.aly.p) -> a
     void b(u.aly.p) -> b
     void b() -> a
     u.aly.o a(u.aly.k) -> a
-u.aly.k$1 -> a.a.gq:
+u.aly.k$1 -> a.a.gt:
     u.aly.k a -> a
     u.aly.p b -> b
     void a() -> a
-u.aly.k$3 -> a.a.gr:
+u.aly.k$3 -> a.a.gu:
     u.aly.k a -> a
     void a() -> a
-u.aly.l -> a.a.gs:
+u.aly.l -> a.a.gv:
     java.lang.String a -> a
     boolean b -> b
     android.content.SharedPreferences c -> c
     java.util.Map d -> d
     void a(boolean) -> a
-u.aly.m -> a.a.gt:
+u.aly.m -> a.a.gw:
     java.lang.Thread$UncaughtExceptionHandler a -> a
     u.aly.t b -> b
     void a(u.aly.t) -> a
     void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
-u.aly.n -> a.a.gu:
+u.aly.n -> a.a.gx:
     int a -> a
     int b -> b
     u.aly.l c -> c
     android.content.Context d -> d
     u.aly.k e -> e
-u.aly.o -> a.a.gv:
+u.aly.o -> a.a.gy:
     void b(u.aly.p) -> b
     void a(u.aly.p) -> a
     void b() -> a
-u.aly.p -> a.a.gw:
+u.aly.p -> a.a.gz:
     void a(u.aly.af,java.lang.String) -> a
-u.aly.q -> a.a.gx:
+u.aly.q -> a.a.ha:
     java.util.List a -> a
     u.aly.H b -> b
     u.aly.I c -> c
@@ -5317,7 +5445,7 @@ u.aly.q -> a.a.gx:
     u.aly.T f() -> e
     u.aly.S g() -> f
     u.aly.J h() -> g
-u.aly.r -> a.a.gy:
+u.aly.r -> a.a.hb:
     int d -> a
     java.lang.String e -> b
     java.lang.String f -> c
@@ -5331,12 +5459,12 @@ u.aly.r -> a.a.gy:
     byte[] a(byte[],java.lang.String) -> a
     java.lang.String a(android.content.Context) -> a
     int b(byte[]) -> b
-u.aly.t -> a.a.gz:
+u.aly.t -> a.a.hc:
     void a(java.lang.Throwable) -> a
-u.aly.v -> a.a.ha:
+u.aly.v -> a.a.hd:
     java.lang.String d -> a
     java.lang.String e -> b
-u.aly.w -> a.a.hb:
+u.aly.w -> a.a.he:
     int d -> d
     int a -> a
     int b -> b
@@ -5353,12 +5481,12 @@ u.aly.w -> a.a.hb:
     void h() -> f
     boolean i() -> g
     long j() -> h
-u.aly.x -> a.a.hc:
+u.aly.x -> a.a.hf:
     java.lang.String a -> a
     long b -> b
-u.aly.y -> a.a.hd:
+u.aly.y -> a.a.hg:
     u.aly.ae a(android.content.Context) -> a
-u.aly.z -> a.a.he:
+u.aly.z -> a.a.hh:
     java.util.Map b -> a
     java.util.ArrayList c -> b
     void a(java.lang.String) -> a
@@ -5451,12 +5579,18 @@ u.fb.x -> a.b.k:
     org.json.JSONObject b(android.content.Context) -> b
 u.upd.a -> a.c.a:
     java.lang.String a -> a
+    java.lang.String c(android.content.Context) -> a
     boolean a(android.content.Context,java.lang.String) -> a
-    java.lang.String[] j(android.content.Context) -> d
-    boolean k(android.content.Context) -> a
-    boolean l(android.content.Context) -> b
+    java.lang.String f(android.content.Context) -> b
+    java.lang.String[] j(android.content.Context) -> i
+    boolean k(android.content.Context) -> c
+    boolean l(android.content.Context) -> d
     boolean b() -> a
-    java.lang.String v(android.content.Context) -> c
+    java.lang.String o(android.content.Context) -> e
+    java.lang.String p(android.content.Context) -> j
+    java.lang.String t(android.content.Context) -> f
+    java.lang.String u(android.content.Context) -> g
+    java.lang.String v(android.content.Context) -> h
 u.upd.b -> a.c.b:
     boolean a -> a
     void a(java.lang.String,java.lang.String) -> a
@@ -5465,6 +5599,8 @@ u.upd.b -> a.c.b:
     void b(java.lang.String,java.lang.String,java.lang.Exception) -> b
     void c(java.lang.String,java.lang.String) -> c
     void c(java.lang.String,java.lang.String,java.lang.Exception) -> c
+    void e(java.lang.String,java.lang.String) -> d
+    void e(java.lang.String,java.lang.String,java.lang.Exception) -> d
 u.upd.c -> a.c.c:
     java.lang.String a -> a
     u.upd.c b -> b
@@ -5483,23 +5619,42 @@ u.upd.c -> a.c.c:
     int d(java.lang.String) -> c
     int f(java.lang.String) -> d
     int a(java.lang.String,java.lang.String) -> a
-u.upd.i -> a.c.d:
-u.upd.j -> a.c.e:
+u.upd.g -> a.c.d:
+    java.lang.String a -> a
+    java.util.Map b -> b
+    u.upd.i a(u.upd.h,java.lang.Class) -> a
+    org.json.JSONObject a(java.lang.String,org.json.JSONObject) -> a
+    java.lang.String a(java.io.InputStream) -> a
+    org.json.JSONObject a(java.lang.String) -> a
+    org.apache.http.params.HttpParams b() -> a
+u.upd.h -> a.c.e:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    org.json.JSONObject a() -> a
+    java.lang.String b() -> b
+    java.lang.String c() -> c
+    void a(java.lang.String) -> a
+u.upd.i -> a.c.f:
+u.upd.j -> a.c.g:
     int b(android.content.Context) -> a
     int e(android.content.Context) -> b
     int g(android.content.Context) -> c
-u.upd.l -> a.c.f:
+u.upd.l -> a.c.h:
     int a(android.content.Context) -> a
-    int d(android.content.Context) -> b
-    int e(android.content.Context) -> c
-    int i(android.content.Context) -> d
-    int k(android.content.Context) -> e
-    int l(android.content.Context) -> f
-    int m(android.content.Context) -> g
-    int n(android.content.Context) -> h
-u.upd.n -> a.c.g:
+    int b(android.content.Context) -> b
+    int d(android.content.Context) -> c
+    int e(android.content.Context) -> d
+    int i(android.content.Context) -> e
+    int k(android.content.Context) -> f
+    int l(android.content.Context) -> g
+    int m(android.content.Context) -> h
+    int n(android.content.Context) -> i
+u.upd.n -> a.c.i:
     java.lang.String a -> a
     java.lang.String a(java.lang.String) -> a
+    java.lang.String b(java.lang.String) -> b
     java.lang.String a(java.io.File) -> a
-    java.lang.String c(java.lang.String) -> b
+    java.lang.String c(java.lang.String) -> c
+    boolean d(java.lang.String) -> d
     java.lang.String a() -> a

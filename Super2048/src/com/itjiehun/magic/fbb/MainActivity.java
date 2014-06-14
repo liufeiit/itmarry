@@ -1,9 +1,12 @@
 package com.itjiehun.magic.fbb;
 
+import org.json.JSONObject;
+
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.ViewGroup;
@@ -17,6 +20,10 @@ import com.itjiehun.magic.Tile;
 import com.itjiehun.magic.umeng.UmengStatic;
 import com.itjiehun.magic.waps.WapsStatic;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener;
+import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UmengUpdateListener;
+import com.umeng.update.UpdateResponse;
 
 public class MainActivity extends Activity {
 
@@ -36,11 +43,18 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		view = new MainView(getBaseContext());
-		view.setId(11111);
 
 		AppConnect.getInstance(this);
 		AppConnect.getInstance(WapsStatic.APP_ID, WapsStatic.APP_PID, this);
+		
 		MobclickAgent.onResume(this, UmengStatic.UMENG_APPKEY, UmengStatic.UMENG_CHANNEL);
+
+		UmengUpdateAgent.setAppkey(UmengStatic.UMENG_APPKEY);
+		UmengUpdateAgent.setChannel(UmengStatic.UMENG_CHANNEL);
+		UmengUpdateAgent.update(this);
+		MobclickAgent.updateOnlineConfig(this);
+		UmengUpdateAgent.setUpdateCheckConfig(true);
+		UmengUpdateAgent.setUpdateAutoPopup(true);
 
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		view.hasSaveState = settings.getBoolean("save_state", false);
@@ -50,15 +64,21 @@ public class MainActivity extends Activity {
 			}
 		}
 		setContentView(view);
-
-		LinearLayout adlayout = new LinearLayout(this);
-		adlayout.setGravity(Gravity.BOTTOM);
-		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
-				ViewGroup.LayoutParams.MATCH_PARENT);
-		AppConnect.getInstance(this).showBannerAd(this, adlayout);
-//		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
-		this.addContentView(adlayout, layoutParams);
-
+		String ads = MobclickAgent.getConfigParams(this, UmengStatic.ADS_KEY);
+		Log.e("umeng ads", "ads : " + ads);
+		if("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
+			LinearLayout adlayout = new LinearLayout(this);
+			adlayout.setGravity(Gravity.BOTTOM);
+			RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
+					ViewGroup.LayoutParams.MATCH_PARENT);
+			AppConnect.getInstance(this).showBannerAd(this, adlayout);
+//			layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
+			addContentView(adlayout, layoutParams);
+		}
+		/*MobclickAgent.setOnlineConfigureListener(new UmengOnlineConfigureListener() {
+					public void onDataReceived(JSONObject data) {
+					}
+				});*/
 	}
 
 	@Override

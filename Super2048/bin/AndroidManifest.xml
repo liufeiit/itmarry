@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.itjiehun.magic.fbb"
     android:installLocation="auto"
-    android:versionCode="10001"
-    android:versionName="2.2.0" >
+    android:versionCode="11001"
+    android:versionName="2.2.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -32,13 +32,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService"/>
+	
+        <activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+	</activity>
     </application>
 	
-    <meta-data android:name="UMENG_APPKEY" android:value="5396666956240bde28001d2e"/>
+    <meta-data android:value="5396666956240bde28001d2e" android:name="UMENG_APPKEY"/>
+	<meta-data android:value="hiapk" android:name="UMENG_CHANNEL"/>
+	
 	<meta-data android:name="APP_ID" android:value="faefc41ffba6c15b5508eeaa05da9444"/>
-	
-	
-	<meta-data android:name="UMENG_CHANNEL" android:value="nearme"/>
-	<meta-data android:name="APP_PID" android:value="nearme"/>
+	<meta-data android:name="APP_PID" android:value="hiapk"/>
 	
 </manifest>
