@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">甄嬛传</string>
+    <string name="header">甄嬛传</string>
+    <string name="action_settings">设置</string>
+    <string name="new_game">重新开始</string>
+    <string name="high_score">最高分</string>
+    <string name="score">分数</string>
+    <string name="instructions">&#160;&#160;上下或者左右移动头像，可以把两个相邻的头像合并.</string>
+    <string name="you_win">You Win!</string>
+    <string name="game_over">Game Over!</string>
+    <string name="go_on">Tap to Continue</string>
+    <string name="for_now">For now&#8230;</string>
+    <string name="endless">"Endless" Mode</string>
+
+</resources>
