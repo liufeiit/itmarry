@@ -10,5 +10,5 @@ public interface WapsStatic {
 
 	String APP_ID = "faefc41ffba6c15b5508eeaa05da9444";
 	
-	String APP_PID = "360";
+	String APP_PID = "nearme";
 }
