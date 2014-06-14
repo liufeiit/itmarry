@@ -82,6 +82,9 @@ public class MainActivity extends Activity {
 		AppConnect.getInstance(this).showBannerAd(this, adlayout);
 		//layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
 		addContentView(adlayout, layoutParams);
+		
+//		AppConnect.getInstance(this).showOffers(this);
+		
 	}
 
 	@Override
