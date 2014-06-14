@@ -8,8 +8,6 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
@@ -19,8 +17,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
-
-import com.itjiehun.magic.zh.R;
 
 public class MainView extends View {
 
@@ -102,29 +98,22 @@ public class MainView extends View {
 
 	private static final float MERGING_ACCELERATION = (float) -0.5;
 	private static final float INITIAL_VELOCITY = (1 - MERGING_ACCELERATION) / 4;
-	
+
 	@Override
 	public void onDraw(Canvas canvas) {
 		// Reset the transparency of the screen
-
 		canvas.drawBitmap(background, 0, 0, paint);
-
 		drawScoreText(canvas);
-
 		if (!game.isActive() && !game.aGrid.isAnimationActive()) {
 			drawNewGameButton(canvas, true);
 		}
-
 		drawCells(canvas);
-
 		if (!game.isActive()) {
 			drawEndGameState(canvas);
 		}
-
 		if (!game.canContinue()) {
 			drawEndlessText(canvas);
 		}
-
 		// Refresh the screen if there is still an animation running
 		if (game.aGrid.isAnimationActive()) {
 			invalidate(startingX, startingY, endingX, endingY);
@@ -149,90 +138,35 @@ public class MainView extends View {
 		draw.setBounds(startingX, startingY, endingX, endingY);
 		draw.draw(canvas);
 	}
-	
-	private final Bitmap 
-			/********************************十二生肖************************************/
-			mouse = BitmapFactory.decodeResource(getResources(), R.drawable.mouse),
-			cow = BitmapFactory.decodeResource(getResources(), R.drawable.cow),
-			tiger = BitmapFactory.decodeResource(getResources(), R.drawable.tiger),
-			rabbit = BitmapFactory.decodeResource(getResources(), R.drawable.rabbit),
-			dragon = BitmapFactory.decodeResource(getResources(), R.drawable.dragon),
-			snake = BitmapFactory.decodeResource(getResources(), R.drawable.snake),
-			horse = BitmapFactory.decodeResource(getResources(), R.drawable.horse),
-			sheep = BitmapFactory.decodeResource(getResources(), R.drawable.sheep),
-			monkey = BitmapFactory.decodeResource(getResources(), R.drawable.monkey),
-			chicken = BitmapFactory.decodeResource(getResources(), R.drawable.chicken),
-			dog = BitmapFactory.decodeResource(getResources(), R.drawable.dog),
-			pig = BitmapFactory.decodeResource(getResources(), R.drawable.pig),
-			top = BitmapFactory.decodeResource(getResources(), R.drawable.top),
-			/*********************************十二生肖***********************************/
 
-			/********************************范冰冰************************************/
-			fbb_2 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_2),
-			fbb_4 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_4),
-			fbb_8 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_8),
-			fbb_16 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_16),
-			fbb_32 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_32),
-			fbb_64 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_64),
-			fbb_128 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_128),
-			fbb_256 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_256),
-			fbb_512 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_512),
-			fbb_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_1024),
-			fbb_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_2048),
-			fbb_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_4096),
-			fbb_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.fbb_8192),
-			/********************************范冰冰************************************/
-			
-			/********************************金秀贤************************************/
-			jxx_2 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_2),
-			jxx_4 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_4),
-			jxx_8 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_8),
-			jxx_16 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_16),
-			jxx_32 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_32),
-			jxx_64 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_64),
-			jxx_128 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_128),
-			jxx_256 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_256),
-			jxx_512 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_512),
-			jxx_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_1024),
-			jxx_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_2048),
-//			jxx_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_4096),
-//			jxx_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_8192)
-			/********************************金秀贤************************************/
-			
-			/********************************甄嬛版************************************/
-			zh_2 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_1),
-			zh_4 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_2),
-			zh_8 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_3),
-			zh_16 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_4),
-			zh_32 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_5),
-			zh_64 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_6),
-			zh_128 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_7),
-			zh_256 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_8),
-			zh_512 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_9),
-			zh_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_10),
-			zh_2048 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_11),
-			zh_4096 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_12),
-			zh_8192 = BitmapFactory.decodeResource(getResources(), R.drawable.zh_13)
-			/********************************甄嬛版************************************/
-			;
-	
-	public static Bitmap getRoundedCornerBitmap0(Bitmap bitmap, float roundPx) { 
-        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), 
-                bitmap.getHeight(), Config.ARGB_8888); 
-        Canvas canvas = new Canvas(output); 
-        final int color = 0xff424242; 
-        final Paint paint = new Paint(); 
-        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight()); 
-        final RectF rectF = new RectF(rect); 
-        paint.setAntiAlias(true); 
-        canvas.drawARGB(0, 0, 0, 0); 
-        paint.setColor(color); 
-        canvas.drawRoundRect(rectF, roundPx, roundPx, paint); 
-        paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN)); 
-        canvas.drawBitmap(bitmap, rect, rect, paint); 
-        return output; 
-    } 
-	
+	private final Bitmap jxx_2 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_2), jxx_4 = BitmapFactory
+			.decodeResource(getResources(), R.drawable.jxx_4), jxx_8 = BitmapFactory.decodeResource(getResources(),
+			R.drawable.jxx_8), jxx_16 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_16),
+			jxx_32 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_32), jxx_64 = BitmapFactory
+					.decodeResource(getResources(), R.drawable.jxx_64), jxx_128 = BitmapFactory.decodeResource(
+					getResources(), R.drawable.jxx_128), jxx_256 = BitmapFactory.decodeResource(getResources(),
+					R.drawable.jxx_256), jxx_512 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_512),
+			jxx_1024 = BitmapFactory.decodeResource(getResources(), R.drawable.jxx_1024), jxx_2048 = BitmapFactory
+					.decodeResource(getResources(), R.drawable.jxx_2048), jxx_4096 = BitmapFactory.decodeResource(
+					getResources(), R.drawable.jxx_4096), jxx_8192 = BitmapFactory.decodeResource(getResources(),
+					R.drawable.jxx_8192);
+
+	public static Bitmap getRoundedCornerBitmap0(Bitmap bitmap, float roundPx) {
+		Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Config.ARGB_8888);
+		Canvas canvas = new Canvas(output);
+		final int color = 0xff424242;
+		final Paint paint = new Paint();
+		final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+		final RectF rectF = new RectF(rect);
+		paint.setAntiAlias(true);
+		canvas.drawARGB(0, 0, 0, 0);
+		paint.setColor(color);
+		canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+		paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+		canvas.drawBitmap(bitmap, rect, rect, paint);
+		return output;
+	}
+
 	private void createBitmapCells() {
 		paint.setTextSize(cellTextSize);
 		paint.setTextAlign(Paint.Align.CENTER);
@@ -251,151 +185,58 @@ public class MainView extends View {
 				paint.setColor(TEXT_BLACK);
 				paintCell.setColor(TEXT_BLACK);
 			}
-			
+
 			RectF dst = new RectF(0, 0, cellSize, cellSize);
-			paintCell.setAntiAlias(true); 
-	        canvas.drawARGB(0, 0, 0, 0); 
-	        canvas.drawRoundRect(dst, 20, 20, paintCell); 
-	        paintCell.setXfermode(new PorterDuffXfermode(Mode.SRC_IN)); 
-	        canvas.drawBitmap(getZHBitmap(value), null, dst, paintCell); 
-			
-//			drawCellText(canvas, value, 0, 0);
-			
+			paintCell.setAntiAlias(true);
+			canvas.drawARGB(0, 0, 0, 0);
+			canvas.drawRoundRect(dst, 20, 20, paintCell);
+			paintCell.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+			canvas.drawBitmap(getJxxBitmap(value), null, dst, paintCell);
 			bitmapCell[xx] = new BitmapDrawable(resources, bitmap);
 		}
 	}
-	
-	private Bitmap getZHBitmap(int value) {
-		if(2 == value) {
-			return zh_2;
+
+	private Bitmap getJxxBitmap(int value) {
+		if (2 == value) {
+			return jxx_2;
 		}
-		if(4 == value) {
-			return zh_4;
+		if (4 == value) {
+			return jxx_4;
 		}
-		if(8 == value) {
-			return zh_8;
+		if (8 == value) {
+			return jxx_8;
 		}
-		if(16 == value) {
-			return zh_16;
+		if (16 == value) {
+			return jxx_16;
 		}
-		if(32 == value) {
-			return zh_32;
+		if (32 == value) {
+			return jxx_32;
 		}
-		if(64 == value) {
-			return zh_64;
+		if (64 == value) {
+			return jxx_64;
 		}
-		if(128 == value) {
-			return zh_128;
+		if (128 == value) {
+			return jxx_128;
 		}
-		if(256 == value) {
-			return zh_256;
+		if (256 == value) {
+			return jxx_256;
 		}
-		if(512 == value) {
-			return zh_512;
+		if (512 == value) {
+			return jxx_512;
 		}
-		if(1024 == value) {
-			return zh_1024;
+		if (1024 == value) {
+			return jxx_1024;
 		}
-		if(2048 == value) {
-			return zh_2048;
+		if (2048 == value) {
+			return jxx_2048;
 		}
-		if(4096 == value) {
-			return zh_4096;
+		if (4096 == value) {
+			return jxx_4096;
 		}
-		if(8192 == value) {
-			return zh_8192;
+		if (8192 == value) {
+			return jxx_8192;
 		}
-		return top;
-	}
-	
-	// 范冰冰
-	private Bitmap getFBBBitmap(int value) {
-		if(2 == value) {
-			return fbb_2;
-		}
-		if(4 == value) {
-			return fbb_4;
-		}
-		if(8 == value) {
-			return fbb_8;
-		}
-		if(16 == value) {
-			return fbb_16;
-		}
-		if(32 == value) {
-			return fbb_32;
-		}
-		if(64 == value) {
-			return fbb_64;
-		}
-		if(128 == value) {
-			return fbb_128;
-		}
-		if(256 == value) {
-			return fbb_256;
-		}
-		if(512 == value) {
-			return fbb_512;
-		}
-		if(1024 == value) {
-			return fbb_1024;
-		}
-		if(2048 == value) {
-			return fbb_2048;
-		}
-		if(4096 == value) {
-			return fbb_4096;
-		}
-		if(8192 == value) {
-			return fbb_8192;
-		}
-		return top;
-	}
-	
-	/**
-	 * 1鼠 2牛 3虎 4兔 5龙 6蛇 7马 8羊 9猴 10鸡 11狗 12猪
-	 */
-	private Bitmap getSXBitmap(int value) {
-		if(2 == value) {
-			return mouse;
-		}
-		if(4 == value) {
-			return cow;
-		}
-		if(8 == value) {
-			return tiger;
-		}
-		if(16 == value) {
-			return rabbit;
-		}
-		if(32 == value) {
-			return dragon;
-		}
-		if(64 == value) {
-			return snake;
-		}
-		if(128 == value) {
-			return horse;
-		}
-		if(256 == value) {
-			return sheep;
-		}
-		if(512 == value) {
-			return monkey;
-		}
-		if(1024 == value) {
-			return chicken;
-		}
-		if(2048 == value) {
-			return dog;
-		}
-		if(4096 == value) {
-			return pig;
-		}
-		if(8192 == value) {
-			return top;
-		}
-		return top;
+		return jxx_8192;
 	}
 
 	void drawCellText(Canvas canvas, int value, int sX, int sY) {
@@ -405,65 +246,8 @@ public class MainView extends View {
 		} else {
 			paint.setColor(TEXT_BLACK);
 		}
-		// TODO 此处修改图片
-		/*
 		String text = String.valueOf(value);
-		if(value == 2) {
-			text = "唐";
-		} else if(value == 4) {
-			text = "宋";
-		}
 		canvas.drawText(text, sX + cellSize / 2, sY + cellSize / 2 - textShiftY, paint);
-		*/
-		
-		/*
-		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img); 
-		canvas.drawColor(Color.BLACK); 
-		canvas.drawBitmap(bmp, 10, 10, null);
-		*/
-		
-		/*
-		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
-		Matrix matrix = new Matrix();
-		// matrix.postScale(0.9f, 0.9f);
-		matrix.postScale(1.0f, 1.0f);
-		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
-		canvas.drawColor(Color.BLACK);
-		canvas.drawBitmap(dstbmp, 10, 10, null);
-		*/
-		
-		/*Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cell_rectangle_2_img);
-		Matrix matrix = new Matrix();
-		matrix.postScale(1.0f, 1.0f);
-		matrix.postRotate(45);
-		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
-		canvas.drawColor(Color.BLACK);
-		canvas.drawBitmap(dstbmp, 10, 10, null);*/
-		
-		Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.cow);
-		Matrix matrix = new Matrix();
-		matrix.postScale(1.0f, 1.0f);
-		Bitmap dstbmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
-		canvas.drawColor(Color.BLACK);
-		canvas.drawBitmap(dstbmp, 10, 10, null);
-		
-	}
-	
-	// 水印
-	Bitmap createBitmap(int w, int h, Bitmap watermark) {
-		int ww = watermark.getWidth();
-		int wh = watermark.getHeight();
-		// create the new blank bitmap
-		Bitmap newb = Bitmap.createBitmap(w, h, Config.ARGB_8888);// 创建一个新的和SRC长度宽度一样的位图
-		Canvas cv = new Canvas(newb);
-		// draw src into cv.drawBitmap( src, 0, 0, null );//在 0，0坐标开始画入src
-		// draw watermark into
-		cv.drawBitmap(watermark, w - ww + 5, h - wh + 5, null);// 在src的右下角画入水印
-		// save all clip
-		cv.save(Canvas.ALL_SAVE_FLAG);// 保存
-		// store
-		cv.restore();// 存储
-		return newb;
 	}
 
 	private void drawScoreText(Canvas canvas) {
@@ -543,8 +327,6 @@ public class MainView extends View {
 		// Drawing the instructions
 		paint.setTextSize(instructionsTextSize);
 		paint.setTextAlign(Paint.Align.LEFT);
-		//TODO
-//		int textShiftY = centerText() * 5;
 		int textShiftY = centerText() * 2;
 		canvas.drawText(instructionsText, startingX, endingY - textShiftY + textPaddingSize, paint);
 	}
@@ -772,11 +554,7 @@ public class MainView extends View {
 		cellTextSize = textSize * 0.9f;
 		titleTextSize = textSize / 3;
 		bodyTextSize = (int) (textSize / 1.5);
-		// TODO
-//		instructionsTextSize = (int) (textSize / 1.8);
 		instructionsTextSize = (int) (textSize / 2.0);
-		// TODO
-//		headerTextSize = textSize * 2;
 		headerTextSize = (int) (textSize * 1.5);
 		gameOverTextSize = textSize * 2;
 		textPaddingSize = (int) (textSize / 3);

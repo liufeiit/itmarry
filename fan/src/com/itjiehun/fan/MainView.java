@@ -239,6 +239,17 @@ public class MainView extends View {
 		}
 		return fbb_8192;
 	}
+	
+	void drawCellText(Canvas canvas, int value, int sX, int sY) {
+		int textShiftY = centerText();
+		if (value >= 8) {
+			paint.setColor(TEXT_WHITE);
+		} else {
+			paint.setColor(TEXT_BLACK);
+		}
+		String text = String.valueOf(value);
+		canvas.drawText(text, sX + cellSize / 2, sY + cellSize / 2 - textShiftY, paint);
+	}
 
 	private void drawScoreText(Canvas canvas) {
 		// Drawing the score text: Ver 2

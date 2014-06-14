@@ -12,8 +12,6 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.preference.PreferenceManager;
 
-import com.itjiehun.magic.zh.R;
-
 public class MainGame {
 
 	public static final int SPAWN_ANIMATION = -1;
@@ -416,10 +414,14 @@ public class MainGame {
 
 	private void playSound(int sound, int number) {
 		// 声音去除
-//		AudioManager am = (AudioManager) mView.getContext().getSystemService(Context.AUDIO_SERVICE);
-//		float audioMaxVolumn = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-//		float audioCurrentVolumn = am.getStreamVolume(AudioManager.STREAM_MUSIC);
-//		float volumnRatio = audioCurrentVolumn / audioMaxVolumn;
-//		soudPool.play(spMap.get(sound), volumnRatio, volumnRatio, 1, number, 1);
+		// AudioManager am = (AudioManager)
+		// mView.getContext().getSystemService(Context.AUDIO_SERVICE);
+		// float audioMaxVolumn =
+		// am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+		// float audioCurrentVolumn =
+		// am.getStreamVolume(AudioManager.STREAM_MUSIC);
+		// float volumnRatio = audioCurrentVolumn / audioMaxVolumn;
+		// soudPool.play(spMap.get(sound), volumnRatio, volumnRatio, 1, number,
+		// 1);
 	}
 }

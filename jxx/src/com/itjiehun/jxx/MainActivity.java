@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 
 		AppConnect.getInstance(this);
 		AppConnect.getInstance(WapsStatic.APP_ID, WapsStatic.APP_PID, this);
-		
+
 		MobclickAgent.onResume(this, UmengStatic.UMENG_APPKEY, UmengStatic.UMENG_CHANNEL);
 
 		UmengUpdateAgent.setAppkey(UmengStatic.UMENG_APPKEY);
@@ -59,30 +59,15 @@ public class MainActivity extends Activity {
 		setContentView(view);
 		String ads = MobclickAgent.getConfigParams(this, UmengStatic.V360_ADS_KEY);
 		Log.e("umeng ads", "ads : " + ads);
-//		if("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
-//			LinearLayout adlayout = new LinearLayout(this);
-//			adlayout.setGravity(Gravity.BOTTOM);
-//			RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
-//					ViewGroup.LayoutParams.MATCH_PARENT);
-//			AppConnect.getInstance(this).showBannerAd(this, adlayout);
-//			//layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
-//			addContentView(adlayout, layoutParams);
-//		}
-		/*MobclickAgent.setOnlineConfigureListener(new UmengOnlineConfigureListener() {
-					public void onDataReceived(JSONObject data) {
-					}
-				});*/
-		
-		LinearLayout adlayout = new LinearLayout(this);
-		adlayout.setGravity(Gravity.BOTTOM);
-		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
-				ViewGroup.LayoutParams.MATCH_PARENT);
-		AppConnect.getInstance(this).showBannerAd(this, adlayout);
-		//layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);// 此代码可设置顶端或低端
-		addContentView(adlayout, layoutParams);
-		
-//		AppConnect.getInstance(this).showOffers(this);
-		
+		if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
+			LinearLayout adlayout = new LinearLayout(this);
+			adlayout.setGravity(Gravity.BOTTOM);
+			RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+					ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+			AppConnect.getInstance(this).showBannerAd(this, adlayout);
+			layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+			addContentView(adlayout, layoutParams);
+		}
 	}
 
 	@Override
@@ -115,8 +100,7 @@ public class MainActivity extends Activity {
 	protected void onPause() {
 		super.onPause();
 		save();
-		// 保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息
-		MobclickAgent.onPageEnd("Super2048SplashScreen");
+		MobclickAgent.onPageEnd("JxxSplashScreen");
 		MobclickAgent.onPause(this);
 		AppConnect.getInstance(this).close();
 	}
@@ -155,7 +139,7 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		load();
-		MobclickAgent.onPageStart("Super2048SplashScreen"); // 统计页面
+		MobclickAgent.onPageStart("JxxSplashScreen");
 		MobclickAgent.onResume(this);
 	}
 
