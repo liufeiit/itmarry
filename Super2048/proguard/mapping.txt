@@ -2773,7 +2773,7 @@ com.itjiehun.magic.Tile -> com.itjiehun.magic.h:
     int getValue() -> a
     com.itjiehun.magic.Tile[] getMergedFrom() -> b
     void setMergedFrom(com.itjiehun.magic.Tile[]) -> a
-com.itjiehun.magic.fbb.MainActivity -> com.itjiehun.magic.fbb.MainActivity:
+com.itjiehun.magic.zh.MainActivity -> com.itjiehun.magic.zh.MainActivity:
     com.itjiehun.magic.MainView view -> a
     void onCreate(android.os.Bundle) -> onCreate
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown

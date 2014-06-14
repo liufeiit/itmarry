@@ -8,7 +8,7 @@ package com.itjiehun.magic.waps;
  */
 public interface WapsStatic {
 
-	String APP_ID = "faefc41ffba6c15b5508eeaa05da9444";
+	String APP_ID = "b01dbe1021b0a9b7ba3ca7fedc097ba7";
 	
-	String APP_PID = "hiapk";
+	String APP_PID = "baidu";
 }

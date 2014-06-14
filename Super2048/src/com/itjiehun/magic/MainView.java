@@ -20,7 +20,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
-import com.itjiehun.magic.fbb.R;
+import com.itjiehun.magic.zh.R;
 
 public class MainView extends View {
 
@@ -257,7 +257,7 @@ public class MainView extends View {
 	        canvas.drawARGB(0, 0, 0, 0); 
 	        canvas.drawRoundRect(dst, 20, 20, paintCell); 
 	        paintCell.setXfermode(new PorterDuffXfermode(Mode.SRC_IN)); 
-	        canvas.drawBitmap(getFBBBitmap(value), null, dst, paintCell); 
+	        canvas.drawBitmap(getZHBitmap(value), null, dst, paintCell); 
 			
 //			drawCellText(canvas, value, 0, 0);
 			

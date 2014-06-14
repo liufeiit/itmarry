@@ -12,7 +12,7 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.preference.PreferenceManager;
 
-import com.itjiehun.magic.fbb.R;
+import com.itjiehun.magic.zh.R;
 
 public class MainGame {
 

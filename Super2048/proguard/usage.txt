@@ -1690,12 +1690,18 @@ com.itjiehun.magic.MainView:
     private static final float MERGING_ACCELERATION
     private static final float INITIAL_VELOCITY
     220:233:public static android.graphics.Bitmap getRoundedCornerBitmap0(android.graphics.Bitmap,float)
-    269:308:private android.graphics.Bitmap getZHBitmap(int)
+    313:352:private android.graphics.Bitmap getFBBBitmap(int)
     359:398:private android.graphics.Bitmap getSXBitmap(int)
     402:450:void drawCellText(android.graphics.Canvas,int,int,int)
     454:466:android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap)
-com.itjiehun.magic.fbb.BuildConfig
-com.itjiehun.magic.fbb.MainActivity:
+com.itjiehun.magic.fbb.package-info
+com.itjiehun.magic.jxx.package-info
+com.itjiehun.magic.umeng.UmengStatic
+com.itjiehun.magic.umeng.package-info
+com.itjiehun.magic.waps.WapsStatic
+com.itjiehun.magic.waps.package-info
+com.itjiehun.magic.zh.BuildConfig
+com.itjiehun.magic.zh.MainActivity:
     public static final java.lang.String WIDTH
     public static final java.lang.String HEIGHT
     public static final java.lang.String SCORE
@@ -1705,24 +1711,18 @@ com.itjiehun.magic.fbb.MainActivity:
     public static final java.lang.String UNDO_GRID
     public static final java.lang.String GAME_STATE
     public static final java.lang.String UNDO_GAME_STATE
-com.itjiehun.magic.fbb.R
-com.itjiehun.magic.fbb.R$anim
-com.itjiehun.magic.fbb.R$attr
-com.itjiehun.magic.fbb.R$color
-com.itjiehun.magic.fbb.R$dimen
-com.itjiehun.magic.fbb.R$drawable
-com.itjiehun.magic.fbb.R$id
-com.itjiehun.magic.fbb.R$layout
-com.itjiehun.magic.fbb.R$menu
-com.itjiehun.magic.fbb.R$raw
-com.itjiehun.magic.fbb.R$string
-com.itjiehun.magic.fbb.R$style
-com.itjiehun.magic.fbb.package-info
-com.itjiehun.magic.jxx.package-info
-com.itjiehun.magic.umeng.UmengStatic
-com.itjiehun.magic.umeng.package-info
-com.itjiehun.magic.waps.WapsStatic
-com.itjiehun.magic.waps.package-info
+com.itjiehun.magic.zh.R
+com.itjiehun.magic.zh.R$anim
+com.itjiehun.magic.zh.R$attr
+com.itjiehun.magic.zh.R$color
+com.itjiehun.magic.zh.R$dimen
+com.itjiehun.magic.zh.R$drawable
+com.itjiehun.magic.zh.R$id
+com.itjiehun.magic.zh.R$layout
+com.itjiehun.magic.zh.R$menu
+com.itjiehun.magic.zh.R$raw
+com.itjiehun.magic.zh.R$string
+com.itjiehun.magic.zh.R$style
 com.itjiehun.magic.zh.package-info
 com.umeng.analytics.AnalyticsConfig:
     7:7:public AnalyticsConfig()

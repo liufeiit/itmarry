@@ -44,8 +44,8 @@ android.support.v4.widget.SlidingPaneLayout$LayoutParams: SlidingPaneLayout$Layo
 android.support.v4.widget.SlidingPaneLayout$SavedState
 android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
 cn.waps.ad
-com.itjiehun.magic.fbb.MainActivity
-com.itjiehun.magic.fbb.MainActivity: MainActivity()
+com.itjiehun.magic.zh.MainActivity
+com.itjiehun.magic.zh.MainActivity: MainActivity()
 com.umeng.analytics.Gender: com.umeng.analytics.Gender[] values()
 com.umeng.analytics.Gender: com.umeng.analytics.Gender valueOf(java.lang.String)
 com.umeng.analytics.social.UMPlatformData$GENDER: com.umeng.analytics.social.UMPlatformData$GENDER[] values()
