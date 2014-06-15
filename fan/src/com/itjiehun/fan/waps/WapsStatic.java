@@ -10,5 +10,5 @@ public interface WapsStatic {
 
 	String APP_ID = "b01dbe1021b0a9b7ba3ca7fedc097ba7";
 	
-	String APP_PID = "baidu";
+	String APP_PID = "wandoujia";
 }

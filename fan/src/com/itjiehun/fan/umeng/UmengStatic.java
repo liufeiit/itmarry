@@ -16,7 +16,7 @@ public interface UmengStatic {
 
 	String UMENG_APPKEY = "5396666956240bde28001d2e";
 	
-	String UMENG_CHANNEL = "baidu";
+	String UMENG_CHANNEL = "wandoujia";
 	
 	String SCORE_EVENT = "score";
 }

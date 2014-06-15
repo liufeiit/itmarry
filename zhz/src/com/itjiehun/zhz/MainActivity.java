@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		view = new MainView(getBaseContext());
+		view.setMainActivity(this);
 
 		AppConnect.getInstance(this);
 		AppConnect.getInstance(WapsStatic.APP_ID, WapsStatic.APP_PID, this);
@@ -65,6 +66,8 @@ public class MainActivity extends Activity {
 			AppConnect.getInstance(this).showBannerAd(this, adlayout);
 			layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 			addContentView(adlayout, layoutParams);
+			
+			AppConnect.getInstance(this).showOffers(this);
 		}*/
 		LinearLayout adlayout = new LinearLayout(this);
 		adlayout.setGravity(Gravity.BOTTOM);
@@ -73,6 +76,8 @@ public class MainActivity extends Activity {
 		AppConnect.getInstance(this).showBannerAd(this, adlayout);
 		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		addContentView(adlayout, layoutParams);
+		
+		AppConnect.getInstance(this).showOffers(this);
 	}
 
 	@Override

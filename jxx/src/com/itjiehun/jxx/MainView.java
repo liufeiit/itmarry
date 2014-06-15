@@ -450,18 +450,20 @@ public class MainView extends View {
 			} else {
 				displayOverlay = winGameFinalOverlay;
 			}
-			String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
+			/*String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
 			Log.e("umeng ads", "ads : " + ads);
 			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
 				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
-			}
+			}*/
+			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 		} else if (game.gameLost()) {
 			displayOverlay = loseGameOverlay;
-			String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
+			/*String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
 			Log.e("umeng ads", "ads : " + ads);
 			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
 				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
-			}
+			}*/
+			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 		}
 
 		if (displayOverlay != null) {

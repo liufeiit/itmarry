@@ -17,6 +17,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+import cn.waps.AppConnect;
 
 public class MainView extends View {
 
@@ -446,8 +447,20 @@ public class MainView extends View {
 			} else {
 				displayOverlay = winGameFinalOverlay;
 			}
+			/*String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
+			Log.e("umeng ads", "ads : " + ads);
+			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
+				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
+			}*/
+			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 		} else if (game.gameLost()) {
 			displayOverlay = loseGameOverlay;
+			/*String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
+			Log.e("umeng ads", "ads : " + ads);
+			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
+				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
+			}*/
+			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 		}
 
 		if (displayOverlay != null) {
@@ -593,6 +606,12 @@ public class MainView extends View {
 
 	private int centerText() {
 		return (int) ((paint.descent() + paint.ascent()) / 2);
+	}
+	
+	private MainActivity mainActivity;
+	
+	public void setMainActivity(MainActivity mainActivity) {
+		this.mainActivity = mainActivity;
 	}
 
 	public MainView(Context context) {

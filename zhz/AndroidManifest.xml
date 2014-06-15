@@ -40,9 +40,9 @@
     </application>
 	
     <meta-data android:name="UMENG_APPKEY" android:value="539be48f56240b3ccd06111f"/>
-	<meta-data android:name="UMENG_CHANNEL" android:value="baidu"/>
+	<meta-data android:name="UMENG_CHANNEL" android:value="wandoujia"/>
 	
 	<meta-data android:name="APP_ID" android:value="b01dbe1021b0a9b7ba3ca7fedc097ba7"/>
-	<meta-data android:name="APP_PID" android:value="baidu"/>
+	<meta-data android:name="APP_PID" android:value="wandoujia"/>
 	
 </manifest>
