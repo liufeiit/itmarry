@@ -134,6 +134,8 @@ public class MainActivity extends Activity {
 		editor.putInt(GAME_STATE, view.game.gameState);
 		editor.putInt(UNDO_GAME_STATE, view.game.lastGameState);
 		editor.commit();
+		MobclickAgent.onEventValue(this, UmengStatic.SCORE_EVENT, DeviceUtil.getDeviceData(this),
+				Long.valueOf(view.game.highScore).intValue());
 	}
 
 	protected void onResume() {
