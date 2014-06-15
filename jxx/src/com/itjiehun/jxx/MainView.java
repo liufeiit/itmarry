@@ -2,6 +2,9 @@ package com.itjiehun.jxx;
 
 import java.util.ArrayList;
 
+import com.itjiehun.jxx.umeng.UmengStatic;
+import com.umeng.analytics.MobclickAgent;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -16,6 +19,7 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 import cn.waps.AppConnect;
 
@@ -440,16 +444,24 @@ public class MainView extends View {
 		}
 		BitmapDrawable displayOverlay = null;
 		if (game.gameWon()) {
-			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 			if (game.canContinue()) {
 				continueButtonEnabled = true;
 				displayOverlay = winGameContinueOverlay;
 			} else {
 				displayOverlay = winGameFinalOverlay;
 			}
+			String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
+			Log.e("umeng ads", "ads : " + ads);
+			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
+				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
+			}
 		} else if (game.gameLost()) {
-			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 			displayOverlay = loseGameOverlay;
+			String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
+			Log.e("umeng ads", "ads : " + ads);
+			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
+				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
+			}
 		}
 
 		if (displayOverlay != null) {
