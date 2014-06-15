@@ -1,4 +1,3 @@
-a.a
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2
@@ -1376,298 +1375,28 @@ android.support.v4.widget.ViewDragHelper:
     908:927:protected boolean canScroll(android.view.View,boolean,int,int,int,int)
     1331:1337:public boolean isEdgeTouched(int)
     1351:1351:public boolean isEdgeTouched(int,int)
-cn.waps.AdInfo:
-    public android.graphics.Bitmap getAdIcon()
-    public java.lang.String getAdText()
-    protected java.lang.String b()
-    protected java.lang.String c()
-    public java.lang.String getAdPackage()
-    protected java.lang.String d()
-    public java.lang.String getAdName()
-    public int getAdPoints()
-    public java.lang.String getDescription()
-    public java.lang.String getVersion()
-    public java.lang.String getFilesize()
-    public java.lang.String getProvider()
-    public java.lang.String[] getImageUrls()
-    protected java.lang.String e()
-    public java.lang.String getAction()
-    protected java.lang.String f()
-    protected void p(java.lang.String)
-    protected int g()
-    protected void b(int)
-    protected int h()
-    protected void c(int)
-    protected android.graphics.Bitmap i()
-    protected void b(android.graphics.Bitmap)
-    protected java.lang.String j()
-    protected void q(java.lang.String)
-    protected java.lang.String k()
-    protected void r(java.lang.String)
-    protected void s(java.lang.String)
-    protected java.lang.String l()
-    protected void t(java.lang.String)
-    protected int m()
-    protected void d(int)
-cn.waps.AnimationType
-cn.waps.AppConnect:
-    public static final java.lang.String LIBRARY_VERSION_NUMBER
-    private static cn.waps.q aM
-    cn.waps.bt m
-    cn.waps.aw n
-    public static final java.lang.String TYPE_BROWSER
-    public static final java.lang.String TYPE_PLAYER
-    public void setPointsCache(boolean)
-    public java.lang.Object[] getPointsData()
-    public java.lang.String getPointsFailedData()
-    public void clearPoints()
-    public void setUpdatePointsFlag(boolean)
-    public void getPoints(cn.waps.UpdatePointsNotifier)
-    public void getPoints()
-    public void awardPoints(int,cn.waps.UpdatePointsNotifier)
-    public void awardPoints(int)
-    public void spendPoints(int,cn.waps.UpdatePointsNotifier)
-    public void spendPoints(int)
-    private void s()
-    private void t()
-    private void u()
-    public java.lang.String getConfig(java.lang.String,java.lang.String)
-    public java.lang.String getConfig(java.lang.String)
-    public void getConfig(java.lang.String,java.lang.String,cn.waps.AppListener)
-    public java.lang.String getConfig_Sync(java.lang.String)
-    public java.util.Map getConfigMap()
-    public void checkUpdate(android.content.Context)
-    private boolean h(java.lang.String)
-    public void showMore(android.content.Context)
-    public void showMore(android.content.Context,java.lang.String)
-    public void setOffersCloseListener(cn.waps.AppListener)
-    public void setMoreCloseListener(cn.waps.AppListener)
-    public void setTuanCloseListener(cn.waps.AppListener)
-    public void setFeedbackCloseListener(cn.waps.AppListener)
-    private void a(int,cn.waps.AppListener)
-    public void setRunnableMap(java.util.HashMap)
-    public void showTuanOffers(android.content.Context)
-    public void showTuanOffers(android.content.Context,java.lang.String)
-    public android.app.Dialog getOffersDialog()
-    public void showFeedback()
-    public void showFeedback(android.content.Context)
-    public void setAdBackColor(int)
-    public void setAdForeColor(int)
-    public void initAdInfo()
-    public java.util.List getAdInfoList()
-    public cn.waps.AdInfo getAdInfo()
-    protected cn.waps.AdInfo a(java.util.List)
-    protected cn.waps.AdInfo a(java.util.List,java.lang.String)
-    public void downloadAd(android.content.Context,java.lang.String)
-    public void clickAd(android.content.Context,java.lang.String)
-    private void d(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
-    public void setWebViewTransparent(boolean)
-    private void h(android.content.Context)
-    public void initPopAd(android.content.Context)
-    public void showPopAd(android.content.Context)
-    public void showPopAd(android.content.Context,int)
-    public android.app.Dialog getPopAdDialog()
-    public boolean hasPopAd(android.content.Context)
-    public android.widget.LinearLayout getPopAdView(android.content.Context)
-    public android.widget.LinearLayout getPopAdView(android.content.Context,int,int)
-    public void showMiniAd(android.content.Context,android.widget.LinearLayout,int)
-    public void initFunAd(android.content.Context)
-    public void showFunAd(android.content.Context,java.lang.String,java.lang.String)
-    public void showBrowser(android.content.Context,java.lang.String)
-    public void showBrowser(android.content.Context,java.lang.String,boolean)
-    public void showPlayer(android.content.Context,java.lang.String)
-    public void showPlayer(android.content.Context,java.lang.String,boolean)
-    public void initUninstallAd(android.content.Context)
-    protected void d(android.content.Context)
-    private java.lang.String i(android.content.Context)
-    private java.lang.String j(android.content.Context)
-    static synthetic java.lang.String p()
-    static synthetic java.lang.String d(java.lang.String)
-    static synthetic boolean e(cn.waps.AppConnect,java.lang.String)
-    static synthetic void f(cn.waps.AppConnect,java.lang.String)
-cn.waps.AppListener:
-    public void onBannerClose()
-    public void onGetConfig(java.lang.String)
-cn.waps.AppLog
-cn.waps.SDKUtils:
-    private android.content.pm.PackageInfo d
-    public void close()
-    public void closeSubmit(java.lang.String)
-    public void closeOfDialog(java.lang.String)
-    public void submit(java.lang.String,java.lang.String)
-    public java.lang.String getAppVersion(java.lang.String)
-    public void load(java.lang.String)
-    public java.lang.String isInstalled(java.lang.String)
-    public android.content.Intent openUrlByBrowser_Intent(java.lang.String,java.lang.String)
-    public void openAppByUri(java.lang.String,java.lang.String,java.lang.String)
-    public java.util.Map getAppInfoMap(java.lang.String)
-    public java.lang.String getRunningAppPackageNames()
-    public boolean isWapNetwork()
-    public java.lang.String getResponseResult(org.apache.http.HttpResponse)
-    public void closeAd()
-    public void hideAd()
-    public void openAd()
-    public void openAd(java.lang.String)
-    public void full_screen()
-    public java.lang.String getScreenStatus()
-    public boolean isTimeLimited(java.lang.String,java.lang.String)
-    public java.lang.String[] splitString(java.lang.String,java.lang.String,java.lang.String)
-    public java.lang.String getNodeTrimValues(org.w3c.dom.NodeList)
-    public java.util.List getList(java.lang.String)
-    public java.lang.String replaceData(java.lang.String)
-    public void sendSMS(java.lang.String,java.lang.String)
-    public void showToast(java.lang.String)
-    public java.lang.String isVisible()
-    public boolean isWifi()
-    public static int getDisplaySize(android.content.Context)
-    public void getHtml(java.lang.String)
-    static synthetic android.content.Context access$000(cn.waps.SDKUtils)
-    static synthetic android.widget.RelativeLayout access$100(cn.waps.SDKUtils)
-    static synthetic android.widget.LinearLayout access$200(cn.waps.SDKUtils)
-    static synthetic cn.waps.AppListener access$300(cn.waps.SDKUtils)
-cn.waps.aa
-cn.waps.aj:
-    public aj()
-    protected static java.lang.String e()
-    protected static java.lang.String g()
-    protected static java.lang.String n()
-    protected static java.lang.String A()
-    protected static java.lang.String B()
-    protected static java.lang.String E()
-    protected static java.lang.String F()
-    protected static java.lang.String G()
-cn.waps.aw
-cn.waps.ax
-cn.waps.ay
-cn.waps.az
-cn.waps.ba
-cn.waps.bb
-cn.waps.bc
-cn.waps.bd
-cn.waps.be:
-    public be()
-cn.waps.bf
-cn.waps.bg
-cn.waps.bh
-cn.waps.bi
-cn.waps.bj
-cn.waps.bk
-cn.waps.bl:
-    protected void b(java.lang.String)
-    protected void i(java.lang.String)
-cn.waps.bt:
-    private android.content.Context i
-    private cn.waps.ae j
-    private android.content.SharedPreferences k
-    private java.lang.String l
-    private java.lang.String m
-    private java.lang.String n
-    private java.lang.String o
-    private java.lang.String p
-    private android.app.Dialog q
-    private java.util.List r
-    private java.lang.String s
-    private cn.waps.cg t
-    java.util.List a
-    private boolean v
-    float c
-    float d
-    android.widget.ViewFlipper e
-    java.util.List f
-    boolean g
-    protected bt()
-    protected void a(android.content.Context,cn.waps.ae,android.content.SharedPreferences,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-    public void a(android.content.Context)
-    public void b(android.content.Context)
-    public void a(android.content.Context,int)
-    public android.app.Dialog a()
-    private void a(android.content.Context,java.util.List,boolean,int)
-    private java.util.List a(java.io.InputStream)
-    protected android.graphics.Bitmap a(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
-    private void a(java.util.List)
-    private void a(cn.waps.AdInfo)
-    private android.widget.LinearLayout a(cn.waps.AdInfo,android.content.Context,android.app.Dialog)
-    private android.widget.LinearLayout a(cn.waps.AdInfo,android.content.Context,android.app.Dialog,int,int)
-    private android.widget.LinearLayout b(cn.waps.AdInfo,android.content.Context,android.app.Dialog,int,int)
-    private void a(cn.waps.AdInfo,android.widget.ViewFlipper,android.widget.LinearLayout)
-    private void a(java.lang.String,android.app.Dialog)
-    public boolean c(android.content.Context)
-    private cn.waps.AdInfo a(android.content.Context,java.util.List)
-    public android.widget.LinearLayout a(android.content.Context,int,int)
-    static synthetic cn.waps.AdInfo a(cn.waps.bt,android.content.Context,java.util.List)
-    static synthetic android.widget.LinearLayout a(cn.waps.bt,cn.waps.AdInfo,android.content.Context,android.app.Dialog,int,int)
-    static synthetic void a(cn.waps.bt,cn.waps.AdInfo,android.widget.ViewFlipper,android.widget.LinearLayout)
-    static synthetic android.content.SharedPreferences a(cn.waps.bt)
-    static synthetic java.lang.String b(cn.waps.bt)
-    static synthetic java.util.List c(cn.waps.bt)
-    static synthetic boolean a(cn.waps.bt,boolean)
-    static synthetic java.lang.String d(cn.waps.bt)
-    static synthetic cn.waps.ae e(cn.waps.bt)
-    static synthetic java.util.List a(cn.waps.bt,java.util.List)
-    static synthetic java.util.List a(cn.waps.bt,java.io.InputStream)
-    static synthetic void a(cn.waps.bt,android.content.Context,java.util.List,boolean,int)
-    static synthetic java.lang.String f(cn.waps.bt)
-    static synthetic java.lang.String g(cn.waps.bt)
-    static synthetic java.lang.String h(cn.waps.bt)
-    static synthetic void b(cn.waps.bt,java.util.List)
-    static synthetic void a(cn.waps.bt,cn.waps.AdInfo)
-    static synthetic void a(cn.waps.bt,java.lang.String,android.app.Dialog)
-    static synthetic android.os.Handler b()
-    static synthetic java.lang.String i(cn.waps.bt)
-    static synthetic android.content.Context j(cn.waps.bt)
-cn.waps.bu
-cn.waps.bv
-cn.waps.bw
-cn.waps.bx
-cn.waps.by
-cn.waps.bz
-cn.waps.ca
-cn.waps.cb
-cn.waps.cc
-cn.waps.cd
-cn.waps.ce
-cn.waps.cf
-cn.waps.cg
-cn.waps.ch
-cn.waps.ci
-cn.waps.cj
-cn.waps.ck
-cn.waps.cl:
-    protected static void a(android.content.Context,java.lang.String,java.lang.String)
-cn.waps.co
-cn.waps.cp
-cn.waps.cq
-cn.waps.cr
-cn.waps.cs
-cn.waps.ct:
-    public ct()
-    protected static android.graphics.drawable.ShapeDrawable b(float,java.lang.String)
-    protected static android.graphics.drawable.ShapeDrawable c(float,java.lang.String)
-cn.waps.m
-cn.waps.n
-cn.waps.o
-cn.waps.p
-cn.waps.q
-cn.waps.r
-cn.waps.s
-cn.waps.t:
-    private t(cn.waps.AppConnect)
-    synthetic t(cn.waps.AppConnect,cn.waps.i)
-cn.waps.u:
-    private u(cn.waps.AppConnect)
-    synthetic u(cn.waps.AppConnect,cn.waps.i)
-cn.waps.v:
-    private v(cn.waps.AppConnect)
-    synthetic v(cn.waps.AppConnect,cn.waps.i)
-cn.waps.y:
-    private y(cn.waps.AppConnect)
-    synthetic y(cn.waps.AppConnect,cn.waps.i)
-com.itjiehun.magic.InputListener:
+com.itjiehun.zhz.BuildConfig
+com.itjiehun.zhz.DeviceUtil:
+    14:14:public DeviceUtil()
+    38:44:public static java.lang.String getDeviceId(android.content.Context)
+    48:62:public static java.lang.String getSimpleDeviceId(android.content.Context)
+    66:71:public static boolean isEmulator()
+com.itjiehun.zhz.InputListener:
     private static final int SWIPE_MIN_DISTANCE
     private static final int SWIPE_THRESHOLD_VELOCITY
     private static final int MOVE_THRESHOLD
     private static final int RESET_STARTING
-com.itjiehun.magic.MainGame:
+com.itjiehun.zhz.MainActivity:
+    public static final java.lang.String WIDTH
+    public static final java.lang.String HEIGHT
+    public static final java.lang.String SCORE
+    public static final java.lang.String HIGH_SCORE
+    public static final java.lang.String UNDO_SCORE
+    public static final java.lang.String CAN_UNDO
+    public static final java.lang.String UNDO_GRID
+    public static final java.lang.String GAME_STATE
+    public static final java.lang.String UNDO_GAME_STATE
+com.itjiehun.zhz.MainGame:
     public static final int SPAWN_ANIMATION
     public static final int MOVE_ANIMATION
     public static final int MERGE_ANIMATION
@@ -1685,45 +1414,28 @@ com.itjiehun.magic.MainGame:
     public static final int GAME_NORMAL_WON
     public static final int GAME_ENDLESS
     public static final int GAME_ENDLESS_WON
-com.itjiehun.magic.MainView:
+com.itjiehun.zhz.MainView:
     public static final int BASE_ANIMATION_TIME
     private static final float MERGING_ACCELERATION
     private static final float INITIAL_VELOCITY
-    220:233:public static android.graphics.Bitmap getRoundedCornerBitmap0(android.graphics.Bitmap,float)
-    313:352:private android.graphics.Bitmap getFBBBitmap(int)
-    359:398:private android.graphics.Bitmap getSXBitmap(int)
-    402:450:void drawCellText(android.graphics.Canvas,int,int,int)
-    454:466:android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap)
-com.itjiehun.magic.fbb.package-info
-com.itjiehun.magic.jxx.package-info
-com.itjiehun.magic.umeng.UmengStatic
-com.itjiehun.magic.umeng.package-info
-com.itjiehun.magic.waps.WapsStatic
-com.itjiehun.magic.waps.package-info
-com.itjiehun.magic.zh.BuildConfig
-com.itjiehun.magic.zh.MainActivity:
-    public static final java.lang.String WIDTH
-    public static final java.lang.String HEIGHT
-    public static final java.lang.String SCORE
-    public static final java.lang.String HIGH_SCORE
-    public static final java.lang.String UNDO_SCORE
-    public static final java.lang.String CAN_UNDO
-    public static final java.lang.String UNDO_GRID
-    public static final java.lang.String GAME_STATE
-    public static final java.lang.String UNDO_GAME_STATE
-com.itjiehun.magic.zh.R
-com.itjiehun.magic.zh.R$anim
-com.itjiehun.magic.zh.R$attr
-com.itjiehun.magic.zh.R$color
-com.itjiehun.magic.zh.R$dimen
-com.itjiehun.magic.zh.R$drawable
-com.itjiehun.magic.zh.R$id
-com.itjiehun.magic.zh.R$layout
-com.itjiehun.magic.zh.R$menu
-com.itjiehun.magic.zh.R$raw
-com.itjiehun.magic.zh.R$string
-com.itjiehun.magic.zh.R$style
-com.itjiehun.magic.zh.package-info
+    155:167:public static android.graphics.Bitmap getRoundedCornerBitmap0(android.graphics.Bitmap,float)
+    242:250:void drawCellText(android.graphics.Canvas,int,int,int)
+com.itjiehun.zhz.R
+com.itjiehun.zhz.R$anim
+com.itjiehun.zhz.R$attr
+com.itjiehun.zhz.R$color
+com.itjiehun.zhz.R$dimen
+com.itjiehun.zhz.R$drawable
+com.itjiehun.zhz.R$id
+com.itjiehun.zhz.R$layout
+com.itjiehun.zhz.R$menu
+com.itjiehun.zhz.R$raw
+com.itjiehun.zhz.R$string
+com.itjiehun.zhz.R$style
+com.itjiehun.zhz.umeng.UmengStatic
+com.itjiehun.zhz.umeng.package-info
+com.itjiehun.zhz.waps.WapsStatic
+com.itjiehun.zhz.waps.package-info
 com.umeng.analytics.AnalyticsConfig:
     7:7:public AnalyticsConfig()
     58:64:public static void setLocation(double,double)
@@ -1754,7 +1466,6 @@ com.umeng.analytics.MobclickAgent:
     272:277:public static void onEventDuration(android.content.Context,java.lang.String,long)
     287:296:public static void onEventDuration(android.content.Context,java.lang.String,java.lang.String,long)
     306:315:public static void onEventDuration(android.content.Context,java.lang.String,java.util.Map,long)
-    325:333:public static void onEventValue(android.content.Context,java.lang.String,java.util.Map,int)
     341:342:public static void onEventBegin(android.content.Context,java.lang.String)
     350:351:public static void onEventEnd(android.content.Context,java.lang.String)
     359:360:public static void onEventBegin(android.content.Context,java.lang.String,java.lang.String)
@@ -1763,6 +1474,7 @@ com.umeng.analytics.MobclickAgent:
     391:392:public static void onKVEventEnd(android.content.Context,java.lang.String,java.lang.String)
     405:411:public static varargs void onSocialEvent(android.content.Context,java.lang.String,com.umeng.analytics.social.UMPlatformData[])
     420:426:public static varargs void onSocialEvent(android.content.Context,com.umeng.analytics.social.UMPlatformData[])
+    436:437:public static java.lang.String getConfigParams(android.content.Context,java.lang.String)
     448:457:public static void updateOnlineConfig(android.content.Context,java.lang.String,java.lang.String)
     474:497:public static void setUserID(android.content.Context,java.lang.String,java.lang.String,com.umeng.analytics.Gender,int)
     505:506:public static void onKillProcess(android.content.Context)
@@ -1806,7 +1518,6 @@ com.umeng.analytics.c:
     178:188:void a(android.content.Context,java.lang.Throwable)
     205:210:void d(android.content.Context)
     214:219:public void a(android.content.Context,java.lang.String,java.lang.String,long,int)
-    223:228:void a(android.content.Context,java.lang.String,java.util.Map,long)
     232:241:void a(android.content.Context,java.lang.String,java.lang.String)
     245:253:void b(android.content.Context,java.lang.String,java.lang.String)
     257:266:void a(android.content.Context,java.lang.String,java.util.HashMap,java.lang.String)
@@ -2064,7 +1775,9 @@ com.umeng.update.util.DeltaUpdate:
 com.umeng.update.util.a
 com.umeng.update.util.c
 u.aly.A
-u.aly.B
+u.aly.B:
+    75:80:public static u.aly.A a(java.lang.String,java.lang.String,java.util.Map)
+    84:84:public static java.lang.String b(java.lang.String,java.lang.String,java.util.Map)
 u.aly.C:
     26:28:public C(java.lang.String)
     36:37:public u.aly.C a(boolean)
@@ -2241,23 +1954,18 @@ u.aly.O:
     192:192:public u.aly.O a()
     197:205:public void b()
     208:208:public java.lang.String c()
-    212:213:public u.aly.O a(java.lang.String)
     217:218:public void d()
     222:222:public boolean e()
     232:232:public int f()
     236:240:public void a(java.lang.String,u.aly.Z)
     243:243:public java.util.Map h()
-    247:248:public u.aly.O a(java.util.Map)
     252:253:public void i()
     257:257:public boolean j()
     267:267:public long k()
-    271:273:public u.aly.O a(long)
     277:278:public void l()
     290:290:public int n()
-    294:296:public u.aly.O a(int)
     300:301:public void o()
     313:313:public long q()
-    317:319:public u.aly.O b(long)
     323:324:public void r()
     336:336:public u.aly.O$e c(int)
     401:405:private void a(java.io.ObjectOutputStream)
@@ -2397,7 +2105,6 @@ u.aly.V:
     239:240:public void j()
     254:254:public int l()
     258:258:public java.util.Iterator m()
-    262:266:public void a(u.aly.O)
     269:269:public java.util.List n()
     273:274:public u.aly.V b(java.util.List)
     278:279:public void o()
@@ -2513,9 +2220,7 @@ u.aly.Z:
     139:153:protected void a(u.aly.Z$a,java.lang.Object)
     262:262:public u.aly.Z$a a(int)
     267:270:public java.lang.String d()
-    275:278:public void b(java.lang.String)
     281:284:public long e()
-    289:291:public void b(long)
     294:294:public boolean f()
     299:299:public boolean h()
     317:321:public int b(u.aly.Z)
@@ -2578,7 +2283,6 @@ u.aly.aJ:
     101:105:private static java.util.List a(java.util.List)
     117:121:public java.lang.Object b(u.aly.aG)
     125:125:public java.lang.Object c(int)
-    129:129:public boolean l()
     133:133:public boolean c(u.aly.aG)
     137:137:public boolean d(int)
     145:148:public void b(u.aly.aG,java.lang.Object)
@@ -2995,16 +2699,12 @@ u.aly.l:
     74:86:private void c(java.lang.String)
     94:108:private boolean d(java.lang.String)
 u.aly.n:
-    43:56:public void a(java.lang.String,java.util.Map,long)
     60:68:public void a(java.lang.String,java.lang.String,long,int)
     72:80:public void a(java.lang.String,java.util.Map)
     83:87:public void a(java.lang.String,java.lang.String)
     90:100:public void b(java.lang.String,java.lang.String)
     103:112:public void a(java.lang.String,java.util.Map,java.lang.String)
     115:125:public void c(java.lang.String,java.lang.String)
-    129:139:private boolean a(java.lang.String)
-    143:149:private boolean b(java.lang.String)
-    153:172:private boolean a(java.util.Map)
 u.aly.o:
     public abstract void a()
 u.aly.q:

@@ -1,3 +1,5 @@
+a.a -> a.a:
+    int init(java.lang.String,java.lang.String,java.lang.String) -> init
 android.support.v4.app.BackStackRecord -> android.support.v4.app.a:
     android.support.v4.app.FragmentManagerImpl mManager -> a
     android.support.v4.app.BackStackRecord$Op mHead -> b
@@ -1800,7 +1802,7 @@ android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.a
     boolean tryCaptureView$5359dc96(android.view.View) -> a
     int clampViewPositionHorizontal$17e143b0(android.view.View,int) -> b
     int clampViewPositionVertical$17e143b0(android.view.View) -> d
-cn.waps.AdInfo -> cn.waps.a:
+cn.waps.AdInfo -> cn.waps.AdInfo:
     java.lang.String a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -1831,27 +1833,64 @@ cn.waps.AdInfo -> cn.waps.a:
     java.lang.String B -> B
     java.lang.String C -> C
     int D -> D
+    android.graphics.Bitmap getAdIcon() -> getAdIcon
     void a(android.graphics.Bitmap) -> a
-    java.lang.String getAdId() -> a
+    java.lang.String getAdId() -> getAdId
     void a(java.lang.String) -> a
-    java.lang.String a() -> b
+    java.lang.String a() -> a
     void b(java.lang.String) -> b
+    java.lang.String getAdText() -> getAdText
     void c(java.lang.String) -> c
+    java.lang.String b() -> b
     void d(java.lang.String) -> d
+    java.lang.String c() -> c
     void e(java.lang.String) -> e
+    java.lang.String getAdPackage() -> getAdPackage
     void f(java.lang.String) -> f
+    java.lang.String d() -> d
     void g(java.lang.String) -> g
+    java.lang.String getAdName() -> getAdName
     void h(java.lang.String) -> h
+    int getAdPoints() -> getAdPoints
     void a(int) -> a
+    java.lang.String getDescription() -> getDescription
     void i(java.lang.String) -> i
+    java.lang.String getVersion() -> getVersion
     void j(java.lang.String) -> j
+    java.lang.String getFilesize() -> getFilesize
     void k(java.lang.String) -> k
+    java.lang.String getProvider() -> getProvider
     void l(java.lang.String) -> l
+    java.lang.String[] getImageUrls() -> getImageUrls
     void a(java.lang.String[]) -> a
+    java.lang.String e() -> e
     void m(java.lang.String) -> m
+    java.lang.String getAction() -> getAction
     void n(java.lang.String) -> n
     void o(java.lang.String) -> o
-cn.waps.AppConnect -> cn.waps.b:
+    java.lang.String f() -> f
+    void p(java.lang.String) -> p
+    int g() -> g
+    void b(int) -> b
+    int h() -> h
+    void c(int) -> c
+    android.graphics.Bitmap i() -> i
+    void b(android.graphics.Bitmap) -> b
+    java.lang.String j() -> j
+    void q(java.lang.String) -> q
+    java.lang.String k() -> k
+    void r(java.lang.String) -> r
+    void s(java.lang.String) -> s
+    java.lang.String l() -> l
+    void t(java.lang.String) -> t
+    int m() -> m
+    void d(int) -> d
+cn.waps.AnimationType -> cn.waps.AnimationType:
+    int MINI_RANDOM -> MINI_RANDOM
+    void startMiniAdAnimation(int,android.view.View) -> startMiniAdAnimation
+    java.util.Map getAnimation(android.view.View) -> getAnimation
+cn.waps.AppConnect -> cn.waps.AppConnect:
+    java.lang.String LIBRARY_VERSION_NUMBER -> LIBRARY_VERSION_NUMBER
     cn.waps.z o -> o
     android.content.Context a -> a
     cn.waps.AppConnect p -> p
@@ -1936,124 +1975,268 @@ cn.waps.AppConnect -> cn.waps.b:
     int f -> f
     java.util.List g -> g
     java.lang.String h -> h
-    java.lang.String aN -> aM
-    java.lang.String aO -> aN
-    java.lang.String aP -> aO
-    cn.waps.t aQ -> aP
+    cn.waps.q aM -> aM
+    java.lang.String aN -> aN
+    java.lang.String aO -> aO
+    java.lang.String aP -> aP
+    cn.waps.t aQ -> aQ
     boolean i -> i
-    java.lang.String aR -> aQ
-    java.lang.String aS -> aR
-    android.os.Handler aT -> aS
-    java.lang.String connectResult -> j
-    cn.waps.AppListener aU -> aT
-    boolean j -> k
-    boolean aV -> aU
-    java.lang.String aW -> aV
-    int aX -> aW
-    java.lang.String aY -> aX
-    boolean aZ -> aY
-    boolean finalize_tag -> l
-    java.util.HashMap ba -> aZ
-    java.util.HashMap bb -> ba
-    int bc -> bb
-    android.app.Dialog k -> m
-    boolean l -> n
-    int bd -> bc
-    java.lang.String be -> bd
-    cn.waps.AppConnect getInstance(java.lang.String,java.lang.String,android.content.Context) -> a
-    cn.waps.AppConnect getInstance(android.content.Context) -> a
-    java.lang.String a(android.content.Context) -> b
-    java.lang.String b(android.content.Context) -> d
+    java.lang.String aR -> aR
+    java.lang.String aS -> aS
+    android.os.Handler aT -> aT
+    java.lang.String connectResult -> connectResult
+    cn.waps.AppListener aU -> aU
+    boolean j -> j
+    boolean aV -> aV
+    java.lang.String aW -> aW
+    int aX -> aX
+    java.lang.String aY -> aY
+    boolean aZ -> aZ
+    boolean finalize_tag -> finalize_tag
+    java.util.HashMap ba -> ba
+    java.util.HashMap bb -> bb
+    int bc -> bc
+    android.app.Dialog k -> k
+    boolean l -> l
+    int bd -> bd
+    cn.waps.bt m -> m
+    cn.waps.aw n -> n
+    java.lang.String TYPE_BROWSER -> TYPE_BROWSER
+    java.lang.String TYPE_PLAYER -> TYPE_PLAYER
+    java.lang.String be -> be
+    cn.waps.AppConnect getInstance(java.lang.String,java.lang.String,android.content.Context) -> getInstance
+    cn.waps.AppConnect getInstance(java.lang.String,android.content.Context) -> getInstance
+    cn.waps.AppConnect getInstance(android.content.Context) -> getInstance
+    java.lang.String a(android.content.Context) -> a
+    java.lang.String e(android.content.Context) -> e
+    void f(android.content.Context) -> f
+    java.lang.String b(android.content.Context) -> b
+    void a() -> a
     void a(java.lang.String,boolean,java.lang.String,java.lang.String,boolean,boolean,boolean) -> a
-    boolean e(java.lang.String) -> d
+    boolean e(java.lang.String) -> e
+    void q() -> q
     void a(cn.waps.AppListener) -> a
-    void package_receiver(java.lang.String,int) -> a
-    boolean f(java.lang.String) -> e
-    boolean b() -> a
-    java.lang.String a(int,android.content.SharedPreferences) -> b
-    void a(java.lang.String,int) -> b
+    void package_receiver(java.lang.String,int) -> package_receiver
+    void r() -> r
+    boolean f(java.lang.String) -> f
+    void setPointsCache(boolean) -> setPointsCache
+    boolean b() -> b
+    java.lang.String a(int,android.content.SharedPreferences) -> a
+    void a(java.lang.String,int) -> a
+    java.lang.Object[] getPointsData() -> getPointsData
     void a(java.lang.String) -> a
-    int getHistoryPoints$faab21a() -> b
-    java.lang.String getHistoryPointsName$1afe14f3() -> c
+    java.lang.String getPointsFailedData() -> getPointsFailedData
+    void clearPoints() -> clearPoints
+    void setUpdatePointsFlag(boolean) -> setUpdatePointsFlag
+    boolean c() -> c
+    void b(java.lang.String,int) -> b
+    boolean g(java.lang.String) -> g
+    int getHistoryPoints(android.content.Context) -> getHistoryPoints
+    java.lang.String getHistoryPointsName(android.content.Context) -> getHistoryPointsName
+    void getPoints(cn.waps.UpdatePointsNotifier) -> getPoints
+    void getPoints() -> getPoints
+    void awardPoints(int,cn.waps.UpdatePointsNotifier) -> awardPoints
+    void awardPoints(int) -> awardPoints
+    void spendPoints(int,cn.waps.UpdatePointsNotifier) -> spendPoints
+    void spendPoints(int) -> spendPoints
+    void s() -> s
+    void t() -> t
+    void u() -> u
+    java.lang.String getConfig(java.lang.String,java.lang.String) -> getConfig
+    java.lang.String getConfig(java.lang.String) -> getConfig
+    void getConfig(java.lang.String,java.lang.String,cn.waps.AppListener) -> getConfig
+    java.lang.String getConfig_Sync(java.lang.String) -> getConfig_Sync
+    java.util.Map getConfigMap() -> getConfigMap
     java.util.Map b(java.lang.String) -> b
-    org.w3c.dom.Document j(java.lang.String) -> f
+    void checkUpdate(android.content.Context) -> checkUpdate
+    boolean h(java.lang.String) -> h
+    void i(java.lang.String) -> i
+    org.w3c.dom.Document j(java.lang.String) -> j
     java.lang.String a(org.w3c.dom.NodeList) -> a
-    void close() -> d
-    void b$30c4c46f(android.content.Context,java.lang.String,java.lang.String) -> a
+    void close() -> close
+    void showMore(android.content.Context) -> showMore
+    void showMore(android.content.Context,java.lang.String) -> showMore
+    void setOffersCloseListener(cn.waps.AppListener) -> setOffersCloseListener
+    void setMoreCloseListener(cn.waps.AppListener) -> setMoreCloseListener
+    void setTuanCloseListener(cn.waps.AppListener) -> setTuanCloseListener
+    void setFeedbackCloseListener(cn.waps.AppListener) -> setFeedbackCloseListener
+    void a(int,cn.waps.AppListener) -> a
+    void setRunnableMap(java.util.HashMap) -> setRunnableMap
+    void showOffers(android.content.Context) -> showOffers
+    void showOffers(android.content.Context,java.lang.String) -> showOffers
+    void showGameOffers(android.content.Context) -> showGameOffers
+    void showGameOffers(android.content.Context,java.lang.String) -> showGameOffers
+    void showAppOffers(android.content.Context) -> showAppOffers
+    void showAppOffers(android.content.Context,java.lang.String) -> showAppOffers
+    void showTuanOffers(android.content.Context) -> showTuanOffers
+    void showTuanOffers(android.content.Context,java.lang.String) -> showTuanOffers
+    void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> b
+    android.app.Dialog getOffersDialog() -> getOffersDialog
     void a(java.lang.String,java.lang.String) -> a
+    cn.waps.bl c(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> c
+    void showFeedback() -> showFeedback
+    void showFeedback(android.content.Context) -> showFeedback
     java.lang.String a(byte[]) -> a
-    java.lang.String d() -> e
+    java.lang.String a(byte[],java.lang.String) -> a
+    void setCrashReport(boolean) -> setCrashReport
+    void g(android.content.Context) -> g
+    java.lang.String d() -> d
+    void setAdBackColor(int) -> setAdBackColor
+    void setAdForeColor(int) -> setAdForeColor
     java.util.Map c(android.content.Context) -> c
+    void initAdInfo() -> initAdInfo
+    java.util.List getAdInfoList() -> getAdInfoList
+    cn.waps.AdInfo getAdInfo() -> getAdInfo
+    cn.waps.AdInfo a(java.util.List) -> a
+    cn.waps.AdInfo a(java.util.List,java.lang.String) -> a
+    void downloadAd(android.content.Context,java.lang.String) -> downloadAd
+    void clickAd(android.content.Context,java.lang.String) -> clickAd
+    void d(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> d
     java.util.List a(java.io.InputStream) -> a
     android.graphics.Bitmap a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
-    void showBannerAd(android.content.Context,android.widget.LinearLayout) -> a
+    void setWebViewTransparent(boolean) -> setWebViewTransparent
+    void h(android.content.Context) -> h
+    void initPopAd(android.content.Context) -> initPopAd
+    void showPopAd(android.content.Context) -> showPopAd
+    void showPopAd(android.content.Context,int) -> showPopAd
+    android.app.Dialog getPopAdDialog() -> getPopAdDialog
+    boolean hasPopAd(android.content.Context) -> hasPopAd
+    android.widget.LinearLayout getPopAdView(android.content.Context) -> getPopAdView
+    android.widget.LinearLayout getPopAdView(android.content.Context,int,int) -> getPopAdView
+    void showBannerAd(android.content.Context,android.widget.LinearLayout) -> showBannerAd
+    void showMiniAd(android.content.Context,android.widget.LinearLayout,int) -> showMiniAd
+    void initFunAd(android.content.Context) -> initFunAd
+    void showFunAd(android.content.Context,java.lang.String,java.lang.String) -> showFunAd
+    void showBrowser(android.content.Context,java.lang.String) -> showBrowser
+    void showBrowser(android.content.Context,java.lang.String,boolean) -> showBrowser
+    void showPlayer(android.content.Context,java.lang.String) -> showPlayer
+    void showPlayer(android.content.Context,java.lang.String,boolean) -> showPlayer
+    void initUninstallAd(android.content.Context) -> initUninstallAd
+    void d(android.content.Context) -> d
+    java.lang.String i(android.content.Context) -> i
+    java.lang.String j(android.content.Context) -> j
     java.lang.String a(cn.waps.AppConnect) -> a
-    cn.waps.ae e() -> f
+    cn.waps.ae e() -> e
     boolean a(cn.waps.AppConnect,java.lang.String) -> a
-    android.content.SharedPreferences f() -> g
+    android.content.SharedPreferences f() -> f
     java.lang.String b(cn.waps.AppConnect) -> b
-    boolean g() -> h
+    boolean g() -> g
     java.lang.String c(cn.waps.AppConnect) -> c
-    java.lang.String h() -> i
-    boolean i() -> j
-    boolean j() -> k
-    boolean k() -> l
+    java.lang.String h() -> h
+    boolean i() -> i
+    boolean j() -> j
+    boolean k() -> k
     void d(cn.waps.AppConnect) -> d
-    java.lang.String l() -> m
+    java.lang.String l() -> l
     java.lang.String c(java.lang.String) -> c
-    java.lang.String m() -> n
-    java.lang.String n() -> o
+    java.lang.String m() -> m
+    java.lang.String n() -> n
     java.lang.String e(cn.waps.AppConnect) -> e
     boolean b(cn.waps.AppConnect,java.lang.String) -> b
     java.lang.String f(cn.waps.AppConnect) -> f
     java.lang.String g(cn.waps.AppConnect) -> g
     java.lang.String c(cn.waps.AppConnect,java.lang.String) -> c
     cn.waps.AppListener h(cn.waps.AppConnect) -> h
-    cn.waps.UpdatePointsNotifier o() -> p
-    java.lang.String a$93851de(int,android.content.SharedPreferences) -> a
+    cn.waps.UpdatePointsNotifier o() -> o
+    java.lang.String a(cn.waps.AppConnect,int,android.content.SharedPreferences) -> a
     boolean d(cn.waps.AppConnect,java.lang.String) -> d
     java.lang.String i(cn.waps.AppConnect) -> i
     void a(cn.waps.AppConnect,java.lang.String,int) -> a
     java.lang.String j(cn.waps.AppConnect) -> j
-    boolean a$138603() -> q
-cn.waps.AppListener -> cn.waps.c:
+    java.lang.String p() -> p
+    java.lang.String d(java.lang.String) -> d
+    boolean e(cn.waps.AppConnect,java.lang.String) -> e
+    void f(cn.waps.AppConnect,java.lang.String) -> f
+    boolean a(boolean) -> a
+cn.waps.AppListener -> cn.waps.AppListener:
     void a() -> a
+    void onOffersClose() -> onOffersClose
+    void onBannerClose() -> onBannerClose
+    void onGetConfig(java.lang.String) -> onGetConfig
     void b() -> b
-cn.waps.SDKUtils -> cn.waps.d:
+cn.waps.AppLog -> cn.waps.AppLog:
+    boolean showLog -> showLog
+    void enableLogging(boolean) -> enableLogging
+    void i(java.lang.String,java.lang.String) -> i
+    void e(java.lang.String,java.lang.String) -> e
+    void e(java.lang.String,java.lang.String,java.lang.Throwable) -> e
+    void w(java.lang.String,java.lang.String) -> w
+    void w(java.lang.String,java.lang.String,java.lang.Throwable) -> w
+    void d(java.lang.String,java.lang.String) -> d
+    void v(java.lang.String,java.lang.String) -> v
+cn.waps.SDKUtils -> cn.waps.SDKUtils:
     android.content.Context b -> b
     android.content.pm.PackageManager c -> c
-    android.os.Handler e -> d
-    android.webkit.WebView f -> e
-    android.widget.RelativeLayout g -> f
-    android.widget.LinearLayout h -> g
-    cn.waps.AppListener i -> h
-    android.app.Dialog j -> i
+    android.content.pm.PackageInfo d -> d
+    android.os.Handler e -> e
+    android.webkit.WebView f -> f
+    android.widget.RelativeLayout g -> g
+    android.widget.LinearLayout h -> h
+    cn.waps.AppListener i -> i
+    android.app.Dialog j -> j
     java.lang.String a -> a
-    java.lang.String getUdid() -> a
-    java.lang.String getImsi() -> b
-    java.lang.String getNetType() -> c
-    java.lang.String getMac_Address() -> d
-    java.lang.String getLanguageCode() -> e
-    java.lang.String getInstalled() -> f
-    java.lang.String getBrowserPackageName(java.lang.String) -> d
-    android.content.Intent goToTargetBrowser_Intent(java.lang.String,java.lang.String) -> d
-    android.content.Intent goToTargetBrowser_Intent(java.lang.String,java.lang.String,java.lang.String) -> a
-    void openUrlByBrowser(java.lang.String,java.lang.String) -> a
-    boolean isCmwap() -> g
-    boolean isConnect() -> h
-    int initAdWidth() -> i
-    void saveDataToLocal(java.lang.String,java.lang.String,java.lang.String,boolean) -> a
-    java.lang.String loadStringFromLocal(java.lang.String,java.lang.String) -> b
-    void saveDataToLocal$5533f4c2(java.io.InputStream,java.lang.String,java.lang.String) -> a
-    java.io.InputStream loadStreamFromLocal(java.lang.String,java.lang.String) -> c
-    void deleteLocalFiles(java.io.File) -> a
-    java.io.InputStream getNetDataToStream(java.lang.String) -> a
-    java.lang.String[] getAllPermissions() -> k
-    boolean hasThePermission(java.lang.String) -> b
-    void callTel(java.lang.String) -> c
-    java.lang.String getAppName() -> j
-cn.waps.UpdatePointsNotifier -> cn.waps.e:
-cn.waps.a -> cn.waps.f:
+    void close() -> close
+    void closeSubmit(java.lang.String) -> closeSubmit
+    void closeOfDialog(java.lang.String) -> closeOfDialog
+    void submit(java.lang.String,java.lang.String) -> submit
+    java.lang.String getUdid() -> getUdid
+    java.lang.String getImsi() -> getImsi
+    java.lang.String getNetType() -> getNetType
+    java.lang.String getMac_Address() -> getMac_Address
+    java.lang.String getAppVersion(java.lang.String) -> getAppVersion
+    java.lang.String getLanguageCode() -> getLanguageCode
+    void load(java.lang.String) -> load
+    java.lang.String getInstalled() -> getInstalled
+    java.lang.String isInstalled(java.lang.String) -> isInstalled
+    java.lang.String getBrowserPackageName(java.lang.String) -> getBrowserPackageName
+    void goToTargetBrowser(java.lang.String,java.lang.String) -> goToTargetBrowser
+    android.content.Intent goToTargetBrowser_Intent(java.lang.String,java.lang.String) -> goToTargetBrowser_Intent
+    android.content.Intent goToTargetBrowser_Intent(java.lang.String,java.lang.String,java.lang.String) -> goToTargetBrowser_Intent
+    void openUrlByBrowser(java.lang.String,java.lang.String) -> openUrlByBrowser
+    android.content.Intent openUrlByBrowser_Intent(java.lang.String,java.lang.String) -> openUrlByBrowser_Intent
+    void openAppByUri(java.lang.String,java.lang.String,java.lang.String) -> openAppByUri
+    java.util.Map getAppInfoMap(java.lang.String) -> getAppInfoMap
+    java.lang.String getRunningAppPackageNames() -> getRunningAppPackageNames
+    boolean isCmwap() -> isCmwap
+    boolean isWapNetwork() -> isWapNetwork
+    boolean isConnect() -> isConnect
+    java.lang.String getResponseResult(org.apache.http.HttpResponse) -> getResponseResult
+    void closeAd() -> closeAd
+    void hideAd() -> hideAd
+    void openAd() -> openAd
+    void openAd(java.lang.String) -> openAd
+    void full_screen() -> full_screen
+    int initAdWidth() -> initAdWidth
+    java.lang.String getScreenStatus() -> getScreenStatus
+    void saveDataToLocal(java.lang.String,java.lang.String,java.lang.String,boolean) -> saveDataToLocal
+    java.lang.String loadStringFromLocal(java.lang.String,java.lang.String) -> loadStringFromLocal
+    void saveDataToLocal(java.io.InputStream,java.lang.String,java.lang.String,boolean) -> saveDataToLocal
+    java.io.InputStream loadStreamFromLocal(java.lang.String,java.lang.String) -> loadStreamFromLocal
+    void deleteLocalFiles(java.io.File) -> deleteLocalFiles
+    java.io.InputStream getNetDataToStream(java.lang.String) -> getNetDataToStream
+    boolean isTimeLimited(java.lang.String,java.lang.String) -> isTimeLimited
+    java.lang.String[] splitString(java.lang.String,java.lang.String,java.lang.String) -> splitString
+    java.lang.String getNodeTrimValues(org.w3c.dom.NodeList) -> getNodeTrimValues
+    java.util.List getList(java.lang.String) -> getList
+    java.lang.String replaceData(java.lang.String) -> replaceData
+    java.lang.String[] getAllPermissions() -> getAllPermissions
+    boolean hasThePermission(java.lang.String) -> hasThePermission
+    void callTel(java.lang.String) -> callTel
+    void sendSMS(java.lang.String,java.lang.String) -> sendSMS
+    void showToast(java.lang.String) -> showToast
+    java.lang.String getAppName() -> getAppName
+    java.lang.String isVisible() -> isVisible
+    boolean isWifi() -> isWifi
+    int getDisplaySize(android.content.Context) -> getDisplaySize
+    void getHtml(java.lang.String) -> getHtml
+    android.content.Context access$000(cn.waps.SDKUtils) -> access$000
+    android.widget.RelativeLayout access$100(cn.waps.SDKUtils) -> access$100
+    android.widget.LinearLayout access$200(cn.waps.SDKUtils) -> access$200
+    cn.waps.AppListener access$300(cn.waps.SDKUtils) -> access$300
+cn.waps.UpdatePointsNotifier -> cn.waps.UpdatePointsNotifier:
+    void getUpdatePoints(java.lang.String,int) -> getUpdatePoints
+    void getUpdatePointsFailed(java.lang.String) -> getUpdatePointsFailed
+cn.waps.a -> cn.waps.a:
     android.content.Context c -> c
     android.widget.LinearLayout d -> d
     long e -> e
@@ -2072,8 +2255,12 @@ cn.waps.a -> cn.waps.f:
     cn.waps.AppListener q -> q
     android.os.Handler r -> r
     java.lang.Thread b -> b
+    void a(android.content.Context,android.widget.LinearLayout,cn.waps.AppListener) -> a
     void a() -> a
+    void a(int) -> a
     android.webkit.WebView b() -> b
+    void a(android.webkit.WebView,java.lang.String) -> a
+    void a(java.lang.String) -> a
     android.content.Context a(cn.waps.a) -> a
     boolean b(cn.waps.a) -> b
     java.lang.String c(cn.waps.a) -> c
@@ -2089,7 +2276,15 @@ cn.waps.a -> cn.waps.f:
     int a(cn.waps.a,int) -> a
     int i(cn.waps.a) -> i
     void a(cn.waps.a,java.lang.String) -> a
-cn.waps.ab -> cn.waps.g:
+cn.waps.aa -> cn.waps.b:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    cn.waps.AppListener c -> c
+    cn.waps.AppConnect d -> d
+    java.lang.String a$4af589aa() -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+cn.waps.ab -> cn.waps.ab:
     android.app.Notification a -> a
     android.app.NotificationManager f -> f
     android.content.Context g -> g
@@ -2106,7 +2301,7 @@ cn.waps.ab -> cn.waps.g:
     void b(java.lang.String,int,java.lang.String) -> b
     void a(int,java.lang.String) -> a
     void a(int) -> a
-cn.waps.ac -> cn.waps.h:
+cn.waps.ac -> cn.waps.c:
     android.content.Context a -> a
     java.lang.String b -> b
     cn.waps.ab c -> c
@@ -2121,7 +2316,7 @@ cn.waps.ad -> cn.waps.ad:
     boolean c -> c
     boolean d -> d
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-cn.waps.ae -> cn.waps.i:
+cn.waps.ae -> cn.waps.ae:
     cn.waps.SDKUtils b -> b
     android.content.Context c -> c
     java.lang.String a -> a
@@ -2130,21 +2325,25 @@ cn.waps.ae -> cn.waps.i:
     byte[] a(java.lang.String) -> a
     java.lang.String a(byte[],java.lang.String) -> a
     java.lang.String a() -> a
-cn.waps.af -> cn.waps.j:
+cn.waps.af -> cn.waps.af:
     boolean a -> a
-    byte[] a$44bd1c79(java.lang.String) -> a
-    java.lang.String b(byte[],int) -> a
-cn.waps.ag -> cn.waps.k:
+    byte[] a(java.lang.String,int) -> a
+    byte[] a(byte[],int) -> a
+    byte[] a(byte[],int,int,int) -> a
+    java.lang.String b(byte[],int) -> b
+    byte[] c(byte[],int) -> c
+    byte[] b(byte[],int,int,int) -> b
+cn.waps.ag -> cn.waps.d:
     byte[] a -> a
     int b -> b
-cn.waps.ah -> cn.waps.l:
+cn.waps.ah -> cn.waps.e:
     int[] c -> c
     int[] d -> d
     int e -> e
     int f -> f
     int[] g -> g
-    boolean a$7dcd25fc$1cf967a0(byte[],int) -> a
-cn.waps.ai -> cn.waps.m:
+    boolean a$7dcd25fc(byte[],int,int) -> a
+cn.waps.ai -> cn.waps.f:
     byte[] h -> h
     byte[] i -> i
     byte[] j -> j
@@ -2155,8 +2354,8 @@ cn.waps.ai -> cn.waps.m:
     boolean f -> f
     byte[] l -> l
     boolean g -> g
-    boolean a$7dcd25fc$1cf967a0(byte[],int) -> a
-cn.waps.aj -> cn.waps.n:
+    boolean a$7dcd25fc(byte[],int,int) -> a
+cn.waps.aj -> cn.waps.aj:
     java.lang.String a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -2177,32 +2376,40 @@ cn.waps.aj -> cn.waps.n:
     java.lang.String b() -> b
     java.lang.String c() -> c
     java.lang.String d() -> d
-    java.lang.String f() -> e
-    java.lang.String h() -> f
-    java.lang.String i() -> g
-    java.lang.String j() -> h
-    java.lang.String k() -> i
-    java.lang.String l() -> j
-    java.lang.String m() -> k
-    java.lang.String o() -> l
-    java.lang.String p() -> m
-    java.lang.String q() -> n
-    java.lang.String r() -> o
-    java.lang.String s() -> p
-    java.lang.String t() -> q
-    java.lang.String u() -> r
-    java.lang.String v() -> s
-    java.lang.String w() -> t
-    java.lang.String x() -> u
-    java.lang.String y() -> v
-    java.lang.String z() -> w
-    java.lang.String C() -> x
-    java.lang.String D() -> y
-    java.lang.String H() -> z
-    java.lang.String I() -> A
-    java.lang.String J() -> B
-    java.lang.String K() -> C
-cn.waps.ak -> cn.waps.o:
+    java.lang.String e() -> e
+    java.lang.String f() -> f
+    java.lang.String g() -> g
+    java.lang.String h() -> h
+    java.lang.String i() -> i
+    java.lang.String j() -> j
+    java.lang.String k() -> k
+    java.lang.String l() -> l
+    java.lang.String m() -> m
+    java.lang.String n() -> n
+    java.lang.String o() -> o
+    java.lang.String p() -> p
+    java.lang.String q() -> q
+    java.lang.String r() -> r
+    java.lang.String s() -> s
+    java.lang.String t() -> t
+    java.lang.String u() -> u
+    java.lang.String v() -> v
+    java.lang.String w() -> w
+    java.lang.String x() -> x
+    java.lang.String y() -> y
+    java.lang.String z() -> z
+    java.lang.String A() -> A
+    java.lang.String B() -> B
+    java.lang.String C() -> C
+    java.lang.String D() -> D
+    java.lang.String E() -> E
+    java.lang.String F() -> F
+    java.lang.String G() -> G
+    java.lang.String H() -> H
+    java.lang.String I() -> I
+    java.lang.String J() -> J
+    java.lang.String K() -> K
+cn.waps.ak -> cn.waps.ak:
     java.lang.Thread$UncaughtExceptionHandler a -> a
     cn.waps.ak b -> b
     android.content.Context c -> c
@@ -2214,23 +2421,26 @@ cn.waps.ak -> cn.waps.o:
     cn.waps.ak a(android.content.Context,cn.waps.ae,java.lang.String) -> a
     void a() -> a
     void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
-    void a$faab20d() -> d
-    java.lang.String d() -> e
+    boolean a(java.lang.Throwable) -> a
+    void a(android.content.Context) -> a
+    java.lang.String d() -> d
+    void b(java.lang.Throwable) -> b
     java.lang.String a(cn.waps.ak) -> a
     java.lang.String b(cn.waps.ak) -> b
     cn.waps.ae b() -> b
     java.lang.String c(cn.waps.ak) -> c
     android.content.Context c() -> c
-cn.waps.am -> cn.waps.p:
+cn.waps.am -> cn.waps.g:
     cn.waps.ak a -> a
     java.lang.Boolean a$5f8445a4() -> a
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.an -> cn.waps.q:
+cn.waps.an -> cn.waps.an:
     java.security.Key a -> a
     byte[] b -> b
-    java.lang.String b(java.lang.String) -> a
+    void a(java.lang.String) -> a
+    java.lang.String b(java.lang.String) -> b
     byte[] a(byte[]) -> a
-cn.waps.ao -> cn.waps.r:
+cn.waps.ao -> cn.waps.ao:
     java.lang.String a -> a
     java.lang.String r -> r
     cn.waps.ab s -> s
@@ -2258,18 +2468,22 @@ cn.waps.ao -> cn.waps.r:
     java.io.File y -> y
     void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
     void run() -> run
+    void a(java.lang.String) -> a
+    void b(java.lang.String) -> b
     void a(java.net.HttpURLConnection,java.lang.String,double,double,java.lang.String,int,java.io.InputStream,cn.waps.ab,boolean) -> a
-    void c(java.lang.String) -> a
+    void c(java.lang.String) -> c
+    void a(android.os.Bundle) -> a
+    void d(java.lang.String) -> d
     java.io.File a(android.content.Context,java.lang.String) -> a
     android.content.Context a(cn.waps.ao) -> a
     cn.waps.ab b(cn.waps.ao) -> b
-cn.waps.ap -> cn.waps.s:
+cn.waps.ap -> cn.waps.h:
     cn.waps.ao a -> a
     void handleMessage(android.os.Message) -> handleMessage
-cn.waps.aq -> cn.waps.t:
+cn.waps.aq -> cn.waps.i:
     cn.waps.ao a -> a
     void run() -> run
-cn.waps.ar -> cn.waps.u:
+cn.waps.ar -> cn.waps.ar:
     java.lang.String a -> a
     java.io.File b -> b
     android.app.AlertDialog c -> c
@@ -2279,8 +2493,9 @@ cn.waps.ar -> cn.waps.u:
     cn.waps.ad g -> g
     boolean h -> h
     java.lang.Thread i -> i
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
     cn.waps.ao a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
-    void b(android.content.Context,java.lang.String,java.lang.String) -> a
+    void b(android.content.Context,java.lang.String,java.lang.String) -> b
     void a(android.content.Context,cn.waps.ao,java.lang.String,java.lang.String,int,java.lang.String) -> a
     void a(android.content.Context,cn.waps.ad) -> a
     java.lang.String a(java.lang.String) -> a
@@ -2300,20 +2515,20 @@ cn.waps.ar -> cn.waps.u:
     java.lang.String e(cn.waps.ar) -> e
     cn.waps.ad a(cn.waps.ar,cn.waps.ad) -> a
     cn.waps.ad f(cn.waps.ar) -> f
-cn.waps.as -> cn.waps.v:
+cn.waps.as -> cn.waps.j:
     android.content.Context a -> a
     cn.waps.ao b -> b
     cn.waps.ar c -> c
     void onClick(android.content.DialogInterface,int) -> onClick
-cn.waps.at -> cn.waps.w:
+cn.waps.at -> cn.waps.k:
     android.content.Context a -> a
     cn.waps.ar b -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-cn.waps.au -> cn.waps.x:
+cn.waps.au -> cn.waps.l:
     android.content.Context a -> a
     cn.waps.ar b -> b
     void run() -> run
-cn.waps.av -> cn.waps.y:
+cn.waps.av -> cn.waps.m:
     android.content.Context a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -2323,11 +2538,131 @@ cn.waps.av -> cn.waps.y:
     java.lang.Boolean a$5f8445a4() -> a
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.b -> cn.waps.z:
+cn.waps.aw -> cn.waps.aw:
+    android.content.Context a -> a
+    cn.waps.ae b -> b
+    java.lang.String c -> c
+    java.util.List d -> d
+    void a() -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,boolean) -> a
+    void a(android.content.Context,java.util.List,java.lang.String,boolean) -> a
+    void a(android.content.Context,java.util.List,int,java.lang.String,boolean) -> a
+    java.util.List a(java.io.InputStream) -> a
+    void b() -> b
+    void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
+    android.widget.LinearLayout a(android.content.Context,android.app.Dialog,java.util.List,java.lang.String,java.lang.String,boolean) -> a
+    java.lang.String a(cn.waps.aw) -> a
+    cn.waps.ae b(cn.waps.aw) -> b
+    java.util.List a(cn.waps.aw,java.util.List) -> a
+    void a(cn.waps.aw,android.content.Context,java.util.List,int,java.lang.String,boolean) -> a
+cn.waps.ax -> cn.waps.n:
+    android.content.Context a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    cn.waps.aw d -> d
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.waps.ay -> cn.waps.o:
+    boolean a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    android.content.Context d -> d
+    cn.waps.aw e -> e
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.waps.az -> cn.waps.p:
+    android.widget.CheckBox a -> a
+    cn.waps.aw b -> b
+    void onClick(android.view.View) -> onClick
+cn.waps.b -> cn.waps.q:
     android.webkit.WebView a -> a
     cn.waps.a b -> b
     void run() -> run
-cn.waps.bl -> cn.waps.aa:
+cn.waps.ba -> cn.waps.r:
+    android.content.Context a -> a
+    java.util.List b -> b
+    java.lang.String c -> c
+    boolean d -> d
+    android.widget.CheckBox e -> e
+    android.app.Dialog f -> f
+    cn.waps.aw g -> g
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+cn.waps.bb -> cn.waps.s:
+    java.util.List a -> a
+    cn.waps.aw b -> b
+    java.lang.String a$606be067() -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+cn.waps.bc -> cn.waps.t:
+    android.content.Context a -> a
+    java.util.List b -> b
+    java.lang.String c -> c
+    cn.waps.aw d -> d
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+cn.waps.bd -> cn.waps.u:
+    cn.waps.aw a -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+cn.waps.be -> cn.waps.be:
+    java.util.Map a() -> a
+    java.util.Map b() -> b
+cn.waps.bf -> cn.waps.bf:
+    android.os.Handler a -> a
+    android.widget.LinearLayout b -> b
+    boolean c -> c
+    android.view.View d -> d
+    android.content.Context e -> e
+    long f -> f
+    int g -> g
+    cn.waps.AnimationType j -> j
+    int k -> k
+    boolean l -> l
+    int m -> m
+    java.lang.String n -> n
+    int o -> o
+    int p -> p
+    java.lang.String q -> q
+    android.content.SharedPreferences r -> r
+    android.content.SharedPreferences$Editor s -> s
+    cn.waps.AdInfo t -> t
+    java.lang.String u -> u
+    java.lang.Runnable h -> h
+    android.widget.TextView i -> i
+    void a(int) -> a
+    void b() -> b
+    void c() -> c
+    void c(int) -> c
+    android.view.View$OnClickListener a(android.content.Context,int) -> a
+    android.widget.LinearLayout a(android.content.Context,android.graphics.Bitmap,java.lang.String,int) -> a
+    void a(cn.waps.bf) -> a
+    boolean b(cn.waps.bf) -> b
+    int c(cn.waps.bf) -> c
+    int d(cn.waps.bf) -> d
+    int a() -> a
+    int a(cn.waps.bf,int) -> a
+    int b(int) -> b
+    void b(cn.waps.bf,int) -> b
+    boolean a(cn.waps.bf,boolean) -> a
+    int e(cn.waps.bf) -> e
+cn.waps.bg -> cn.waps.v:
+    cn.waps.bf a -> a
+    void run() -> run
+cn.waps.bh -> cn.waps.w:
+    cn.waps.bf a -> a
+    void run() -> run
+cn.waps.bi -> cn.waps.x:
+    cn.waps.bf a -> a
+    void run() -> run
+cn.waps.bj -> cn.waps.y:
+    cn.waps.bi a -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+cn.waps.bk -> cn.waps.bk:
+    int a -> a
+    android.content.Context b -> b
+    cn.waps.bf c -> c
+    void onClick(android.view.View) -> onClick
+cn.waps.bl -> cn.waps.bl:
     java.lang.String a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -2346,32 +2681,34 @@ cn.waps.bl -> cn.waps.aa:
     java.lang.String a() -> a
     void a(java.lang.String) -> a
     java.lang.String b() -> b
+    void b(java.lang.String) -> b
     java.lang.String c() -> c
-    void c(java.lang.String) -> b
+    void c(java.lang.String) -> c
     java.lang.String d() -> d
-    void d(java.lang.String) -> c
+    void d(java.lang.String) -> d
     java.lang.String e() -> e
-    void e(java.lang.String) -> d
+    void e(java.lang.String) -> e
     java.lang.String f() -> f
-    void f(java.lang.String) -> e
+    void f(java.lang.String) -> f
     java.lang.String g() -> g
-    void g$552c4e01() -> h
-    java.lang.String h() -> i
-    void h(java.lang.String) -> f
-    java.lang.String i() -> j
-    void j(java.lang.String) -> g
-    android.os.Handler j() -> k
+    void g(java.lang.String) -> g
+    java.lang.String h() -> h
+    void h(java.lang.String) -> h
+    java.lang.String i() -> i
+    void i(java.lang.String) -> i
+    void j(java.lang.String) -> j
+    android.os.Handler j() -> j
     void a(android.os.Handler) -> a
-    java.util.HashMap k() -> l
+    java.util.HashMap k() -> k
     void a(java.util.HashMap) -> a
-    java.util.HashMap l() -> m
+    java.util.HashMap l() -> l
     void b(java.util.HashMap) -> b
-    int m() -> n
+    int m() -> m
     void a(int) -> a
-cn.waps.bm -> cn.waps.ab:
+cn.waps.bm -> cn.waps.bm:
     android.app.Dialog a -> a
     android.app.Dialog a(android.content.Context,cn.waps.bl) -> a
-cn.waps.bn -> cn.waps.ac:
+cn.waps.bn -> cn.waps.bn:
     android.webkit.WebView m -> m
     java.lang.String n -> n
     android.widget.ProgressBar o -> o
@@ -2403,7 +2740,11 @@ cn.waps.bn -> cn.waps.ac:
     java.io.File j -> j
     android.app.AlertDialog k -> k
     android.os.Handler l -> l
-    android.view.View a$1842e8(android.content.Context,cn.waps.bl,android.app.Dialog) -> a
+    android.view.View a(android.content.Context,android.webkit.WebView,cn.waps.bl,android.app.Dialog) -> a
+    void a(android.content.Context,cn.waps.ao,java.lang.String,java.lang.String,java.lang.String) -> a
+    void a(android.content.Context,android.webkit.WebView,android.app.Dialog) -> a
+    boolean a(android.webkit.WebView,android.app.Dialog) -> a
+    void a(android.content.Context,cn.waps.bl) -> a
     java.lang.String a(cn.waps.bn) -> a
     java.util.Map a() -> a
     java.lang.String b(cn.waps.bn) -> b
@@ -2412,33 +2753,33 @@ cn.waps.bn -> cn.waps.ac:
     java.lang.String e(cn.waps.bn) -> e
     void a(cn.waps.bn,android.content.Context,cn.waps.ao,java.lang.String,java.lang.String,java.lang.String) -> a
     java.lang.String a(cn.waps.bn,java.lang.String) -> a
-    java.util.Map a$76056a5b() -> b
+    java.util.Map a(java.util.Map) -> a
     java.util.HashMap f(cn.waps.bn) -> f
     int g(cn.waps.bn) -> g
     java.util.HashMap h(cn.waps.bn) -> h
     boolean i(cn.waps.bn) -> i
-    boolean a$237dec22(cn.waps.bn) -> j
-    android.widget.ProgressBar j(cn.waps.bn) -> k
+    boolean a(cn.waps.bn,boolean) -> a
+    android.widget.ProgressBar j(cn.waps.bn) -> j
     java.lang.String b(cn.waps.bn,java.lang.String) -> b
     java.lang.String c(cn.waps.bn,java.lang.String) -> c
-cn.waps.bo -> cn.waps.ae:
+cn.waps.bo -> cn.waps.z:
     android.content.Context a -> a
     android.app.Dialog b -> b
     cn.waps.bn c -> c
     void onDownloadStart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,long) -> onDownloadStart
-cn.waps.bp -> cn.waps.af:
+cn.waps.bp -> cn.waps.aa:
     cn.waps.bo a -> a
     void a() -> a
-cn.waps.bq -> cn.waps.ag:
+cn.waps.bq -> cn.waps.ac:
     android.webkit.WebView a -> a
     cn.waps.bn b -> b
     void onCancel(android.content.DialogInterface) -> onCancel
-cn.waps.br -> cn.waps.ah:
+cn.waps.br -> cn.waps.ag:
     android.app.Dialog a -> a
     android.webkit.WebView b -> b
     cn.waps.bn c -> c
     boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
-cn.waps.bs -> cn.waps.ai:
+cn.waps.bs -> cn.waps.ah:
     android.content.Context a -> a
     android.app.Dialog b -> b
     cn.waps.bn c -> c
@@ -2446,106 +2787,307 @@ cn.waps.bs -> cn.waps.ai:
     void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
     void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
     boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
-cn.waps.bt -> cn.waps.aj:
-    android.os.Handler u -> c
-    java.util.List b -> a
-    java.lang.String h -> b
-cn.waps.c -> cn.waps.ak:
+cn.waps.bt -> cn.waps.bt:
+    android.content.Context i -> i
+    cn.waps.ae j -> j
+    android.content.SharedPreferences k -> k
+    java.lang.String l -> l
+    java.lang.String m -> m
+    java.lang.String n -> n
+    java.lang.String o -> o
+    java.lang.String p -> p
+    android.app.Dialog q -> q
+    java.util.List r -> r
+    java.lang.String s -> s
+    cn.waps.cg t -> t
+    java.util.List a -> a
+    android.os.Handler u -> u
+    boolean v -> v
+    java.util.List b -> b
+    float c -> c
+    float d -> d
+    android.widget.ViewFlipper e -> e
+    java.util.List f -> f
+    boolean g -> g
+    java.lang.String h -> h
+    void a(android.content.Context,cn.waps.ae,android.content.SharedPreferences,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void a(android.content.Context) -> a
+    void b(android.content.Context) -> b
+    void a(android.content.Context,int) -> a
+    android.app.Dialog a() -> a
+    void a(android.content.Context,java.util.List,boolean,int) -> a
+    java.util.List a(java.io.InputStream) -> a
+    android.graphics.Bitmap a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
+    void a(java.util.List) -> a
+    void a(cn.waps.AdInfo) -> a
+    android.widget.LinearLayout a(cn.waps.AdInfo,android.content.Context,android.app.Dialog) -> a
+    android.widget.LinearLayout a(cn.waps.AdInfo,android.content.Context,android.app.Dialog,int,int) -> a
+    android.widget.LinearLayout b(cn.waps.AdInfo,android.content.Context,android.app.Dialog,int,int) -> b
+    void a(cn.waps.AdInfo,android.widget.ViewFlipper,android.widget.LinearLayout) -> a
+    void a(java.lang.String,android.app.Dialog) -> a
+    boolean c(android.content.Context) -> c
+    cn.waps.AdInfo a(android.content.Context,java.util.List) -> a
+    android.widget.LinearLayout a(android.content.Context,int,int) -> a
+    cn.waps.AdInfo a(cn.waps.bt,android.content.Context,java.util.List) -> a
+    android.widget.LinearLayout a(cn.waps.bt,cn.waps.AdInfo,android.content.Context,android.app.Dialog,int,int) -> a
+    void a(cn.waps.bt,cn.waps.AdInfo,android.widget.ViewFlipper,android.widget.LinearLayout) -> a
+    android.content.SharedPreferences a(cn.waps.bt) -> a
+    java.lang.String b(cn.waps.bt) -> b
+    java.util.List c(cn.waps.bt) -> c
+    boolean a(cn.waps.bt,boolean) -> a
+    java.lang.String d(cn.waps.bt) -> d
+    cn.waps.ae e(cn.waps.bt) -> e
+    java.util.List a(cn.waps.bt,java.util.List) -> a
+    java.util.List a(cn.waps.bt,java.io.InputStream) -> a
+    void a(cn.waps.bt,android.content.Context,java.util.List,boolean,int) -> a
+    java.lang.String f(cn.waps.bt) -> f
+    java.lang.String g(cn.waps.bt) -> g
+    java.lang.String h(cn.waps.bt) -> h
+    void b(cn.waps.bt,java.util.List) -> b
+    void a(cn.waps.bt,cn.waps.AdInfo) -> a
+    void a(cn.waps.bt,java.lang.String,android.app.Dialog) -> a
+    android.os.Handler b() -> b
+    java.lang.String i(cn.waps.bt) -> i
+    android.content.Context j(cn.waps.bt) -> j
+cn.waps.bu -> cn.waps.ai:
+    cn.waps.bt a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+cn.waps.bv -> cn.waps.al:
+    android.app.Dialog a -> a
+    cn.waps.bt b -> b
+    void onClick(android.view.View) -> onClick
+cn.waps.bw -> cn.waps.am:
+    java.lang.String a -> a
+    android.app.Dialog b -> b
+    android.widget.LinearLayout c -> c
+    android.widget.LinearLayout d -> d
+    cn.waps.bt e -> e
+    void onClick(android.view.View) -> onClick
+cn.waps.bx -> cn.waps.ap:
+    android.widget.LinearLayout a -> a
+    android.widget.LinearLayout b -> b
+    android.view.animation.TranslateAnimation c -> c
+    android.view.animation.TranslateAnimation d -> d
+    android.content.Context e -> e
+    android.app.Dialog f -> f
+    int g -> g
+    int h -> h
+    android.view.animation.TranslateAnimation i -> i
+    android.view.animation.TranslateAnimation j -> j
+    cn.waps.bt k -> k
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+cn.waps.by -> cn.waps.aq:
+    cn.waps.bx a -> a
+    void run() -> run
+cn.waps.bz -> cn.waps.as:
+    java.lang.String a -> a
+    android.app.Dialog b -> b
+    android.widget.LinearLayout c -> c
+    android.widget.LinearLayout d -> d
+    android.content.Context e -> e
+    cn.waps.bt f -> f
+    void onClick(android.view.View) -> onClick
+cn.waps.c -> cn.waps.at:
     java.lang.String a -> a
     android.webkit.WebView b -> b
     cn.waps.a c -> c
     void run() -> run
-cn.waps.cl -> cn.waps.al:
+cn.waps.ca -> cn.waps.au:
+    android.widget.LinearLayout a -> a
+    android.widget.LinearLayout b -> b
+    cn.waps.bt c -> c
+    void onClick(android.view.View) -> onClick
+cn.waps.cb -> cn.waps.av:
+    android.widget.LinearLayout a -> a
+    android.graphics.drawable.GradientDrawable b -> b
+    android.graphics.drawable.GradientDrawable c -> c
+    cn.waps.bt d -> d
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+cn.waps.cc -> cn.waps.ax:
+    cn.waps.bl a -> a
+    cn.waps.bt b -> b
+    void run() -> run
+cn.waps.cd -> cn.waps.ay:
+    android.app.Dialog a -> a
+    cn.waps.bt b -> b
+    void onDraw(android.graphics.Canvas) -> onDraw
+cn.waps.ce -> cn.waps.az:
+    cn.waps.AdInfo a -> a
+    android.widget.LinearLayout b -> b
+    cn.waps.bt c -> c
+    void run() -> run
+cn.waps.cf -> cn.waps.ba:
+    cn.waps.ce a -> a
+    void run() -> run
+cn.waps.cg -> cn.waps.bb:
+    android.content.Context a -> a
+    boolean b -> b
+    int c -> c
+    java.lang.String d -> d
+    cn.waps.bt e -> e
+    java.lang.Boolean a$5f8445a4() -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+cn.waps.ch -> cn.waps.bc:
+    cn.waps.AdInfo a -> a
+    cn.waps.bt b -> b
+    void run() -> run
+cn.waps.ci -> cn.waps.bd:
+    cn.waps.ch a -> a
+    void run() -> run
+cn.waps.cj -> cn.waps.bg:
+    java.util.List a -> a
+    cn.waps.AdInfo b -> b
+    cn.waps.bt c -> c
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+cn.waps.ck -> cn.waps.bh:
+    android.widget.ImageView a -> a
+    cn.waps.bt b -> b
+    void run() -> run
+cn.waps.cl -> cn.waps.cl:
     android.content.Context a -> a
     cn.waps.SDKUtils b -> b
     java.net.HttpURLConnection a(java.lang.String,java.util.List,byte[]) -> a
-    java.net.HttpURLConnection a(java.lang.String) -> f
-    boolean a$62c4d5a9(android.webkit.WebView,java.lang.String,java.lang.String) -> a
+    java.net.HttpURLConnection a(java.lang.String) -> a
+    boolean a(android.webkit.WebView,java.lang.String,android.app.Dialog,java.lang.String) -> a
     android.content.Intent a(android.content.Context,java.lang.String) -> a
     android.content.Intent a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
     java.lang.String c(java.lang.String,java.lang.String) -> c
-    java.lang.String a$7a1ba7c4(java.lang.String) -> a
+    java.lang.String a(java.lang.String,int) -> a
     boolean b(java.lang.String) -> b
+    java.lang.String a(android.content.Context) -> a
     java.lang.String c(java.lang.String) -> c
     java.lang.String d(java.lang.String) -> d
     boolean a() -> a
     void a(android.content.SharedPreferences) -> a
+    boolean a(int,int) -> a
     java.lang.Object[] e(java.lang.String) -> e
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
     java.lang.String a(java.lang.String,java.lang.String) -> a
+    void a(java.lang.String,java.lang.String,java.lang.String) -> a
     java.lang.String b(java.lang.String,java.lang.String) -> b
-    java.lang.String b(android.content.Context) -> a
-cn.waps.cm -> cn.waps.am:
+    java.lang.String b(android.content.Context) -> b
+cn.waps.cm -> cn.waps.bi:
     android.webkit.WebView a -> a
     java.lang.String b -> b
     cn.waps.cl c -> c
     void b() -> b
-cn.waps.cn -> cn.waps.an:
+cn.waps.cn -> cn.waps.bj:
     cn.waps.cl a -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-cn.waps.d -> cn.waps.ao:
+cn.waps.co -> cn.waps.bo:
+    cn.waps.SDKUtils a -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.waps.cp -> cn.waps.bp:
+    cn.waps.SDKUtils a -> a
+    void run() -> run
+cn.waps.cq -> cn.waps.bq:
+    cn.waps.SDKUtils a -> a
+    void run() -> run
+cn.waps.cr -> cn.waps.br:
+    java.lang.String a -> a
+    cn.waps.SDKUtils b -> b
+    void run() -> run
+cn.waps.cs -> cn.waps.bs:
+    cn.waps.SDKUtils a -> a
+    void run() -> run
+cn.waps.ct -> cn.waps.ct:
+    android.graphics.drawable.ShapeDrawable a(float,java.lang.String) -> a
+    android.graphics.drawable.ShapeDrawable b(float,java.lang.String) -> b
+    android.graphics.drawable.ShapeDrawable c(float,java.lang.String) -> c
+cn.waps.d -> cn.waps.bu:
     cn.waps.bl a -> a
     cn.waps.a b -> b
     void run() -> run
-cn.waps.e -> cn.waps.ap:
+cn.waps.e -> cn.waps.bv:
     cn.waps.a a -> a
     void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
     void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
     void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
     boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
-cn.waps.f -> cn.waps.aq:
+cn.waps.f -> cn.waps.bw:
     cn.waps.e a -> a
     void run() -> run
-cn.waps.g -> cn.waps.ar:
+cn.waps.g -> cn.waps.bx:
     cn.waps.e a -> a
     void run() -> run
-cn.waps.h -> cn.waps.as:
+cn.waps.h -> cn.waps.by:
     android.webkit.WebView a -> a
     cn.waps.e b -> b
     void run() -> run
-cn.waps.i -> cn.waps.at:
+cn.waps.i -> cn.waps.bz:
     java.lang.String a -> a
     cn.waps.AppConnect b -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-cn.waps.j -> cn.waps.au:
+cn.waps.j -> cn.waps.ca:
     cn.waps.AppConnect a -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-cn.waps.k -> cn.waps.av:
+cn.waps.k -> cn.waps.cb:
     android.app.Dialog a -> a
     cn.waps.AppConnect b -> b
     void run() -> run
-cn.waps.l -> cn.waps.aw:
+cn.waps.l -> cn.waps.cc:
     cn.waps.AppConnect a -> a
     void onShow(android.content.DialogInterface) -> onShow
-cn.waps.t -> cn.waps.ax:
+cn.waps.m -> cn.waps.cd:
+    android.content.Context a -> a
+    cn.waps.bl b -> b
+    cn.waps.AppConnect c -> c
+    void run() -> run
+cn.waps.n -> cn.waps.ce:
+    cn.waps.AppConnect a -> a
+    void run() -> run
+cn.waps.o -> cn.waps.cf:
+    android.content.Context a -> a
+    cn.waps.bl b -> b
+    cn.waps.AppConnect c -> c
+    void run() -> run
+cn.waps.p -> cn.waps.cg:
+    android.content.Context a -> a
+    cn.waps.AppConnect b -> b
+    void run() -> run
+cn.waps.q -> cn.waps.ch:
+    android.content.Context a -> a
+    cn.waps.AppConnect b -> b
+    java.lang.Boolean a$5f8445a4() -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+cn.waps.r -> cn.waps.ci:
+    cn.waps.q a -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.waps.s -> cn.waps.cj:
+    cn.waps.q a -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.waps.t -> cn.waps.ck:
     java.lang.String a -> a
     cn.waps.AppConnect b -> b
     java.lang.Boolean a$5f8445a4() -> a
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.u -> cn.waps.ay:
+cn.waps.u -> cn.waps.cm:
     cn.waps.AppConnect a -> a
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.v -> cn.waps.az:
-    cn.waps.AppConnect a -> a
-    java.lang.Boolean a$5f8445a4() -> a
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.w -> cn.waps.ba:
+cn.waps.v -> cn.waps.cn:
     cn.waps.AppConnect a -> a
     java.lang.Boolean a$5f8445a4() -> a
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.x -> cn.waps.bb:
+cn.waps.w -> cn.waps.co:
+    cn.waps.AppConnect a -> a
+    java.lang.Boolean a$5f8445a4() -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+cn.waps.x -> cn.waps.cp:
     java.lang.String b -> b
     cn.waps.AppConnect a -> a
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.y -> cn.waps.bc:
+cn.waps.y -> cn.waps.cq:
     cn.waps.AppConnect a -> a
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-cn.waps.z -> cn.waps.bd:
+cn.waps.z -> cn.waps.cr:
     cn.waps.AppConnect a -> a
     java.lang.Boolean a$5f8445a4() -> a
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-com.itjiehun.magic.AnimationCell -> com.itjiehun.magic.a:
+com.itjiehun.zhz.AnimationCell -> com.itjiehun.zhz.a:
     int animationType -> b
     long timeElapsed -> c
     long animationTime -> d
@@ -2556,7 +3098,7 @@ com.itjiehun.magic.AnimationCell -> com.itjiehun.magic.a:
     boolean animationDone() -> b
     double getPercentageDone() -> c
     boolean isActive() -> d
-com.itjiehun.magic.AnimationGrid -> com.itjiehun.magic.b:
+com.itjiehun.zhz.AnimationGrid -> com.itjiehun.zhz.b:
     java.util.ArrayList[][] field -> a
     int activeAnimations -> d
     boolean oneMoreFrame -> b
@@ -2565,31 +3107,34 @@ com.itjiehun.magic.AnimationGrid -> com.itjiehun.magic.b:
     void tickAll(long) -> a
     boolean isAnimationActive() -> a
     void cancelAnimations() -> b
-com.itjiehun.magic.Cell -> com.itjiehun.magic.c:
+com.itjiehun.zhz.Cell -> com.itjiehun.zhz.c:
     int x -> a
     int y -> b
     int getX() -> e
     int getY() -> f
     void setX(int) -> a
     void setY(int) -> b
-com.itjiehun.magic.Grid -> com.itjiehun.magic.d:
-    com.itjiehun.magic.Tile[][] field -> a
-    com.itjiehun.magic.Tile[][] undoField -> b
-    com.itjiehun.magic.Tile[][] bufferField -> c
-    com.itjiehun.magic.Cell randomAvailableCell() -> a
+com.itjiehun.zhz.DeviceUtil -> com.itjiehun.zhz.d:
+    java.lang.String tag -> a
+    java.util.Map getDeviceData(android.content.Context) -> a
+com.itjiehun.zhz.Grid -> com.itjiehun.zhz.e:
+    com.itjiehun.zhz.Tile[][] field -> a
+    com.itjiehun.zhz.Tile[][] undoField -> b
+    com.itjiehun.zhz.Tile[][] bufferField -> c
+    com.itjiehun.zhz.Cell randomAvailableCell() -> a
     java.util.ArrayList getAvailableCells() -> g
     java.util.ArrayList getNotAvailableCells() -> b
     boolean isCellsAvailable() -> c
-    boolean isCellOccupied(com.itjiehun.magic.Cell) -> a
-    com.itjiehun.magic.Tile getCellContent(com.itjiehun.magic.Cell) -> b
-    boolean isCellWithinBounds(com.itjiehun.magic.Cell) -> c
-    void insertTile(com.itjiehun.magic.Tile) -> a
-    void removeTile(com.itjiehun.magic.Tile) -> b
+    boolean isCellOccupied(com.itjiehun.zhz.Cell) -> a
+    com.itjiehun.zhz.Tile getCellContent(com.itjiehun.zhz.Cell) -> b
+    boolean isCellWithinBounds(com.itjiehun.zhz.Cell) -> c
+    void insertTile(com.itjiehun.zhz.Tile) -> a
+    void removeTile(com.itjiehun.zhz.Tile) -> b
     void saveTiles() -> d
     void prepareSaveTiles() -> e
     void clearGrid() -> f
     void clearUndoGrid() -> h
-com.itjiehun.magic.InputListener -> com.itjiehun.magic.e:
+com.itjiehun.zhz.InputListener -> com.itjiehun.zhz.f:
     float x -> a
     float y -> b
     float lastdx -> c
@@ -2601,15 +3146,24 @@ com.itjiehun.magic.InputListener -> com.itjiehun.magic.e:
     int previousDirection -> i
     int veryLastDirection -> j
     boolean hasMoved -> k
-    com.itjiehun.magic.MainView mView -> l
+    com.itjiehun.zhz.MainView mView -> l
     boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
     float pathMoved() -> a
     boolean iconPressed(int,int) -> a
     boolean inRange(float,float,float) -> a
     boolean isTap(int) -> a
-com.itjiehun.magic.MainGame -> com.itjiehun.magic.f:
-    com.itjiehun.magic.Grid grid -> a
-    com.itjiehun.magic.AnimationGrid aGrid -> b
+com.itjiehun.zhz.MainActivity -> com.itjiehun.zhz.MainActivity:
+    com.itjiehun.zhz.MainView view -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onPause() -> onPause
+    void save() -> a
+    void onResume() -> onResume
+    void load() -> b
+com.itjiehun.zhz.MainGame -> com.itjiehun.zhz.g:
+    com.itjiehun.zhz.Grid grid -> a
+    com.itjiehun.zhz.AnimationGrid aGrid -> b
     int numSquaresX -> c
     int numSquaresY -> d
     int startTiles -> e
@@ -2624,7 +3178,7 @@ com.itjiehun.magic.MainGame -> com.itjiehun.magic.f:
     android.media.SoundPool soudPool -> n
     java.util.HashMap spMap -> o
     android.content.Context mContext -> p
-    com.itjiehun.magic.MainView mView -> q
+    com.itjiehun.zhz.MainView mView -> q
     void newGame() -> a
     void addStartTiles() -> i
     void addRandomTile() -> j
@@ -2639,16 +3193,17 @@ com.itjiehun.magic.MainGame -> com.itjiehun.magic.f:
     boolean isActive() -> f
     void move(int) -> a
     void endGame() -> o
-    com.itjiehun.magic.Cell getVector(int) -> b
-    java.util.List buildTraversalsY(com.itjiehun.magic.Cell) -> a
-    com.itjiehun.magic.Cell[] findFarthestPosition(com.itjiehun.magic.Cell,com.itjiehun.magic.Cell) -> a
+    com.itjiehun.zhz.Cell getVector(int) -> b
+    java.util.List buildTraversalsY(com.itjiehun.zhz.Cell) -> a
+    com.itjiehun.zhz.Cell[] findFarthestPosition(com.itjiehun.zhz.Cell,com.itjiehun.zhz.Cell) -> a
     boolean tileMatchesAvailable() -> p
     void setEndlessMode() -> g
     boolean canContinue() -> h
-com.itjiehun.magic.MainView -> com.itjiehun.magic.g:
+    void playSound$255f295() -> q
+com.itjiehun.zhz.MainView -> com.itjiehun.zhz.h:
     android.graphics.Paint paint -> n
     android.graphics.Paint paintCell -> o
-    com.itjiehun.magic.MainGame game -> a
+    com.itjiehun.zhz.MainGame game -> a
     boolean hasSaveState -> b
     int numCellTypes -> p
     boolean continueButtonEnabled -> c
@@ -2705,83 +3260,36 @@ com.itjiehun.magic.MainView -> com.itjiehun.magic.g:
     float instructionsTextSize -> ah
     float gameOverTextSize -> ai
     boolean refreshLastTime -> m
-    android.graphics.Bitmap mouse -> aj
-    android.graphics.Bitmap cow -> ak
-    android.graphics.Bitmap tiger -> al
-    android.graphics.Bitmap rabbit -> am
-    android.graphics.Bitmap dragon -> an
-    android.graphics.Bitmap snake -> ao
-    android.graphics.Bitmap horse -> ap
-    android.graphics.Bitmap sheep -> aq
-    android.graphics.Bitmap monkey -> ar
-    android.graphics.Bitmap chicken -> as
-    android.graphics.Bitmap dog -> at
-    android.graphics.Bitmap pig -> au
-    android.graphics.Bitmap top -> av
-    android.graphics.Bitmap fbb_2 -> aw
-    android.graphics.Bitmap fbb_4 -> ax
-    android.graphics.Bitmap fbb_8 -> ay
-    android.graphics.Bitmap fbb_16 -> az
-    android.graphics.Bitmap fbb_32 -> aA
-    android.graphics.Bitmap fbb_64 -> aB
-    android.graphics.Bitmap fbb_128 -> aC
-    android.graphics.Bitmap fbb_256 -> aD
-    android.graphics.Bitmap fbb_512 -> aE
-    android.graphics.Bitmap fbb_1024 -> aF
-    android.graphics.Bitmap fbb_2048 -> aG
-    android.graphics.Bitmap fbb_4096 -> aH
-    android.graphics.Bitmap fbb_8192 -> aI
-    android.graphics.Bitmap jxx_2 -> aJ
-    android.graphics.Bitmap jxx_4 -> aK
-    android.graphics.Bitmap jxx_8 -> aL
-    android.graphics.Bitmap jxx_16 -> aM
-    android.graphics.Bitmap jxx_32 -> aN
-    android.graphics.Bitmap jxx_64 -> aO
-    android.graphics.Bitmap jxx_128 -> aP
-    android.graphics.Bitmap jxx_256 -> aQ
-    android.graphics.Bitmap jxx_512 -> aR
-    android.graphics.Bitmap jxx_1024 -> aS
-    android.graphics.Bitmap jxx_2048 -> aT
-    android.graphics.Bitmap zh_2 -> aU
-    android.graphics.Bitmap zh_4 -> aV
-    android.graphics.Bitmap zh_8 -> aW
-    android.graphics.Bitmap zh_16 -> aX
-    android.graphics.Bitmap zh_32 -> aY
-    android.graphics.Bitmap zh_64 -> aZ
-    android.graphics.Bitmap zh_128 -> ba
-    android.graphics.Bitmap zh_256 -> bb
-    android.graphics.Bitmap zh_512 -> bc
-    android.graphics.Bitmap zh_1024 -> bd
-    android.graphics.Bitmap zh_2048 -> be
-    android.graphics.Bitmap zh_4096 -> bf
-    android.graphics.Bitmap zh_8192 -> bg
+    android.graphics.Bitmap zh_2 -> aj
+    android.graphics.Bitmap zh_4 -> ak
+    android.graphics.Bitmap zh_8 -> al
+    android.graphics.Bitmap zh_16 -> am
+    android.graphics.Bitmap zh_32 -> an
+    android.graphics.Bitmap zh_64 -> ao
+    android.graphics.Bitmap zh_128 -> ap
+    android.graphics.Bitmap zh_256 -> aq
+    android.graphics.Bitmap zh_512 -> ar
+    android.graphics.Bitmap zh_1024 -> as
+    android.graphics.Bitmap zh_2048 -> at
+    android.graphics.Bitmap zh_4096 -> au
+    android.graphics.Bitmap zh_8192 -> av
     void onDraw(android.graphics.Canvas) -> onDraw
     void onSizeChanged(int,int,int,int) -> onSizeChanged
     void drawDrawable(android.graphics.Canvas,android.graphics.drawable.Drawable,int,int,int,int) -> a
     void createBitmapCells() -> b
     void drawNewGameButton(android.graphics.Canvas,boolean) -> a
     void drawBackgroundGrid(android.graphics.Canvas) -> a
-    void drawCells(android.graphics.Canvas) -> b
-    void drawEndGameState(android.graphics.Canvas) -> c
+    void drawEndGameState(android.graphics.Canvas) -> b
     void createEndGameStates(android.graphics.Canvas,boolean,boolean) -> a
     void resyncTime() -> a
     int centerText() -> c
-com.itjiehun.magic.Tile -> com.itjiehun.magic.h:
+com.itjiehun.zhz.Tile -> com.itjiehun.zhz.i:
     int value -> a
-    com.itjiehun.magic.Tile[] mergedFrom -> b
-    void updatePosition(com.itjiehun.magic.Cell) -> a
+    com.itjiehun.zhz.Tile[] mergedFrom -> b
+    void updatePosition(com.itjiehun.zhz.Cell) -> a
     int getValue() -> a
-    com.itjiehun.magic.Tile[] getMergedFrom() -> b
-    void setMergedFrom(com.itjiehun.magic.Tile[]) -> a
-com.itjiehun.magic.zh.MainActivity -> com.itjiehun.magic.zh.MainActivity:
-    com.itjiehun.magic.MainView view -> a
-    void onCreate(android.os.Bundle) -> onCreate
-    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
-    void onPause() -> onPause
-    void save() -> a
-    void onResume() -> onResume
-    void load() -> b
+    com.itjiehun.zhz.Tile[] getMergedFrom() -> b
+    void setMergedFrom(com.itjiehun.zhz.Tile[]) -> a
 com.umeng.analytics.AnalyticsConfig -> com.umeng.a.a:
     java.lang.String a -> o
     java.lang.String b -> p
@@ -2832,7 +3340,7 @@ com.umeng.analytics.MobclickAgent -> com.umeng.a.f:
     void onPause(android.content.Context) -> a
     void onResume(android.content.Context) -> b
     void onResume(android.content.Context,java.lang.String,java.lang.String) -> a
-    java.lang.String getConfigParams(android.content.Context,java.lang.String) -> a
+    void onEventValue(android.content.Context,java.lang.String,java.util.Map,int) -> a
     void updateOnlineConfig(android.content.Context) -> c
 com.umeng.analytics.ReportPolicy -> com.umeng.a.g:
 com.umeng.analytics.ReportPolicy$a -> com.umeng.a.h:
@@ -2876,6 +3384,7 @@ com.umeng.analytics.c -> com.umeng.a.p:
     void b(android.content.Context) -> b
     void c(android.content.Context) -> c
     void h(android.content.Context) -> e
+    void a$71c672dc(android.content.Context,java.lang.String,java.util.Map) -> a
     void a(java.lang.Throwable) -> a
     void a(com.umeng.analytics.c,android.content.Context) -> a
     void b(com.umeng.analytics.c,android.content.Context) -> b
@@ -3510,13 +4019,15 @@ com.umeng.update.util.b -> com.umeng.update.util.a:
     com.umeng.update.util.b a(int) -> b
     com.umeng.update.util.b d(java.lang.CharSequence) -> d
     com.umeng.update.util.b a(long) -> a
-u.aly.C -> a.a.a:
+u.aly.B -> b.a.a:
+    void a(u.aly.af,java.lang.String) -> a
+u.aly.C -> b.a.b:
     java.lang.String a(java.lang.Throwable) -> a
     void a(u.aly.af,java.lang.String) -> a
-u.aly.E -> a.a.b:
-u.aly.F -> a.a.c:
+u.aly.E -> b.a.c:
+u.aly.F -> b.a.d:
     void a(u.aly.af,java.lang.String) -> a
-u.aly.G -> a.a.d:
+u.aly.G -> b.a.e:
     u.aly.G a -> a
     u.aly.G b -> b
     u.aly.G c -> c
@@ -3527,7 +4038,7 @@ u.aly.G -> a.a.d:
     u.aly.G a(int) -> a
     u.aly.G[] values() -> values
     u.aly.G valueOf(java.lang.String) -> valueOf
-u.aly.H -> a.a.e:
+u.aly.H -> b.a.f:
     u.aly.bd c -> c
     u.aly.aT d -> d
     java.util.Map e -> e
@@ -3542,17 +4053,17 @@ u.aly.H -> a.a.e:
     void f() -> c
     u.aly.bd h() -> d
     u.aly.aT i() -> e
-u.aly.H$a -> a.a.f:
+u.aly.H$a -> b.a.g:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.H$b -> a.a.g:
+u.aly.H$b -> b.a.h:
     u.aly.bg b() -> a
-u.aly.H$c -> a.a.h:
+u.aly.H$c -> b.a.i:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.H$d -> a.a.i:
+u.aly.H$d -> b.a.j:
     u.aly.bg b() -> a
-u.aly.H$e -> a.a.j:
+u.aly.H$e -> b.a.k:
     u.aly.H$e a -> a
     java.util.Map b -> b
     short c -> c
@@ -3561,7 +4072,7 @@ u.aly.H$e -> a.a.j:
     short a() -> a
     u.aly.H$e[] values() -> values
     u.aly.H$e valueOf(java.lang.String) -> valueOf
-u.aly.I -> a.a.k:
+u.aly.I -> b.a.l:
     u.aly.bd l -> l
     u.aly.aT m -> m
     u.aly.aT n -> n
@@ -3628,17 +4139,17 @@ u.aly.I -> a.a.k:
     u.aly.aT Q() -> z
     u.aly.aT R() -> A
     u.aly.aT S() -> B
-u.aly.I$a -> a.a.l:
+u.aly.I$a -> b.a.m:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.I$b -> a.a.m:
+u.aly.I$b -> b.a.n:
     u.aly.bg b() -> a
-u.aly.I$c -> a.a.n:
+u.aly.I$c -> b.a.o:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.I$d -> a.a.o:
+u.aly.I$d -> b.a.p:
     u.aly.bg b() -> a
-u.aly.I$e -> a.a.p:
+u.aly.I$e -> b.a.q:
     u.aly.I$e a -> a
     u.aly.I$e b -> b
     u.aly.I$e c -> c
@@ -3656,7 +4167,7 @@ u.aly.I$e -> a.a.p:
     short a() -> a
     u.aly.I$e[] values() -> values
     u.aly.I$e valueOf(java.lang.String) -> valueOf
-u.aly.J -> a.a.q:
+u.aly.J -> b.a.r:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -3685,17 +4196,17 @@ u.aly.J -> a.a.q:
     u.aly.aT o() -> i
     u.aly.aT p() -> j
     u.aly.aT q() -> k
-u.aly.J$a -> a.a.r:
+u.aly.J$a -> b.a.s:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.J$b -> a.a.s:
+u.aly.J$b -> b.a.t:
     u.aly.bg b() -> a
-u.aly.J$c -> a.a.t:
+u.aly.J$c -> b.a.u:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.J$d -> a.a.u:
+u.aly.J$d -> b.a.v:
     u.aly.bg b() -> a
-u.aly.J$e -> a.a.v:
+u.aly.J$e -> b.a.w:
     u.aly.J$e a -> a
     u.aly.J$e b -> b
     u.aly.J$e c -> c
@@ -3706,7 +4217,7 @@ u.aly.J$e -> a.a.v:
     short a() -> a
     u.aly.J$e[] values() -> values
     u.aly.J$e valueOf(java.lang.String) -> valueOf
-u.aly.K -> a.a.w:
+u.aly.K -> b.a.x:
     u.aly.bd s -> s
     u.aly.aT t -> t
     u.aly.aT u -> u
@@ -3816,17 +4327,17 @@ u.aly.K -> a.a.w:
     u.aly.aT as() -> Y
     u.aly.aT at() -> Z
     u.aly.aT au() -> aa
-u.aly.K$a -> a.a.x:
+u.aly.K$a -> b.a.y:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.K$b -> a.a.y:
+u.aly.K$b -> b.a.z:
     u.aly.bg b() -> a
-u.aly.K$c -> a.a.z:
+u.aly.K$c -> b.a.aa:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.K$d -> a.a.aa:
+u.aly.K$d -> b.a.ab:
     u.aly.bg b() -> a
-u.aly.K$e -> a.a.ab:
+u.aly.K$e -> b.a.ac:
     u.aly.K$e a -> a
     u.aly.K$e b -> b
     u.aly.K$e c -> c
@@ -3851,7 +4362,7 @@ u.aly.K$e -> a.a.ab:
     short a() -> a
     u.aly.K$e[] values() -> values
     u.aly.K$e valueOf(java.lang.String) -> valueOf
-u.aly.M -> a.a.ac:
+u.aly.M -> b.a.ad:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -3876,17 +4387,17 @@ u.aly.M -> a.a.ac:
     u.aly.aT o() -> h
     u.aly.aT p() -> i
     u.aly.aT q() -> j
-u.aly.M$a -> a.a.ad:
+u.aly.M$a -> b.a.ae:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.M$b -> a.a.ae:
+u.aly.M$b -> b.a.af:
     u.aly.bg b() -> a
-u.aly.M$c -> a.a.af:
+u.aly.M$c -> b.a.ag:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.M$d -> a.a.ag:
+u.aly.M$d -> b.a.ah:
     u.aly.bg b() -> a
-u.aly.M$e -> a.a.ah:
+u.aly.M$e -> b.a.ai:
     u.aly.M$e a -> a
     u.aly.M$e b -> b
     u.aly.M$e c -> c
@@ -3897,7 +4408,7 @@ u.aly.M$e -> a.a.ah:
     short a() -> a
     u.aly.M$e[] values() -> values
     u.aly.M$e valueOf(java.lang.String) -> valueOf
-u.aly.N -> a.a.ai:
+u.aly.N -> b.a.aj:
     u.aly.N a -> a
     u.aly.N b -> b
     int c -> c
@@ -3906,7 +4417,7 @@ u.aly.N -> a.a.ai:
     u.aly.N a(int) -> a
     u.aly.N[] values() -> values
     u.aly.N valueOf(java.lang.String) -> valueOf
-u.aly.O -> a.a.aj:
+u.aly.O -> b.a.ak:
     u.aly.bd g -> g
     u.aly.aT h -> h
     u.aly.aT i -> i
@@ -3940,17 +4451,17 @@ u.aly.O -> a.a.aj:
     u.aly.aT x() -> m
     u.aly.aT y() -> n
     u.aly.aT z() -> o
-u.aly.O$a -> a.a.ak:
+u.aly.O$a -> b.a.al:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.O$b -> a.a.al:
+u.aly.O$b -> b.a.am:
     u.aly.bg b() -> a
-u.aly.O$c -> a.a.am:
+u.aly.O$c -> b.a.an:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.O$d -> a.a.an:
+u.aly.O$d -> b.a.ao:
     u.aly.bg b() -> a
-u.aly.O$e -> a.a.ao:
+u.aly.O$e -> b.a.ap:
     u.aly.O$e a -> a
     u.aly.O$e b -> b
     u.aly.O$e c -> c
@@ -3963,7 +4474,7 @@ u.aly.O$e -> a.a.ao:
     short a() -> a
     u.aly.O$e[] values() -> values
     u.aly.O$e valueOf(java.lang.String) -> valueOf
-u.aly.P -> a.a.ap:
+u.aly.P -> b.a.aq:
     u.aly.P a -> a
     u.aly.P b -> b
     u.aly.P c -> c
@@ -3973,7 +4484,7 @@ u.aly.P -> a.a.ap:
     u.aly.P a(int) -> a
     u.aly.P[] values() -> values
     u.aly.P valueOf(java.lang.String) -> valueOf
-u.aly.Q -> a.a.aq:
+u.aly.Q -> b.a.ar:
     u.aly.bd f -> f
     u.aly.aT g -> g
     u.aly.aT h -> h
@@ -4006,17 +4517,17 @@ u.aly.Q -> a.a.aq:
     u.aly.aT s() -> j
     u.aly.aT t() -> k
     u.aly.aT u() -> l
-u.aly.Q$a -> a.a.ar:
+u.aly.Q$a -> b.a.as:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.Q$b -> a.a.as:
+u.aly.Q$b -> b.a.at:
     u.aly.bg b() -> a
-u.aly.Q$c -> a.a.at:
+u.aly.Q$c -> b.a.au:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.Q$d -> a.a.au:
+u.aly.Q$d -> b.a.av:
     u.aly.bg b() -> a
-u.aly.Q$e -> a.a.av:
+u.aly.Q$e -> b.a.aw:
     u.aly.Q$e a -> a
     u.aly.Q$e b -> b
     u.aly.Q$e c -> c
@@ -4028,7 +4539,7 @@ u.aly.Q$e -> a.a.av:
     short a() -> a
     u.aly.Q$e[] values() -> values
     u.aly.Q$e valueOf(java.lang.String) -> valueOf
-u.aly.R -> a.a.aw:
+u.aly.R -> b.a.ax:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -4058,17 +4569,17 @@ u.aly.R -> a.a.aw:
     u.aly.aT o() -> k
     u.aly.aT p() -> l
     u.aly.aT q() -> m
-u.aly.R$a -> a.a.ax:
+u.aly.R$a -> b.a.ay:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.R$b -> a.a.ay:
+u.aly.R$b -> b.a.az:
     u.aly.bg b() -> a
-u.aly.R$c -> a.a.az:
+u.aly.R$c -> b.a.ba:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.R$d -> a.a.ba:
+u.aly.R$d -> b.a.bb:
     u.aly.bg b() -> a
-u.aly.R$e -> a.a.bb:
+u.aly.R$e -> b.a.bc:
     u.aly.R$e a -> a
     u.aly.R$e b -> b
     u.aly.R$e c -> c
@@ -4079,7 +4590,7 @@ u.aly.R$e -> a.a.bb:
     short a() -> a
     u.aly.R$e[] values() -> values
     u.aly.R$e valueOf(java.lang.String) -> valueOf
-u.aly.S -> a.a.bc:
+u.aly.S -> b.a.bd:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -4107,17 +4618,17 @@ u.aly.S -> a.a.bc:
     u.aly.aT r() -> i
     u.aly.aT s() -> j
     u.aly.aT t() -> k
-u.aly.S$a -> a.a.bd:
+u.aly.S$a -> b.a.be:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.S$b -> a.a.be:
+u.aly.S$b -> b.a.bf:
     u.aly.bg b() -> a
-u.aly.S$c -> a.a.bf:
+u.aly.S$c -> b.a.bg:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.S$d -> a.a.bg:
+u.aly.S$d -> b.a.bh:
     u.aly.bg b() -> a
-u.aly.S$e -> a.a.bh:
+u.aly.S$e -> b.a.bi:
     u.aly.S$e a -> a
     u.aly.S$e b -> b
     u.aly.S$e c -> c
@@ -4128,7 +4639,7 @@ u.aly.S$e -> a.a.bh:
     short a() -> a
     u.aly.S$e[] values() -> values
     u.aly.S$e valueOf(java.lang.String) -> valueOf
-u.aly.T -> a.a.bi:
+u.aly.T -> b.a.bj:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -4156,17 +4667,17 @@ u.aly.T -> a.a.bi:
     u.aly.aT p() -> j
     u.aly.aT q() -> k
     u.aly.aT r() -> l
-u.aly.T$a -> a.a.bj:
+u.aly.T$a -> b.a.bk:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.T$b -> a.a.bk:
+u.aly.T$b -> b.a.bl:
     u.aly.bg b() -> a
-u.aly.T$c -> a.a.bl:
+u.aly.T$c -> b.a.bm:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.T$d -> a.a.bm:
+u.aly.T$d -> b.a.bn:
     u.aly.bg b() -> a
-u.aly.T$e -> a.a.bn:
+u.aly.T$e -> b.a.bo:
     u.aly.T$e a -> a
     u.aly.T$e b -> b
     u.aly.T$e c -> c
@@ -4177,7 +4688,7 @@ u.aly.T$e -> a.a.bn:
     short a() -> a
     u.aly.T$e[] values() -> values
     u.aly.T$e valueOf(java.lang.String) -> valueOf
-u.aly.U -> a.a.bo:
+u.aly.U -> b.a.bp:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -4205,17 +4716,17 @@ u.aly.U -> a.a.bo:
     u.aly.aT o() -> k
     u.aly.aT p() -> l
     u.aly.aT q() -> m
-u.aly.U$a -> a.a.bp:
+u.aly.U$a -> b.a.bq:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.U$b -> a.a.bq:
+u.aly.U$b -> b.a.br:
     u.aly.bg b() -> a
-u.aly.U$c -> a.a.br:
+u.aly.U$c -> b.a.bs:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.U$d -> a.a.bs:
+u.aly.U$d -> b.a.bt:
     u.aly.bg b() -> a
-u.aly.U$e -> a.a.bt:
+u.aly.U$e -> b.a.bu:
     u.aly.U$e a -> a
     u.aly.U$e b -> b
     u.aly.U$e c -> c
@@ -4226,7 +4737,7 @@ u.aly.U$e -> a.a.bt:
     short a() -> a
     u.aly.U$e[] values() -> values
     u.aly.U$e valueOf(java.lang.String) -> valueOf
-u.aly.V -> a.a.bu:
+u.aly.V -> b.a.bv:
     u.aly.bd f -> f
     u.aly.aT g -> g
     u.aly.aT h -> h
@@ -4245,6 +4756,7 @@ u.aly.V -> a.a.bu:
     void a(u.aly.M) -> a
     boolean k() -> c
     void b$1385ff() -> d
+    void a(u.aly.O) -> a
     boolean p() -> e
     void c$1385ff() -> f
     boolean u() -> g
@@ -4258,17 +4770,17 @@ u.aly.V -> a.a.bu:
     u.aly.aT y() -> l
     u.aly.aT z() -> m
     u.aly.aT A() -> n
-u.aly.V$a -> a.a.bv:
+u.aly.V$a -> b.a.bw:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.V$b -> a.a.bw:
+u.aly.V$b -> b.a.bx:
     u.aly.bg b() -> a
-u.aly.V$c -> a.a.bx:
+u.aly.V$c -> b.a.by:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.V$d -> a.a.by:
+u.aly.V$d -> b.a.bz:
     u.aly.bg b() -> a
-u.aly.V$e -> a.a.bz:
+u.aly.V$e -> b.a.ca:
     u.aly.V$e a -> a
     u.aly.V$e b -> b
     u.aly.V$e c -> c
@@ -4280,7 +4792,7 @@ u.aly.V$e -> a.a.bz:
     short a() -> a
     u.aly.V$e[] values() -> values
     u.aly.V$e valueOf(java.lang.String) -> valueOf
-u.aly.W -> a.a.ca:
+u.aly.W -> b.a.cb:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -4305,17 +4817,17 @@ u.aly.W -> a.a.ca:
     u.aly.aT o() -> i
     u.aly.aT p() -> j
     u.aly.aT q() -> k
-u.aly.W$a -> a.a.cb:
+u.aly.W$a -> b.a.cc:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.W$b -> a.a.cc:
+u.aly.W$b -> b.a.cd:
     u.aly.bg b() -> a
-u.aly.W$c -> a.a.cd:
+u.aly.W$c -> b.a.ce:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.W$d -> a.a.ce:
+u.aly.W$d -> b.a.cf:
     u.aly.bg b() -> a
-u.aly.W$e -> a.a.cf:
+u.aly.W$e -> b.a.cg:
     u.aly.W$e a -> a
     u.aly.W$e b -> b
     u.aly.W$e c -> c
@@ -4326,7 +4838,7 @@ u.aly.W$e -> a.a.cf:
     short a() -> a
     u.aly.W$e[] values() -> values
     u.aly.W$e valueOf(java.lang.String) -> valueOf
-u.aly.X -> a.a.cg:
+u.aly.X -> b.a.ch:
     u.aly.bd m -> m
     u.aly.aT n -> n
     u.aly.aT o -> o
@@ -4399,17 +4911,17 @@ u.aly.X -> a.a.cg:
     u.aly.aT U() -> G
     u.aly.aT V() -> H
     u.aly.aT W() -> I
-u.aly.X$a -> a.a.ch:
+u.aly.X$a -> b.a.ci:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.X$b -> a.a.ci:
+u.aly.X$b -> b.a.cj:
     u.aly.bg b() -> a
-u.aly.X$c -> a.a.cj:
+u.aly.X$c -> b.a.ck:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.X$d -> a.a.ck:
+u.aly.X$d -> b.a.cl:
     u.aly.bg b() -> a
-u.aly.X$e -> a.a.cl:
+u.aly.X$e -> b.a.cm:
     u.aly.X$e a -> a
     u.aly.X$e b -> b
     u.aly.X$e c -> c
@@ -4428,7 +4940,7 @@ u.aly.X$e -> a.a.cl:
     short a() -> a
     u.aly.X$e[] values() -> values
     u.aly.X$e valueOf(java.lang.String) -> valueOf
-u.aly.Y -> a.a.cm:
+u.aly.Y -> b.a.cn:
     u.aly.bd d -> d
     u.aly.aT e -> e
     u.aly.aT f -> f
@@ -4447,17 +4959,17 @@ u.aly.Y -> a.a.cm:
     u.aly.bd k() -> e
     u.aly.aT l() -> f
     u.aly.aT m() -> g
-u.aly.Y$a -> a.a.cn:
+u.aly.Y$a -> b.a.co:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.Y$b -> a.a.co:
+u.aly.Y$b -> b.a.cp:
     u.aly.bg b() -> a
-u.aly.Y$c -> a.a.cp:
+u.aly.Y$c -> b.a.cq:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.Y$d -> a.a.cq:
+u.aly.Y$d -> b.a.cr:
     u.aly.bg b() -> a
-u.aly.Y$e -> a.a.cr:
+u.aly.Y$e -> b.a.cs:
     u.aly.Y$e a -> a
     u.aly.Y$e b -> b
     java.util.Map c -> c
@@ -4467,7 +4979,7 @@ u.aly.Y$e -> a.a.cr:
     short a() -> a
     u.aly.Y$e[] values() -> values
     u.aly.Y$e valueOf(java.lang.String) -> valueOf
-u.aly.Z -> a.a.cs:
+u.aly.Z -> b.a.ct:
     u.aly.bd d -> d
     u.aly.aT e -> e
     u.aly.aT f -> f
@@ -4478,12 +4990,14 @@ u.aly.Z -> a.a.cs:
     java.lang.Object a(u.aly.aY,short) -> a
     void d(u.aly.aY) -> d
     u.aly.bd c() -> a
+    void b(java.lang.String) -> a
+    void b(long) -> a
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     u.aly.aT a(u.aly.aG) -> a
     u.aly.aG b(short) -> a
-    int[] i() -> d
-u.aly.Z$a -> a.a.ct:
+    int[] i() -> e
+u.aly.Z$a -> b.a.cu:
     u.aly.Z$a a -> a
     u.aly.Z$a b -> b
     java.util.Map c -> c
@@ -4495,7 +5009,7 @@ u.aly.Z$a -> a.a.ct:
     short a() -> a
     u.aly.Z$a[] values() -> values
     u.aly.Z$a valueOf(java.lang.String) -> valueOf
-u.aly.a -> a.a.cu:
+u.aly.a -> b.a.cv:
     int a -> a
     int b -> b
     java.lang.String c -> c
@@ -4509,7 +5023,7 @@ u.aly.a -> a.a.cu:
     void a$61fb9e66() -> f
     java.lang.String f() -> g
     void a(u.aly.S) -> a
-u.aly.aA -> a.a.cv:
+u.aly.aA -> b.a.cw:
     java.util.Comparator a -> a
     int a(int,int) -> a
     int a(byte[],byte[]) -> a
@@ -4518,26 +5032,27 @@ u.aly.aA -> a.a.cv:
     int a(java.util.Set,java.util.Set) -> a
     int a(java.util.Map,java.util.Map) -> a
     void a(java.nio.ByteBuffer,java.lang.StringBuilder) -> a
-u.aly.aA$a -> a.a.cw:
+u.aly.aA$a -> b.a.cx:
     int compare(java.lang.Object,java.lang.Object) -> compare
-u.aly.aC -> a.a.cx:
+u.aly.aC -> b.a.cy:
     u.aly.aY a -> a
     u.aly.bl b -> b
     void a(u.aly.az,byte[]) -> a
-u.aly.aF -> a.a.cy:
-u.aly.aG -> a.a.cz:
+u.aly.aF -> b.a.cz:
+u.aly.aG -> b.a.da:
     short a() -> a
-u.aly.aI -> a.a.da:
+u.aly.aI -> b.a.db:
     java.io.ByteArrayOutputStream a -> a
     u.aly.bk b -> b
     u.aly.aY c -> c
     byte[] a(u.aly.az) -> a
-u.aly.aJ -> a.a.db:
+u.aly.aJ -> b.a.dc:
     java.lang.Object b -> b
     u.aly.aG c -> c
     java.util.Map a -> a
     u.aly.aG j() -> b
     java.lang.Object k() -> c
+    boolean l() -> d
     void a(u.aly.aY) -> a
     void b(u.aly.aY) -> b
     java.lang.Object a(u.aly.aY,u.aly.aT) -> a
@@ -4548,37 +5063,37 @@ u.aly.aJ -> a.a.db:
     u.aly.aT a(u.aly.aG) -> a
     u.aly.aG b(short) -> a
     java.lang.String toString() -> toString
-u.aly.aJ$a -> a.a.dc:
+u.aly.aJ$a -> b.a.dd:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.aJ$b -> a.a.dd:
+u.aly.aJ$b -> b.a.de:
     u.aly.bg b() -> a
-u.aly.aJ$c -> a.a.de:
+u.aly.aJ$c -> b.a.df:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.aJ$d -> a.a.df:
+u.aly.aJ$d -> b.a.dg:
     u.aly.bg b() -> a
-u.aly.aK -> a.a.dg:
+u.aly.aK -> b.a.dh:
     java.lang.Class a -> a
-u.aly.aL -> a.a.dh:
+u.aly.aL -> b.a.di:
     java.lang.String a -> a
     byte b -> b
     u.aly.aM c -> c
     java.util.Map d -> d
     void a(java.lang.Class,java.util.Map) -> a
-u.aly.aM -> a.a.di:
+u.aly.aM -> b.a.dj:
     byte b -> b
     boolean a -> a
     java.lang.String c -> c
     boolean d -> d
-u.aly.aN -> a.a.dj:
+u.aly.aN -> b.a.dk:
     u.aly.aM a -> a
-u.aly.aO -> a.a.dk:
+u.aly.aO -> b.a.dl:
     u.aly.aM a -> a
     u.aly.aM c -> c
-u.aly.aQ -> a.a.dl:
+u.aly.aQ -> b.a.dm:
     java.lang.Class a -> a
-u.aly.aR -> a.a.dm:
+u.aly.aR -> b.a.dn:
     u.aly.bd h -> f
     boolean c -> a
     boolean d -> b
@@ -4624,12 +5139,12 @@ u.aly.aR -> a.a.dm:
     int a$1cf967b1(byte[],int) -> a
     void c(int) -> b
     void d(int) -> d
-u.aly.aR$a -> a.a.dn:
+u.aly.aR$a -> b.a.do:
     boolean a -> a
     boolean b -> b
     int c -> c
     u.aly.aY a(u.aly.bm) -> a
-u.aly.aS -> a.a.do:
+u.aly.aS -> b.a.dp:
     u.aly.bd d -> d
     u.aly.aT e -> f
     byte[] f -> g
@@ -4680,22 +5195,22 @@ u.aly.aS -> a.a.do:
     int E() -> t
     int g(int) -> e
     byte d(byte) -> c
-u.aly.aS$a -> a.a.dp:
+u.aly.aS$a -> b.a.dq:
     long a -> a
     u.aly.aY a(u.aly.bm) -> a
-u.aly.aT -> a.a.dq:
+u.aly.aT -> b.a.dr:
     java.lang.String a -> a
     byte b -> b
     short c -> c
     java.lang.String toString() -> toString
-u.aly.aU -> a.a.dr:
+u.aly.aU -> b.a.ds:
     byte a -> a
     int b -> b
-u.aly.aV -> a.a.ds:
+u.aly.aV -> b.a.dt:
     byte a -> a
     byte b -> b
     int c -> c
-u.aly.aY -> a.a.dt:
+u.aly.aY -> b.a.du:
     u.aly.bm g -> e
     void a$35425119() -> a
     void b() -> b
@@ -4726,9 +5241,9 @@ u.aly.aY -> a.a.dt:
     java.nio.ByteBuffer A() -> q
     void B() -> r
     java.lang.Class D() -> s
-u.aly.aZ -> a.a.du:
+u.aly.aZ -> b.a.dv:
     int g -> a
-u.aly.aa -> a.a.dv:
+u.aly.aa -> b.a.dw:
     u.aly.bd d -> d
     u.aly.aT e -> e
     u.aly.aT f -> f
@@ -4748,17 +5263,17 @@ u.aly.aa -> a.a.dv:
     u.aly.bd k() -> f
     u.aly.aT l() -> g
     u.aly.aT m() -> h
-u.aly.aa$a -> a.a.dw:
+u.aly.aa$a -> b.a.dx:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.aa$b -> a.a.dx:
+u.aly.aa$b -> b.a.dy:
     u.aly.bg b() -> a
-u.aly.aa$c -> a.a.dy:
+u.aly.aa$c -> b.a.dz:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.aa$d -> a.a.dz:
+u.aly.aa$d -> b.a.ea:
     u.aly.bg b() -> a
-u.aly.aa$e -> a.a.ea:
+u.aly.aa$e -> b.a.eb:
     u.aly.aa$e a -> a
     u.aly.aa$e b -> b
     java.util.Map c -> c
@@ -4768,7 +5283,7 @@ u.aly.aa$e -> a.a.ea:
     short a() -> a
     u.aly.aa$e[] values() -> values
     u.aly.aa$e valueOf(java.lang.String) -> valueOf
-u.aly.ab -> a.a.eb:
+u.aly.ab -> b.a.ec:
     u.aly.bd e -> e
     u.aly.aT f -> f
     u.aly.aT g -> g
@@ -4796,17 +5311,17 @@ u.aly.ab -> a.a.eb:
     u.aly.aT o() -> k
     u.aly.aT p() -> l
     u.aly.aT q() -> m
-u.aly.ab$a -> a.a.ec:
+u.aly.ab$a -> b.a.ed:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ab$b -> a.a.ed:
+u.aly.ab$b -> b.a.ee:
     u.aly.bg b() -> a
-u.aly.ab$c -> a.a.ee:
+u.aly.ab$c -> b.a.ef:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ab$d -> a.a.ef:
+u.aly.ab$d -> b.a.eg:
     u.aly.bg b() -> a
-u.aly.ab$e -> a.a.eg:
+u.aly.ab$e -> b.a.eh:
     u.aly.ab$e a -> a
     u.aly.ab$e b -> b
     u.aly.ab$e c -> c
@@ -4817,7 +5332,7 @@ u.aly.ab$e -> a.a.eg:
     short a() -> a
     u.aly.ab$e[] values() -> values
     u.aly.ab$e valueOf(java.lang.String) -> valueOf
-u.aly.ac -> a.a.eh:
+u.aly.ac -> b.a.ei:
     u.aly.ac a -> a
     u.aly.ac b -> b
     u.aly.ac c -> c
@@ -4828,7 +5343,7 @@ u.aly.ac -> a.a.eh:
     u.aly.ac a(int) -> a
     u.aly.ac[] values() -> values
     u.aly.ac valueOf(java.lang.String) -> valueOf
-u.aly.ad -> a.a.ei:
+u.aly.ad -> b.a.ej:
     u.aly.bd i -> i
     u.aly.aT j -> j
     u.aly.aT k -> k
@@ -4882,17 +5397,17 @@ u.aly.ad -> a.a.ei:
     u.aly.aT I() -> u
     u.aly.aT J() -> v
     u.aly.aT K() -> w
-u.aly.ad$a -> a.a.ej:
+u.aly.ad$a -> b.a.ek:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ad$b -> a.a.ek:
+u.aly.ad$b -> b.a.el:
     u.aly.bg b() -> a
-u.aly.ad$c -> a.a.el:
+u.aly.ad$c -> b.a.em:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ad$d -> a.a.em:
+u.aly.ad$d -> b.a.en:
     u.aly.bg b() -> a
-u.aly.ad$e -> a.a.en:
+u.aly.ad$e -> b.a.eo:
     u.aly.ad$e a -> a
     u.aly.ad$e b -> b
     u.aly.ad$e c -> c
@@ -4907,7 +5422,7 @@ u.aly.ad$e -> a.a.en:
     short a() -> a
     u.aly.ad$e[] values() -> values
     u.aly.ad$e valueOf(java.lang.String) -> valueOf
-u.aly.ae -> a.a.eo:
+u.aly.ae -> b.a.ep:
     u.aly.bd d -> d
     u.aly.aT e -> e
     u.aly.aT f -> f
@@ -4929,17 +5444,17 @@ u.aly.ae -> a.a.eo:
     u.aly.bd k() -> f
     u.aly.aT l() -> g
     u.aly.aT m() -> h
-u.aly.ae$a -> a.a.ep:
+u.aly.ae$a -> b.a.eq:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ae$b -> a.a.eq:
+u.aly.ae$b -> b.a.er:
     u.aly.bg b() -> a
-u.aly.ae$c -> a.a.er:
+u.aly.ae$c -> b.a.es:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ae$d -> a.a.es:
+u.aly.ae$d -> b.a.et:
     u.aly.bg b() -> a
-u.aly.ae$e -> a.a.et:
+u.aly.ae$e -> b.a.eu:
     u.aly.ae$e a -> a
     u.aly.ae$e b -> b
     java.util.Map c -> c
@@ -4949,7 +5464,7 @@ u.aly.ae$e -> a.a.et:
     short a() -> a
     u.aly.ae$e[] values() -> values
     u.aly.ae$e valueOf(java.lang.String) -> valueOf
-u.aly.af -> a.a.eu:
+u.aly.af -> b.a.ev:
     u.aly.bd k -> k
     u.aly.aT l -> l
     u.aly.aT m -> m
@@ -5012,17 +5527,17 @@ u.aly.af -> a.a.eu:
     u.aly.aT Q() -> z
     u.aly.aT R() -> A
     u.aly.aT S() -> B
-u.aly.af$a -> a.a.ev:
+u.aly.af$a -> b.a.ew:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.af$b -> a.a.ew:
+u.aly.af$b -> b.a.ex:
     u.aly.bg b() -> a
-u.aly.af$c -> a.a.ex:
+u.aly.af$c -> b.a.ey:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.af$d -> a.a.ey:
+u.aly.af$d -> b.a.ez:
     u.aly.bg b() -> a
-u.aly.af$e -> a.a.ez:
+u.aly.af$e -> b.a.fa:
     u.aly.af$e a -> a
     u.aly.af$e b -> b
     u.aly.af$e c -> c
@@ -5039,7 +5554,7 @@ u.aly.af$e -> a.a.ez:
     short a() -> a
     u.aly.af$e[] values() -> values
     u.aly.af$e valueOf(java.lang.String) -> valueOf
-u.aly.ag -> a.a.fa:
+u.aly.ag -> b.a.fb:
     u.aly.bd f -> f
     u.aly.aT g -> g
     u.aly.aT h -> h
@@ -5074,17 +5589,17 @@ u.aly.ag -> a.a.fa:
     u.aly.aT s() -> l
     u.aly.aT t() -> m
     u.aly.aT u() -> n
-u.aly.ag$a -> a.a.fb:
+u.aly.ag$a -> b.a.fc:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ag$b -> a.a.fc:
+u.aly.ag$b -> b.a.fd:
     u.aly.bg b() -> a
-u.aly.ag$c -> a.a.fd:
+u.aly.ag$c -> b.a.fe:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ag$d -> a.a.fe:
+u.aly.ag$d -> b.a.ff:
     u.aly.bg b() -> a
-u.aly.ag$e -> a.a.ff:
+u.aly.ag$e -> b.a.fg:
     u.aly.ag$e a -> a
     u.aly.ag$e b -> b
     u.aly.ag$e c -> c
@@ -5096,7 +5611,7 @@ u.aly.ag$e -> a.a.ff:
     short a() -> a
     u.aly.ag$e[] values() -> values
     u.aly.ag$e valueOf(java.lang.String) -> valueOf
-u.aly.ah -> a.a.fg:
+u.aly.ah -> b.a.fh:
     u.aly.bd k -> k
     u.aly.aT l -> l
     u.aly.aT m -> m
@@ -5154,17 +5669,17 @@ u.aly.ah -> a.a.fg:
     u.aly.aT N() -> u
     u.aly.aT O() -> v
     u.aly.aT P() -> w
-u.aly.ah$a -> a.a.fh:
+u.aly.ah$a -> b.a.fi:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ah$b -> a.a.fi:
+u.aly.ah$b -> b.a.fj:
     u.aly.bg b() -> a
-u.aly.ah$c -> a.a.fj:
+u.aly.ah$c -> b.a.fk:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.ah$d -> a.a.fk:
+u.aly.ah$d -> b.a.fl:
     u.aly.bg b() -> a
-u.aly.ah$e -> a.a.fl:
+u.aly.ah$e -> b.a.fm:
     u.aly.ah$e a -> a
     u.aly.ah$e b -> b
     u.aly.ah$e c -> c
@@ -5181,7 +5696,7 @@ u.aly.ah$e -> a.a.fl:
     short a() -> a
     u.aly.ah$e[] values() -> values
     u.aly.ah$e valueOf(java.lang.String) -> valueOf
-u.aly.ai -> a.a.fm:
+u.aly.ai -> b.a.fn:
     java.lang.String a -> a
     java.lang.String c(android.content.Context) -> a
     java.lang.String d(android.content.Context) -> b
@@ -5204,7 +5719,7 @@ u.aly.ai -> a.a.fm:
     java.lang.String u(android.content.Context) -> o
     java.lang.String v(android.content.Context) -> p
     boolean w(android.content.Context) -> q
-u.aly.aj -> a.a.fn:
+u.aly.aj -> b.a.fo:
     boolean a -> a
     void a(java.lang.String,java.lang.String) -> a
     void a(java.lang.String,java.lang.String,java.lang.Exception) -> a
@@ -5214,7 +5729,7 @@ u.aly.aj -> a.a.fn:
     void c(java.lang.String,java.lang.String,java.lang.Exception) -> c
     void e(java.lang.String,java.lang.String) -> d
     void e(java.lang.String,java.lang.String,java.lang.Exception) -> d
-u.aly.ao -> a.a.fo:
+u.aly.ao -> b.a.fp:
     java.lang.String a -> a
     java.util.Map b -> b
     u.aly.aq a(u.aly.ap,java.lang.Class) -> a
@@ -5222,7 +5737,7 @@ u.aly.ao -> a.a.fo:
     java.lang.String a(java.io.InputStream) -> a
     org.json.JSONObject a(java.lang.String) -> a
     org.apache.http.params.HttpParams b() -> a
-u.aly.ap -> a.a.fp:
+u.aly.ap -> b.a.fq:
     java.lang.String b -> b
     java.lang.String c -> c
     java.lang.String d -> d
@@ -5230,11 +5745,11 @@ u.aly.ap -> a.a.fp:
     java.lang.String b() -> b
     java.lang.String c() -> c
     void a(java.lang.String) -> a
-u.aly.aq -> a.a.fq:
-u.aly.au -> a.a.fr:
+u.aly.aq -> b.a.fr:
+u.aly.au -> b.a.fs:
     int a -> a
     byte[] a(byte[]) -> a
-u.aly.av -> a.a.fs:
+u.aly.av -> b.a.ft:
     java.lang.String a -> a
     java.lang.String a(java.lang.String) -> a
     java.lang.String b(java.lang.String) -> b
@@ -5244,49 +5759,49 @@ u.aly.av -> a.a.fs:
     void a(java.io.File,byte[]) -> a
     void c(java.io.InputStream) -> c
     void a(java.io.OutputStream) -> a
-u.aly.aw -> a.a.ft:
+u.aly.aw -> b.a.fu:
     boolean a(byte,int) -> a
-u.aly.ax -> a.a.fu:
+u.aly.ax -> b.a.fv:
     short[] a -> a
     int b -> b
     short a() -> a
     void a(short) -> a
     void c() -> b
     java.lang.String toString() -> toString
-u.aly.az -> a.a.fv:
+u.aly.az -> b.a.fw:
     void a(u.aly.aY) -> a
     void b(u.aly.aY) -> b
-u.aly.b -> a.a.fw:
+u.aly.b -> b.a.fx:
     android.content.Context b -> a
     java.lang.String f() -> g
-u.aly.ba -> a.a.fx:
+u.aly.ba -> b.a.fy:
     u.aly.aY a(u.aly.bm) -> a
-u.aly.bb -> a.a.fy:
+u.aly.bb -> b.a.fz:
     int a -> a
     void a(u.aly.aY,byte) -> a
     void a(u.aly.aY,byte,int) -> a
-u.aly.bc -> a.a.fz:
+u.aly.bc -> b.a.ga:
     byte a -> a
     int b -> b
-u.aly.bd -> a.a.ga:
+u.aly.bd -> b.a.gb:
     java.lang.String a -> a
-u.aly.be -> a.a.gb:
+u.aly.be -> b.a.gc:
     java.lang.Class D() -> s
     void a(java.util.BitSet,int) -> a
     java.util.BitSet b(int) -> b
-u.aly.bg -> a.a.gc:
+u.aly.bg -> b.a.gd:
     void a(u.aly.aY,u.aly.az) -> a
     void b(u.aly.aY,u.aly.az) -> b
-u.aly.bh -> a.a.gd:
+u.aly.bh -> b.a.ge:
     u.aly.bg b() -> a
-u.aly.bi -> a.a.ge:
-u.aly.bj -> a.a.gf:
-u.aly.bk -> a.a.gg:
+u.aly.bi -> b.a.gf:
+u.aly.bj -> b.a.gg:
+u.aly.bk -> b.a.gh:
     java.io.InputStream a -> a
     java.io.OutputStream b -> b
     int a(byte[],int,int) -> a
     void b(byte[],int,int) -> b
-u.aly.bl -> a.a.gh:
+u.aly.bl -> b.a.gi:
     byte[] a -> a
     int b -> b
     int c -> c
@@ -5298,7 +5813,7 @@ u.aly.bl -> a.a.gh:
     int g() -> c
     int h() -> d
     void a(int) -> a
-u.aly.bm -> a.a.gi:
+u.aly.bm -> b.a.gj:
     int a(byte[],int,int) -> a
     int d$1cf967b1(byte[],int) -> b
     void b(byte[]) -> a
@@ -5307,9 +5822,9 @@ u.aly.bm -> a.a.gi:
     int g() -> c
     int h() -> d
     void a(int) -> a
-u.aly.bn -> a.a.gj:
+u.aly.bn -> b.a.gk:
     int f -> a
-u.aly.c -> a.a.gk:
+u.aly.c -> b.a.gl:
     byte[] a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -5330,7 +5845,7 @@ u.aly.c -> a.a.gk:
     byte[] a(byte[]) -> a
     java.lang.String b(byte[]) -> b
     byte[] b(java.lang.String) -> a
-u.aly.d -> a.a.gl:
+u.aly.d -> b.a.gm:
     java.lang.String a -> a
     java.io.File b -> b
     u.aly.S c -> c
@@ -5345,10 +5860,10 @@ u.aly.d -> a.a.gl:
     void e() -> d
     void f() -> f
     u.aly.S h() -> g
-u.aly.e -> a.a.gm:
+u.aly.e -> b.a.gn:
     android.content.Context b -> a
     java.lang.String f() -> g
-u.aly.f -> a.a.gn:
+u.aly.f -> b.a.go:
     byte[] b -> a
     u.aly.T c -> b
     android.content.Context d -> c
@@ -5357,21 +5872,21 @@ u.aly.f -> a.a.gn:
     u.aly.T a() -> a
     void b() -> b
     void c() -> c
-u.aly.g -> a.a.go:
+u.aly.g -> b.a.gp:
     android.content.Context b -> a
     java.lang.String f() -> g
-u.aly.h -> a.a.gp:
+u.aly.h -> b.a.gq:
     u.aly.d a -> a
     u.aly.f b -> b
     u.aly.d a(android.content.Context) -> a
     u.aly.f b(android.content.Context) -> b
-u.aly.i -> a.a.gq:
+u.aly.i -> b.a.gr:
     java.util.regex.Pattern c -> a
     android.content.Context d -> b
     java.lang.String f() -> g
     java.lang.String g() -> h
     java.io.File h() -> i
-u.aly.j -> a.a.gr:
+u.aly.j -> b.a.gs:
     u.aly.q a -> a
     u.aly.r b -> b
     com.umeng.analytics.ReportPolicy$e c -> c
@@ -5388,7 +5903,7 @@ u.aly.j -> a.a.gr:
     byte[] a(u.aly.af) -> a
     void a(int,int) -> a
     void a(int,long) -> a
-u.aly.k -> a.a.gs:
+u.aly.k -> b.a.gt:
     u.aly.o a -> a
     android.content.Context b -> b
     u.aly.k c -> c
@@ -5398,37 +5913,39 @@ u.aly.k -> a.a.gs:
     void b(u.aly.p) -> b
     void b() -> a
     u.aly.o a(u.aly.k) -> a
-u.aly.k$1 -> a.a.gt:
+u.aly.k$1 -> b.a.gu:
     u.aly.k a -> a
     u.aly.p b -> b
     void a() -> a
-u.aly.k$3 -> a.a.gu:
+u.aly.k$3 -> b.a.gv:
     u.aly.k a -> a
     void a() -> a
-u.aly.l -> a.a.gv:
+u.aly.l -> b.a.gw:
     java.lang.String a -> a
     boolean b -> b
     android.content.SharedPreferences c -> c
     java.util.Map d -> d
     void a(boolean) -> a
-u.aly.m -> a.a.gw:
+u.aly.m -> b.a.gx:
     java.lang.Thread$UncaughtExceptionHandler a -> a
     u.aly.t b -> b
     void a(u.aly.t) -> a
     void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
-u.aly.n -> a.a.gx:
+u.aly.n -> b.a.gy:
     int a -> a
     int b -> b
     u.aly.l c -> c
     android.content.Context d -> d
     u.aly.k e -> e
-u.aly.o -> a.a.gy:
+    void a$426fdfde(java.lang.String,java.util.Map) -> a
+    boolean a(java.lang.String) -> a
+u.aly.o -> b.a.gz:
     void b(u.aly.p) -> b
     void a(u.aly.p) -> a
     void b() -> a
-u.aly.p -> a.a.gz:
+u.aly.p -> b.a.ha:
     void a(u.aly.af,java.lang.String) -> a
-u.aly.q -> a.a.ha:
+u.aly.q -> b.a.hb:
     java.util.List a -> a
     u.aly.H b -> b
     u.aly.I c -> c
@@ -5445,7 +5962,7 @@ u.aly.q -> a.a.ha:
     u.aly.T f() -> e
     u.aly.S g() -> f
     u.aly.J h() -> g
-u.aly.r -> a.a.hb:
+u.aly.r -> b.a.hc:
     int d -> a
     java.lang.String e -> b
     java.lang.String f -> c
@@ -5459,12 +5976,12 @@ u.aly.r -> a.a.hb:
     byte[] a(byte[],java.lang.String) -> a
     java.lang.String a(android.content.Context) -> a
     int b(byte[]) -> b
-u.aly.t -> a.a.hc:
+u.aly.t -> b.a.hd:
     void a(java.lang.Throwable) -> a
-u.aly.v -> a.a.hd:
+u.aly.v -> b.a.he:
     java.lang.String d -> a
     java.lang.String e -> b
-u.aly.w -> a.a.he:
+u.aly.w -> b.a.hf:
     int d -> d
     int a -> a
     int b -> b
@@ -5481,12 +5998,12 @@ u.aly.w -> a.a.he:
     void h() -> f
     boolean i() -> g
     long j() -> h
-u.aly.x -> a.a.hf:
+u.aly.x -> b.a.hg:
     java.lang.String a -> a
     long b -> b
-u.aly.y -> a.a.hg:
+u.aly.y -> b.a.hh:
     u.aly.ae a(android.content.Context) -> a
-u.aly.z -> a.a.hh:
+u.aly.z -> b.a.hi:
     java.util.Map b -> a
     java.util.ArrayList c -> b
     void a(java.lang.String) -> a
@@ -5494,7 +6011,7 @@ u.aly.z -> a.a.hh:
     void a() -> a
     void a(android.content.Context) -> a
     java.util.List a(android.content.SharedPreferences) -> a
-u.fb.a -> a.b.a:
+u.fb.a -> b.b.a:
     java.lang.String a -> a
     java.lang.String c(android.content.Context) -> a
     java.lang.String d(android.content.Context) -> b
@@ -5514,7 +6031,7 @@ u.fb.a -> a.b.a:
     int a(java.lang.Object,java.lang.String) -> a
     java.lang.String t(android.content.Context) -> k
     java.lang.String u(android.content.Context) -> l
-u.fb.b -> a.b.b:
+u.fb.b -> b.b.b:
     boolean a -> a
     void a(java.lang.String,java.lang.String) -> a
     void a(java.lang.String,java.lang.String,java.lang.Exception) -> a
@@ -5524,7 +6041,7 @@ u.fb.b -> a.b.b:
     void c(java.lang.String,java.lang.String,java.lang.Exception) -> c
     void e(java.lang.String,java.lang.String) -> d
     void e(java.lang.String,java.lang.String,java.lang.Exception) -> d
-u.fb.c -> a.b.c:
+u.fb.c -> b.b.c:
     java.lang.String a -> a
     u.fb.c b -> b
     android.content.res.Resources c -> c
@@ -5543,16 +6060,16 @@ u.fb.c -> a.b.c:
     int d(java.lang.String) -> d
     int f(java.lang.String) -> e
     int a(java.lang.String,java.lang.String) -> a
-u.fb.h -> a.b.d:
+u.fb.h -> b.b.d:
     java.lang.String a -> a
     java.lang.String b -> b
     java.lang.String c -> c
-u.fb.i -> a.b.e:
-u.fb.n -> a.b.f:
+u.fb.i -> b.b.e:
+u.fb.n -> b.b.f:
     java.lang.String a -> a
     java.lang.String b(java.lang.String) -> a
     boolean d(java.lang.String) -> b
-u.fb.p -> a.b.g:
+u.fb.p -> b.b.g:
     java.lang.String e -> a
     android.content.Context f -> b
     u.fb.r a(u.fb.q) -> a
@@ -5562,22 +6079,22 @@ u.fb.p -> a.b.g:
     boolean a(com.umeng.fb.model.UserTitleReply) -> a
     void a(org.json.JSONObject) -> a
     void b(org.json.JSONObject) -> b
-u.fb.q -> a.b.h:
+u.fb.q -> b.b.h:
     java.lang.String d -> d
     org.json.JSONObject e -> e
     java.lang.String f -> f
-u.fb.r -> a.b.i:
+u.fb.r -> b.b.i:
     org.json.JSONObject a -> a
     org.json.JSONObject a() -> a
-u.fb.u -> a.b.j:
+u.fb.u -> b.b.j:
     int b(android.content.Context) -> a
     int d(android.content.Context) -> b
-u.fb.x -> a.b.k:
+u.fb.x -> b.b.k:
     java.lang.String a -> a
     java.lang.String a(android.content.Context) -> a
     java.lang.String a() -> a
     org.json.JSONObject b(android.content.Context) -> b
-u.upd.a -> a.c.a:
+u.upd.a -> b.c.a:
     java.lang.String a -> a
     java.lang.String c(android.content.Context) -> a
     boolean a(android.content.Context,java.lang.String) -> a
@@ -5591,7 +6108,7 @@ u.upd.a -> a.c.a:
     java.lang.String t(android.content.Context) -> f
     java.lang.String u(android.content.Context) -> g
     java.lang.String v(android.content.Context) -> h
-u.upd.b -> a.c.b:
+u.upd.b -> b.c.b:
     boolean a -> a
     void a(java.lang.String,java.lang.String) -> a
     void a(java.lang.String,java.lang.String,java.lang.Exception) -> a
@@ -5601,7 +6118,7 @@ u.upd.b -> a.c.b:
     void c(java.lang.String,java.lang.String,java.lang.Exception) -> c
     void e(java.lang.String,java.lang.String) -> d
     void e(java.lang.String,java.lang.String,java.lang.Exception) -> d
-u.upd.c -> a.c.c:
+u.upd.c -> b.c.c:
     java.lang.String a -> a
     u.upd.c b -> b
     android.content.res.Resources c -> c
@@ -5619,7 +6136,7 @@ u.upd.c -> a.c.c:
     int d(java.lang.String) -> c
     int f(java.lang.String) -> d
     int a(java.lang.String,java.lang.String) -> a
-u.upd.g -> a.c.d:
+u.upd.g -> b.c.d:
     java.lang.String a -> a
     java.util.Map b -> b
     u.upd.i a(u.upd.h,java.lang.Class) -> a
@@ -5627,7 +6144,7 @@ u.upd.g -> a.c.d:
     java.lang.String a(java.io.InputStream) -> a
     org.json.JSONObject a(java.lang.String) -> a
     org.apache.http.params.HttpParams b() -> a
-u.upd.h -> a.c.e:
+u.upd.h -> b.c.e:
     java.lang.String a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -5635,12 +6152,12 @@ u.upd.h -> a.c.e:
     java.lang.String b() -> b
     java.lang.String c() -> c
     void a(java.lang.String) -> a
-u.upd.i -> a.c.f:
-u.upd.j -> a.c.g:
+u.upd.i -> b.c.f:
+u.upd.j -> b.c.g:
     int b(android.content.Context) -> a
     int e(android.content.Context) -> b
     int g(android.content.Context) -> c
-u.upd.l -> a.c.h:
+u.upd.l -> b.c.h:
     int a(android.content.Context) -> a
     int b(android.content.Context) -> b
     int d(android.content.Context) -> c
@@ -5650,7 +6167,7 @@ u.upd.l -> a.c.h:
     int l(android.content.Context) -> g
     int m(android.content.Context) -> h
     int n(android.content.Context) -> i
-u.upd.n -> a.c.i:
+u.upd.n -> b.c.i:
     java.lang.String a -> a
     java.lang.String a(java.lang.String) -> a
     java.lang.String b(java.lang.String) -> b
