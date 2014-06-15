@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.ViewGroup;
@@ -58,8 +59,7 @@ public class MainActivity extends Activity {
 		}
 		setContentView(view);
 		
-		/*
-		String ads = MobclickAgent.getConfigParams(this, UmengStatic.V360_ADS_KEY);
+		/*String ads = MobclickAgent.getConfigParams(this, UmengStatic.BAIDU_ADS);
 		Log.e("umeng ads", "ads : " + ads);
 		if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
 			LinearLayout adlayout = new LinearLayout(this);
@@ -69,8 +69,7 @@ public class MainActivity extends Activity {
 			AppConnect.getInstance(this).showBannerAd(this, adlayout);
 			layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 			addContentView(adlayout, layoutParams);
-		}
-		*/
+		}*/
 		
 		LinearLayout adlayout = new LinearLayout(this);
 		adlayout.setGravity(Gravity.BOTTOM);

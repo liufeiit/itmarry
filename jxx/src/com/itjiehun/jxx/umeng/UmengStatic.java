@@ -9,6 +9,8 @@ package com.itjiehun.jxx.umeng;
 public interface UmengStatic {
 
 	String ADS_KEY = "hiapk_ads_key";
+	
+	String BAIDU_ADS = "baidu_ads";
 
 	String XM_ADS_KEY = "xiaomi_ads_key";
 
@@ -18,5 +20,5 @@ public interface UmengStatic {
 
 	String UMENG_APPKEY = "539d042c56240b2e1109331f";
 
-	String UMENG_CHANNEL = "default";
+	String UMENG_CHANNEL = "lenovo";
 }
