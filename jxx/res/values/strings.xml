@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">甄嬛传</string>
-    <string name="header">甄嬛传</string>
+    <string name="app_name">都教授</string>
+    <string name="header">都教授</string>
     <string name="action_settings">设置</string>
     <string name="new_game">重新开始</string>
     <string name="high_score">最高分</string>

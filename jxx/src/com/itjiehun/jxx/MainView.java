@@ -17,6 +17,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+import cn.waps.AppConnect;
 
 public class MainView extends View {
 
@@ -428,7 +429,7 @@ public class MainView extends View {
 			}
 		}
 	}
-
+	
 	private void drawEndGameState(Canvas canvas) {
 		double alphaChange = 1;
 		continueButtonEnabled = false;
@@ -439,6 +440,7 @@ public class MainView extends View {
 		}
 		BitmapDrawable displayOverlay = null;
 		if (game.gameWon()) {
+			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 			if (game.canContinue()) {
 				continueButtonEnabled = true;
 				displayOverlay = winGameContinueOverlay;
@@ -446,6 +448,7 @@ public class MainView extends View {
 				displayOverlay = winGameFinalOverlay;
 			}
 		} else if (game.gameLost()) {
+			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 			displayOverlay = loseGameOverlay;
 		}
 
@@ -592,6 +595,12 @@ public class MainView extends View {
 
 	private int centerText() {
 		return (int) ((paint.descent() + paint.ascent()) / 2);
+	}
+	
+	private MainActivity mainActivity;
+	
+	public void setMainActivity(MainActivity mainActivity) {
+		this.mainActivity = mainActivity;
 	}
 
 	public MainView(Context context) {

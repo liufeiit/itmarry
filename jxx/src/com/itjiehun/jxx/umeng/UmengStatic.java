@@ -13,10 +13,10 @@ public interface UmengStatic {
 	String XM_ADS_KEY = "xiaomi_ads_key";
 
 	String V360_ADS_KEY = "v360_ads_key";
-
-	String UMENG_APPKEY = "539be48f56240b3ccd06111f";
-
-	String UMENG_CHANNEL = "baidu";
 	
 	String SCORE_EVENT = "score";
+
+	String UMENG_APPKEY = "539d042c56240b2e1109331f";
+
+	String UMENG_CHANNEL = "default";
 }

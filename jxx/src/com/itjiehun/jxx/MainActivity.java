@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.ViewGroup;
@@ -36,6 +35,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		view = new MainView(getBaseContext());
+		view.setMainActivity(this);
 
 		AppConnect.getInstance(this);
 		AppConnect.getInstance(WapsStatic.APP_ID, WapsStatic.APP_PID, this);
@@ -57,6 +57,8 @@ public class MainActivity extends Activity {
 			}
 		}
 		setContentView(view);
+		
+		/*
 		String ads = MobclickAgent.getConfigParams(this, UmengStatic.V360_ADS_KEY);
 		Log.e("umeng ads", "ads : " + ads);
 		if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
@@ -68,6 +70,15 @@ public class MainActivity extends Activity {
 			layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 			addContentView(adlayout, layoutParams);
 		}
+		*/
+		
+		LinearLayout adlayout = new LinearLayout(this);
+		adlayout.setGravity(Gravity.BOTTOM);
+		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+				ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+		AppConnect.getInstance(this).showBannerAd(this, adlayout);
+		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		addContentView(adlayout, layoutParams);
 	}
 
 	@Override
