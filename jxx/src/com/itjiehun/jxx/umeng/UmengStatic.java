@@ -20,5 +20,5 @@ public interface UmengStatic {
 
 	String UMENG_APPKEY = "539d042c56240b2e1109331f";
 
-	String UMENG_CHANNEL = "wandoujia";
+	String UMENG_CHANNEL = "QQ";
 }

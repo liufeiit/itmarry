@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
 		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		addContentView(adlayout, layoutParams);
 		
-		AppConnect.getInstance(this).showOffers(this);
+//		AppConnect.getInstance(this).showOffers(this);
 	}
 
 	@Override
