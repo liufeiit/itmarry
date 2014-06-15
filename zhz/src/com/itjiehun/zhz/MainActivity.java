@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
 			}
 		}
 		setContentView(view);
-		String ads = MobclickAgent.getConfigParams(this, UmengStatic.V360_ADS_KEY);
+		/*String ads = MobclickAgent.getConfigParams(this, UmengStatic.V360_ADS_KEY);
 		if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
 			LinearLayout adlayout = new LinearLayout(this);
 			adlayout.setGravity(Gravity.BOTTOM);
@@ -65,7 +65,14 @@ public class MainActivity extends Activity {
 			AppConnect.getInstance(this).showBannerAd(this, adlayout);
 			layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 			addContentView(adlayout, layoutParams);
-		}
+		}*/
+		LinearLayout adlayout = new LinearLayout(this);
+		adlayout.setGravity(Gravity.BOTTOM);
+		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+				ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+		AppConnect.getInstance(this).showBannerAd(this, adlayout);
+		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		addContentView(adlayout, layoutParams);
 	}
 
 	@Override
