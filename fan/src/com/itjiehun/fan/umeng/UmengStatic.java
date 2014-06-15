@@ -14,7 +14,7 @@ public interface UmengStatic {
 	
 	String V360_ADS_KEY = "v360_ads_key";
 
-	String UMENG_APPKEY = "539be48f56240b3ccd06111f";
+	String UMENG_APPKEY = "5396666956240bde28001d2e";
 	
 	String UMENG_CHANNEL = "baidu";
 	
