@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"
+    android:background="@color/bg_feed"
+>
+<LinearLayout 
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"
+    android:orientation="vertical" > 
+    
+    <ProgressBar
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:id="@+id/fav_progressbar"
+        />
+    
+   <LinearLayout 
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"
+    android:id="@+id/fav_wrap_layout"
+    android:visibility="gone"
+    android:orientation="vertical" >  
+   
+    
+   <EditText
+       android:layout_height="wrap_content"
+       android:layout_marginTop="15dp"
+       android:layout_marginBottom="15dp"
+       android:padding="8dp"
+       android:layout_width="wrap_content"
+       android:background="@drawable/bg_search"
+       android:hint="search"
+       android:id="@+id/fav_search_edit"
+       android:layout_gravity="center"
+       android:visibility="gone"
+    />
+  
+   <TextView
+       style="@style/FavHeader"
+       android:text="Store"
+       android:visibility="gone"
+    />
+
+    <com.hongkong.stiqer.widget.ExpandableHeightListView
+        android:id="@+id/fav_listview_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1px"
+        android:divider="@color/bg_feed"
+       />
+  
+    <TextView
+       style="@style/FavHeader"
+       android:text="Promotion"
+       android:visibility="gone"
+       />
+    <com.hongkong.stiqer.widget.ExpandableHeightListView
+        android:id="@+id/fav_listview_promotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1px"
+        android:divider="@color/bg_feed"
+       />
+
+   </LinearLayout>
+  </LinearLayout> 
+</ScrollView> 

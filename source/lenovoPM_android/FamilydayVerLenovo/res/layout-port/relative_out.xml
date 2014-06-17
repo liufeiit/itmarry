@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layoutAnimation="@anim/layout_out" >
+    
+	<TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/centerTv"
+         android:layout_centerInParent="true"
+         android:visibility="invisible"
+         />
+     
+     <ImageView 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@id/centerTv"
+         android:src="@drawable/pic_default"
+         android:scaleType="centerCrop"
+         android:id="@+id/showPic"
+         android:visibility="invisible"
+         />
+ 
+     
+    
+         <ImageView 
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:id="@+id/showPicLeft"
+         android:scaleType="centerCrop"
+         android:visibility="invisible"
+         />
+ 
+     
+     <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="60dp"
+         android:text="正在加载中..."
+         android:textSize="30sp"
+         android:gravity="center_vertical"
+         android:id="@+id/widget_textBar"
+         android:layout_centerInParent="true"
+         android:visibility="invisible"
+         />
+     <ProgressBar 
+         android:layout_width="60dp"
+         android:layout_height="60dp"
+         android:id="@+id/widget_bar"
+         android:layout_toLeftOf="@id/widget_textBar"
+         android:layout_centerVertical="true"
+         android:visibility="invisible"
+         />
+     
+     <!-- <ImageView 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_toRightOf="@id/centerTv"
+         android:layout_alignRight="@id/showPic"
+         android:layout_alignTop="@id/showPic"
+         android:layout_alignBottom="@id/showPic"
+         android:id="@+id/showPicRight"
+         android:scaleType="fitXY"
+         android:visibility="invisible"
+         /> -->
+     
+     <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@drawable/icon80x80"
+         android:layout_marginRight="20dp"
+         android:layout_marginBottom="20dp"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentBottom="true"
+         android:id="@+id/widget_icon"
+         android:visibility="invisible"
+         />
+     
+     <!-- <RelativeLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:layout_centerVertical="true"
+         android:id="@+id/infoLeft"
+         android:visibility="invisible"
+         >
+         
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:maxWidth="210dp"
+             android:id="@+id/showTitleLeft"
+             android:text="无标题"
+             android:textStyle="bold"
+             android:textColor="@color/black"
+             android:textSize="25sp"
+             android:layout_marginLeft="15dp"
+             
+             />
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:maxWidth="110dp"
+             android:layout_below="@id/showTitleLeft"
+             android:layout_alignLeft="@id/showTitleLeft"
+             android:gravity="bottom"
+             android:text="用户名"
+             android:textSize="20sp"
+             android:id="@+id/showNameLeft"
+             android:textColor="#9D9D9D"
+             android:singleLine="true"
+             />
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@id/showNameLeft"
+             android:layout_alignBottom="@id/showNameLeft"
+             android:layout_marginLeft="5dp"
+             android:text="发布时间"
+             android:textSize="15sp"
+             android:textColor="#9D9D9D"
+             android:id="@+id/showTimeLeft"
+             android:paddingBottom="2dp"
+             />
+         <TextView 
+             android:layout_width="10dp"
+             android:layout_height="wrap_content"
+             android:background="@color/green"
+             android:id="@+id/colorTvLeft"
+             android:layout_marginRight="5dp"
+             android:layout_alignTop="@id/showTitleLeft"
+             android:layout_alignBottom="@id/showNameLeft"
+             />
+     </RelativeLayout> -->
+     <RelativeLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="15dp"
+         android:layout_marginBottom="40dp"
+         android:layout_alignParentBottom="true"
+         android:id="@+id/infoRight"
+         android:visibility="invisible"
+         >
+         
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:maxWidth="210dp"
+             android:id="@+id/showTitleRight"
+             android:text="无标题"
+             android:textStyle="bold"
+             android:textColor="@color/white"
+             android:textSize="25sp"
+             android:layout_marginLeft="15dp"
+             />
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:maxWidth="110dp"
+             android:layout_below="@id/showTitleRight"
+             android:layout_alignLeft="@id/showTitleRight"
+             android:gravity="bottom"
+             android:text="用户名"
+             android:textSize="20sp"
+             android:id="@+id/showNameRight"
+             android:textColor="@color/white"
+             android:singleLine="true"
+             />
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@id/showNameRight"
+             android:layout_alignBottom="@id/showNameRight"
+             android:layout_marginLeft="5dp"
+             android:text="发布时间"
+             android:textSize="15sp"
+             android:textColor="@color/white"
+             android:id="@+id/showTimeRight"
+             android:layout_marginBottom="2dp"
+             />
+         
+         <TextView 
+             android:layout_width="5dp"
+             android:layout_height="wrap_content"
+             android:background="@color/green"
+             android:layout_alignTop="@id/showTitleRight"
+             android:layout_alignBottom="@id/showNameRight"
+             android:id="@+id/colorTvRight"
+             android:layout_marginRight="5dp"
+             />
+     </RelativeLayout>
+     
+     
+     <RelativeLayout 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/centerTv"
+     android:layout_marginTop="20dp"
+     android:layout_centerHorizontal="true"
+     android:id="@+id/info"
+     android:visibility="invisible"
+     >
+     
+     <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:maxWidth="450dp"
+         android:minHeight="30dp"
+         android:id="@+id/showTitle"
+         android:text="无标题"
+         android:textColor="@color/black"
+         android:textSize="25sp"
+         android:textStyle="bold"
+         android:layout_marginLeft="15dp"
+         />
+     <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:maxWidth="110dp"
+         android:layout_below="@id/showTitle"
+         android:layout_alignLeft="@id/showTitle"
+         android:gravity="bottom"
+         android:text="用户名"
+         android:textSize="20sp"
+         android:id="@+id/showName"
+         android:textColor="#9D9D9D"
+         android:singleLine="true"
+         />
+     <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@id/showName"
+         android:layout_alignBottom="@id/showName"
+         android:layout_marginLeft="5dp"
+         android:text="发布时间"
+         android:textSize="15sp"
+         android:textColor="#9D9D9D"
+         android:id="@+id/showTime"
+         android:layout_marginBottom="2dp"
+         />
+     <TextView 
+         android:layout_width="5dp"
+         android:layout_height="wrap_content"
+         android:background="@color/green"
+         android:layout_marginRight="5dp"
+         android:layout_alignBottom="@id/showName"
+         android:layout_alignTop="@id/showTitle"
+         android:layout_toLeftOf="@id/showTitle"
+         />
+     
+     </RelativeLayout>
+    
+</RelativeLayout>

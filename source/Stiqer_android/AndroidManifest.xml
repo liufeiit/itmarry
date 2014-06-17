@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hongkong.stiqer"
+    android:versionCode="10"
+    android:versionName="1.3.2" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+    
+   <uses-permission android:name="android.permission.GET_TASKS" />
+   <uses-permission android:name="android.permission.INTERNET" />
+   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+   <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+   <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+      
+   <uses-permission android:name="android.permission.READ_CONTACTS"/>
+   <uses-permission android:name="android.permission.SEND_SMS"/>
+   
+   <!-- push -->
+   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+   <permission android:name="com.hongkong.stiqer.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+   <uses-permission android:name="PACKAGE_NAME.permission.C2D_MESSAGE" />
+   <uses-permission android:name="android.permission.WAKE_LOCK" />
+   
+   <!-- zxing -->
+   <uses-permission android:name="android.permission.CAMERA" />
+   <uses-feature android:name="android.hardware.camera" />
+   <uses-feature android:name="android.hardware.camera.autofocus" />
+   <uses-permission android:name="android.permission.VIBRATE" />
+   <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+   <!-- Gaode Map -->
+   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+   <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />  
+   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:name=".AppContext"
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">
+
+     <meta-data  
+            android:name="com.amap.api.v2.apikey"  
+            android:value="217cce86a616733574e15fb656698226"/>  
+            
+     <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+     
+        <activity
+          android:name="cn.sharesdk.framework.ShareSDKUIShell"
+          android:theme="@android:style/Theme.Translucent.NoTitleBar"
+          android:configChanges="keyboardHidden|orientation|screenSize"
+          android:screenOrientation="portrait"
+          android:windowSoftInputMode="stateHidden|adjustResize" />   
+
+        <activity android:name="com.hongkong.stiqer.ui.MapActivity"  
+          android:screenOrientation="sensor"  
+          android:hardwareAccelerated="false"
+          android:configChanges="orientation|keyboardHidden">  
+          
+       </activity> 
+        <activity android:name="com.facebook.LoginActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+        
+        <activity
+            android:name="com.hongkong.stiqer.ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.hongkong.stiqer.ui.GuideActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+             <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+        </activity>
+
+        
+        <activity android:name="com.hongkong.stiqer.ui.InvitationActivity" 
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait" 
+            android:theme="@style/ActivityDialogStyle"
+            ></activity>
+
+        <activity android:name="com.hongkong.stiqer.ui.ChooseAtActivity" android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="com.hongkong.stiqer.ui.MessageActivity" android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="com.hongkong.stiqer.ui.TutorialActivity" android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="eu.janmuller.android.simplecropimage.CropImage" />
+        <activity
+            android:name="com.hongkong.stiqer.ui.CameraActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"> 
+           
+        </activity>
+        
+        <activity android:name="com.hongkong.stiqer.ui.CheckPhoneActivity" android:screenOrientation="portrait">
+             
+        </activity>    
+        
+        <activity android:name="com.hongkong.stiqer.ui.MainActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden|screenSize">
+            
+        </activity>
+        <activity android:name="com.hongkong.stiqer.ui.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.hongkong.stiqer.ui.LCompleteActivity"
+            android:theme="@style/ActivityDialogStyle"
+            android:screenOrientation="portrait"
+             android:configChanges="orientation|keyboardHidden"
+         >
+            
+         </activity>   
+        <activity android:name="com.hongkong.stiqer.ui.AddFriendActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.hongkong.stiqer.ui.SearchFriendActivity" android:screenOrientation="portrait">
+            
+        </activity>
+       
+        <activity android:name="com.hongkong.stiqer.ui.PSettingActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <activity android:name="com.hongkong.stiqer.ui.StoreDetailActivity" android:screenOrientation="portrait"></activity>
+        
+        <activity android:name="com.hongkong.stiqer.ui.TabUserActivity" android:screenOrientation="portrait"></activity>
+        
+        <activity android:name="com.hongkong.stiqer.ui.TabStoreActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.hongkong.stiqer.ui.HttpsActivity" android:screenOrientation="portrait">
+            
+        </activity>
+        
+        <activity android:name="com.hongkong.stiqer.ui.UserActivity" android:screenOrientation="portrait">
+           <intent-filter>
+             <action android:name="android.intent.action.VIEW"/>
+             <category android:name="android.intent.category.DEFAULT"/>
+             <category android:name="android.intent.category.BROWSABLE"/>
+             <data android:scheme="devdiv" android:host="stqier_profile"/>
+           </intent-filter>
+        </activity>
+
+        <activity android:name="com.hongkong.stiqer.ui.CommentActivity" android:screenOrientation="portrait"></activity>
+        
+        <activity android:name="com.hongkong.stiqer.tab.PhotoCheckActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.hongkong.stiqer.tab.ActsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.hongkong.stiqer.tab.AchievementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.hongkong.stiqer.tab.RankActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.hongkong.stiqer.tab.StorePhotoActivity" android:screenOrientation="portrait"/>
+        
+        <activity android:name="com.google.zxing.CaptureActivity" android:screenOrientation="portrait"></activity>
+
+        <!-- Required for the library -->
+        <provider android:name="com.urbanairship.UrbanAirshipProvider"
+          android:authorities="com.hongkong.stiqer.urbanairship.provider"
+          android:permission="com.hongkong.stiqer.permission.UA_DATA"
+          android:exported="true"
+          android:multiprocess="true" />
+        
+        <!-- Required for Push -->
+       <service android:name="com.urbanairship.push.PushService"/>
+       <receiver android:name="com.urbanairship.CoreReceiver" />
+       <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+         <intent-filter>
+           <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+           <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+           <category android:name="com.hongkong.stiqer" />
+         </intent-filter>
+         <!--  Required for detecting when the application is upgraded so it can request a new GCM ID -->
+         <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_REPLACED" />
+            <data android:scheme="package"/>
+         </intent-filter>
+        </receiver>
+      <!-- Required for analytics -->
+<service android:name="com.urbanairship.analytics.EventService"/>
+
+<!-- Required for Rich Push -->
+<service android:name="com.urbanairship.richpush.RichPushUpdateService"/>
+
+<!-- Required for Actions -->
+<activity android:name="com.urbanairship.actions.ActionActivity"/>
+<service android:name="com.urbanairship.actions.ActionService"/>
+<!-- Required for Landing Page Action -->
+<activity
+    android:name="com.urbanairship.actions.LandingPageActivity"
+    android:parentActivityName="com.hongkong.stiqer.MainActivity"
+    android:exported="false">
+
+    <!-- MODIFICATION REQUIRED set or remove the parent activity -->
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.hongkong.stiqer.MainActivity" />
+
+    <intent-filter>
+        <action android:name="com.urbanairship.actions.SHOW_LANDING_PAGE_INTENT_ACTION"/>
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+        <category android:name="android.intent.category.DEFAULT"/>
+    </intent-filter>
+</activity>
+
+<receiver android:name="com.hongkong.stiqer.service.IntentReceiver" />
+    </application>
+
+</manifest>

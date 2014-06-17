@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_gravity="bottom" >
+
+    <RadioGroup
+        android:id="@+id/tabbar_rg"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rg_rb1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="我的大学"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/rg_rb2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="游学之旅"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/main_mid"
+        android:layout_width="70dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_mid_ic"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_horizontal"
+            android:text="我的位置"
+            android:textColor="#000"
+            android:textSize="10dp" />
+
+        <com.gaoxiaoxing.view.MarqueeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:focusable="true"
+            android:tag="location"
+            android:text="定位中"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+</RelativeLayout>

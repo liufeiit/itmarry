@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.com.wanshangle.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.com.wanshangle.android.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    
+	<!-- 配置的第三方参数属性 -->
+	<meta-data android:name="appid" android:value="VzTAix6Ctp9hWKr83WuAc8" />
+	<meta-data android:name="appkey" android:value="Jola9iRQDmApRQRqqcLeG1" />
+	<meta-data android:name="appsecret" android:value="vtocEtThQ6A0tA8GRqyuc7" />
+	<activity android:name="com.igexin.sdk.SdkActivity"
+	 	android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	 	android:taskAffinity="android.task.SdkActivityTask"
+	 	android:excludeFromRecents="true"
+	 	android:process="com.example.tuixin.pushservice">
+          	<intent-filter>
+          		<action android:name="com.igexin.action.popupact.com.example.tuixin" />
+          		<category android:name="android.intent.category.DEFAULT" />
+          	</intent-filter>
+          </activity>
+          <service android:label="NotifyCenterAIDL"
+          	android:name="com.igexin.sdk.coordinator.SdkMsgService"   
+          	android:process="com.example.tuixin.pushservice"
+          	android:exported="true">
+          </service>
+          
+          <receiver android:name="com.igexin.sdk.coordinator.NotificationCenterAIDLReceiver">
+          	<intent-filter>
+       		<action android:name="com.igexin.sdk.action.refreshls" />
+       	</intent-filter>
+       </receiver>
+          
+       <service android:label="NotifyCenter"
+       	android:name="com.igexin.sdk.SdkMainService"
+       	android:process="com.example.tuixin.pushservice"
+       	android:exported="false">
+       </service>
+       <receiver android:name="com.igexin.sdk.SdkReceiver">
+       	<intent-filter>
+       		<action android:name="android.intent.action.BOOT_COMPLETED" />
+       		<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+       		<action android:name="android.intent.action.USER_PRESENT" />
+       	</intent-filter>
+       </receiver>
+       <service android:name="sdk.download.DownloadService" 
+       	android:process="com.example.tuixin.pushservice" />
+       <receiver android:exported="false" android:name="sdk.download.DownloadReceiver">
+       	<intent-filter>
+       		<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+       	</intent-filter>
+       </receiver>
+       <provider android:authorities="sdk.download.com.example.tuixin"
+       	android:process="com.example.tuixin.pushservice"
+       	android:name="sdk.download.DownloadProvider"/>
+
+
+</manifest>

@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\work\\itmarry\\reader\\android-reader\\src\\org\\geometerplus\\android\\fbreader\\libraryService\\LibraryInterface.aidl
+ * Original file: /home/lf/working/itmarry/reader/android-reader/src/org/geometerplus/android/fbreader/libraryService/LibraryInterface.aidl
  */
 package org.geometerplus.android.fbreader.libraryService;
 public interface LibraryInterface extends android.os.IInterface

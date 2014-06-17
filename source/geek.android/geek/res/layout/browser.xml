@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	<RelativeLayout
+        android:id="@+id/browser_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="vertical" 
+        android:background="#1abc9c" >
+
+        <ImageButton
+            android:id="@+id/browser_back"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="10dip"
+            android:background="#00000000" 
+            android:src="@drawable/btn_back_normal" />
+        <!--竖线-->
+        <View 
+            android:id="@+id/login_view_01"
+            android:layout_marginLeft="10dip"
+            android:layout_width="1dp"  
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/browser_back"   
+            android:background="#0EBB99" />  
+ 
+        <View 
+            android:id="@+id/login_view_02" 
+            android:layout_width="1dp"  
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/login_view_01"   
+            android:background="#01AA89" /> 
+		
+        <TextView
+            android:id="@+id/login_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="极客头条"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:onClick="share"
+            android:src="@drawable/ic_menu_moreoverflow_normal_holo_dark"/>
+   
+    </RelativeLayout>	
+   
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+ 	<ImageView
+        android:id="@+id/webview_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/reload"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="0dp" >
+        <EditText  
+		    android:id="@+id/edit_comment"    
+		    android:layout_width="270dip"   
+		    android:minHeight="40dip"
+		    android:layout_height="wrap_content" 
+		    android:layout_margin="2dp" 
+		    android:layout_weight="4" 
+		    android:background="@drawable/ic_bg_for_edit"
+	        android:drawableLeft="@drawable/ic_write_comment"
+	        android:hint="@string/browser_comment" />
+		
+        <ImageView
+            android:id="@+id/commentPost"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="commentPost"
+            android:src="@drawable/btn_send_normal" />
+    </LinearLayout>
+
+</LinearLayout>

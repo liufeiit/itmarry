@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_dh"
+        android:showAsAction="ifRoom|withText"
+        android:title="导航">
+    </item>
+    <item
+        android:id="@+id/menu_del"
+        android:showAsAction="always|withText"
+        android:title="退回">
+    </item>
+    <item
+        android:id="@+id/menu_save"
+        android:showAsAction="always|withText"
+        android:title="提交">
+    </item>
+
+</menu>

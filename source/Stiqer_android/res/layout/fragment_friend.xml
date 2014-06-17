@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_feed"
+    android:orientation="vertical" >
+    
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/friend_progressbar"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/alphabetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:textSize="14sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="2dp"
+        android:lineSpacingExtra="3dp"
+        android:textColor="#FF9B9C9E"
+        android:background="@color/white"
+        />
+    
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/alphabetButton"
+        android:background="#FF8C9493"
+        android:id="@+id/divider_line"
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/not_friend_hint"
+        android:visibility="gone"
+        android:id="@+id/not_friend_hint"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        />
+    <com.hongkong.stiqer.widget.RefreshableView
+        android:id="@+id/refreshable_view"  
+        android:layout_width="fill_parent"  
+        android:layout_toLeftOf="@id/divider_line"
+        android:layout_height="fill_parent">
+    <ListView
+        android:id="@+id/contacts_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:dividerHeight="1dp"
+        android:divider="#FF87C0B3"
+        android:scrollbars="none"
+        android:fadingEdge="none" >
+    </ListView>
+    </com.hongkong.stiqer.widget.RefreshableView>
+    
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="18dip"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/divider_line"
+        android:visibility="gone"
+        android:background="#FF87C0B3" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dip"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/section_toast_layout"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/section_toast"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/section_toast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            /> 
+    </RelativeLayout>
+    
+</RelativeLayout>

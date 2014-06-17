@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:padding="10dp"
+    >
+  <LinearLayout android:id="@+id/llPage"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+        <ImageView
+          android:id="@+id/ivPic"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:scaleType="fitXY"/>
+    	<TextView android:id="@+id/tvName"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="left"
+	       android:text=""
+	       android:textSize="22sp"
+	       android:textColor="#9DD448"
+	       android:singleLine="true"
+	       android:textStyle="bold"
+	       android:layout_marginTop="5dp"
+    	/> 
+       <TextView android:id="@+id/tvDesp"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="left"
+	       android:textSize="18sp"
+	       android:textColor="#666666"
+	       android:textStyle="bold"
+    	/> 
+    	<ImageView
+          android:layout_width="fill_parent"
+          android:layout_height="10dp"
+          android:background="#EEEEEE"
+          android:visibility="gone"
+          />
+  </LinearLayout>
+</RelativeLayout>

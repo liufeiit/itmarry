@@ -1,0 +1,508 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/line_rw_dm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="任务编号"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Rw_dm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_weight="4"
+                        android:gravity="right"
+                        android:src="@null" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Sg_lbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="地理信息"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/sns_shoot_location_normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Sg_lbs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80" >
+                </View>
+                <LinearLayout
+                    android:id="@+id/line_Sg_is_gxdlxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="是否更新位置信息"
+                            android:textSize="14sp" />
+
+                         <Switch
+                            android:id="@+id/is_gxdlxx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textOff="否"
+                            android:textOn="是"
+                            tools:ignore="NewApi" >
+                        </Switch>
+                    </LinearLayout>
+
+                    
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Zp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="现场照片"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/qqmail_attach_icon_normal" />
+                    </LinearLayout>
+
+                    <Gallery
+                        android:id="@+id/ZpGallery"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:duplicateParentState="true"
+                        android:focusable="true"
+                        android:spacing="10dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Wcqk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="完成情况"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/mm_submenu_normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Sg_Wcqk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/line_isGhsb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="是否更换设备"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <Switch
+                            android:id="@+id/isGhsb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textOff="否"
+                            android:textOn="是"
+                            tools:ignore="NewApi" >
+                        </Switch>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_Zcbh"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80"
+                    android:visibility="gone" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Zcbh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="新资产编号"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/mm_submenu_normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Sg_zcbh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_Jsr"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80"
+                    android:visibility="gone" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Jsr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="旧资产接收人"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/mm_submenu_normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Sg_jsr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_Tel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80"
+                    android:visibility="gone" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="旧资产接收人联系电话"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/mm_submenu_normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Sg_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_Cfdd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80"
+                    android:visibility="gone" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Cfdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="旧资产存放地点"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/mm_submenu_normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Sg_cfdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_Cfdd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#817F80"
+                    android:visibility="gone" >
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/line_Cfdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_selected"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="旧资产存放地点"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:src="@drawable/mm_submenu_normal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Sg_cfdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 首字母 -->
+
+    <TextView
+        android:id="@+id/alpha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:paddingLeft="10dip"
+        android:text="a&apos;a&apos;a"
+        android:textColor="#FFFFFF"
+        android:visibility="visible" />
+
+    <!-- 联系人信息 -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alpha"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/head"
+        android:singleLine="true"
+        android:text="hhhhhhhhhh"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/alpha"
+        android:layout_margin="10dp"
+        android:src="@drawable/touxiang" />
+
+    <QuickContactBadge
+        android:id="@+id/qcb"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/alpha"
+        android:alpha="0" />
+    
+
+</RelativeLayout>

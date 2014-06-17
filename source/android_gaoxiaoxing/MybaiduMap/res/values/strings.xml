@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="KEY">06E6DC13e84364f5da4f05614efef936</string>
+	<string name="LBS_AK">5c7441ab0eabfa8ce85d31d901047ec6</string>
+    <string name="app_name">高校行</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <color name="Color_clicked">#8888ff88</color>
+    <color  name="green">#34bca9</color>
+    <color name="blue">#3454bc</color>
+    <color name="blue0">#00739f</color>
+
+</resources>

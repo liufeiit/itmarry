@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_search"
+        android:showAsAction="ifRoom|withText"
+        android:title="搜索">
+        
+    </item>
+     <item
+        android:id="@+id/menu_pldr"
+        android:showAsAction="ifRoom|withText"
+        android:title="批量导入">
+        
+    </item>
+    <item
+        android:id="@+id/menu_qx"
+        android:showAsAction="ifRoom|withText"
+        android:title="全选">
+        
+    </item>
+    <item
+        android:id="@+id/menu_qxqx"
+        android:showAsAction="ifRoom|withText"
+        android:title="取消全选">
+        
+    </item>
+    <item
+        android:id="@+id/menu_dr"
+        android:showAsAction="ifRoom|withText"
+        android:title="导入">
+        
+    </item>
+   
+
+</menu>

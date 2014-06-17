@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Qiaoqiao</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="phone_number">Phone number :</string>
+    <string name="generic_user">Create a user</string>
+    <string name="login">Login user </string>
+    <string name="password">Input password :</string>
+    <string name="LoginState">0</string>
+    <string name="InitState">1</string>
+    <string name="login_state_pre">0</string>
+    <string name="login_state_input">1</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_contact">ContactActivity</string>
+    <string name="search_name_in_contact">Search name :</string>
+    <string name="no_such_number">No Such Numbr !</string>
+    <string name="not_friend">He isn\'t your friends</string>
+    <string name="can_not_get">Can\'t get</string>
+    <string name="title_activity_choise_photo">ChoisePhotoActivity</string>
+    <string name="title_activity_contract_list">ContractListActivity</string>
+    <string name="Myself">Myself</string>
+    <string name="Account">Account :</string>
+    <string name="Login">__Login__</string>
+    <string name="title_activity_contron">ContronActivity</string>
+	<string name="control_default">Default</string>
+</resources>

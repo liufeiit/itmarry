@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.gaoxiaoxing.view.CustomActionBar
+        android:id="@+id/customactionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="位于" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="10dp" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/baidumap"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false" />
+        <!-- 使mapview不能被点击 -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true" />
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/poi_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/green"
+        android:dividerHeight="2dp" />
+
+</LinearLayout>

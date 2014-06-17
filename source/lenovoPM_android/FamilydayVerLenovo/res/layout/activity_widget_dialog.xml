@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="150dp"
+    android:background="@color/black"
+    android:paddingBottom="20dp"
+    tools:context=".WidgetDialogActivity" >
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/wd_center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="提示信息！"
+        android:gravity="center"
+        android:layout_above="@id/wd_center"
+       	android:textColor="@color/white"
+       	android:textSize="30sp"
+       	android:layout_centerHorizontal="true"
+       	android:id="@+id/wd_notice"
+       	android:background="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="本地图库"
+        android:background="@drawable/widget_selector"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:id="@+id/wd_local"
+        android:layout_below="@id/wd_center"
+        android:layout_toLeftOf="@id/wd_center"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+       	android:singleLine="true"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="进入Family"
+        android:background="@drawable/widget_selector"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:id="@+id/wd_family"
+        android:layout_below="@id/wd_center"
+        android:layout_toRightOf="@id/wd_center"
+        android:gravity="center"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        />
+
+</RelativeLayout>

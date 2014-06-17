@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp" >
+        
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/sf_user_avater"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/corners"
+            />
+        
+         <TextView
+            android:id="@+id/sf_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#FF41494C"
+            android:layout_toRightOf="@id/sf_user_avater"
+            android:layout_marginLeft="3dp"
+            android:textSize="16sp" />
+         
+         <ImageView
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content" 
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/sf_user_name"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_level_noti"
+          />
+        
+        <TextView
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content" 
+            android:layout_toRightOf="@id/sf_user_name"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="14dp"
+            android:textColor="@color/white"
+            android:textSize="7dp"
+            android:textStyle="bold"
+            android:id="@+id/sf_user_level"
+         />
+        
+          <Button
+             android:layout_width="65dp"
+             android:layout_height="35dp"
+             android:id="@+id/sf_add_btn"
+             android:visibility="gone"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="15dp"
+             android:text="Add"
+             android:textColor="@color/black"
+             android:layout_centerVertical="true"
+             android:padding="10dp"
+             android:background="@drawable/white_corner"
+           />
+          
+          <Button
+             android:layout_width="65dp"
+             android:layout_height="35dp"
+             android:id="@+id/sf_added_btn"
+             android:layout_alignParentRight="true"
+             android:text="Added"
+             android:layout_marginRight="15dp"
+             android:visibility="gone"
+             android:clickable="false"
+             android:background="@drawable/green_corner"
+             android:textColor="@color/black"
+             android:layout_centerVertical="true"
+             android:padding="10dp"
+           />
+    </RelativeLayout>
+</LinearLayout>

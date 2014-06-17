@@ -1,0 +1,23 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="bg">#ffffffff</color>
+    <color name="gray_light">#ffb0b0b0</color>
+    <color name="gray">#ff808080</color>
+    <color name="white">#ffffffff</color>
+    <color name="unfocused">#cccccccc</color>
+    <color name="pressed">#D1EEEE</color>
+    <color name="selected">#D1EEEE</color>
+    <color name="focused">#D1EEEE</color>
+    <color name="actionbar_separator">#2b2b2b</color>
+    <color name="actionbar_title">#FFFFFF</color>
+    <color name="actionbar_background_start">#222222</color>
+    <color name="actionbar_background_end">#222222</color>
+    <color name="actionbar_background_item_pressed_start">#FF7F00</color>
+    <color name="actionbar_background_item_pressed_end">#EE7600</color>
+    <color name="main_bg">#fff0f0f0</color>
+    <color name="grey">#ff58616d</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="blue1">#ff61a8de</color>
+
+</resources>

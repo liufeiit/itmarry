@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1abc9c">
+	
+    <RelativeLayout
+        android:id="@+id/left_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/social_profile_favorite_btn_pressed_night"
+        android:visibility="visible" >
+        <ImageView 
+            android:id="@+id/left_menu_avatar" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"     
+		    android:src="@drawable/default_round_head" 
+		    android:layout_marginTop="20dip"
+		    android:layout_marginLeft="30dip"
+		    android:gravity="center"
+		    android:contentDescription="@string/desc"
+		    android:layout_centerHorizontal="true" />
+		<TextView
+            android:id="@+id/left_menu_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未登录"
+            android:layout_marginTop="10dip"
+            android:layout_below="@id/left_menu_avatar"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="#abc123"
+            android:textSize="18sp" />
+    
+	
+        <ImageView android:id="@+id/rank_icon" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="50dip"     
+		    android:src="@drawable/ic_thank" 
+		    android:contentDescription="@string/desc"
+		    android:layout_marginTop="20dip"
+		    android:layout_marginLeft="30dip"
+		    android:layout_below="@id/left_menu_username" />
+       	<TextView
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_below="@id/left_menu_username"
+            android:layout_alignTop="@id/rank_icon"
+            android:text="排行榜"
+            android:background="@drawable/btn_check_label_background"
+            android:layout_marginLeft="20dip"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+
+        <ImageView 
+            android:id="@+id/favor_icon" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="50dip" 
+		    android:layout_marginTop="10dip"       
+		    android:src="@drawable/ic_thank"
+		    android:contentDescription="@string/desc"
+		    android:layout_below="@id/rank_icon"
+		    android:layout_alignLeft="@id/rank_icon" />
+        <TextView
+            android:id="@+id/favor"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignTop="@id/favor_icon"
+            android:text="我的收藏"
+            android:background="@drawable/btn_check_label_background"
+            android:layout_toRightOf="@id/favor_icon"
+            android:layout_alignLeft="@id/rank"
+            android:layout_below="@id/rank"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+	    <ImageView 
+	        android:id="@+id/aboutus_icon" 
+		    android:layout_width="wrap_content"   
+		    android:layout_height="50dip" 
+		    android:layout_marginTop="10dip"    
+		    android:src="@drawable/ic_thanked" 
+		    android:contentDescription="@string/desc"
+		    android:layout_below="@id/favor_icon"
+		    android:layout_alignLeft="@id/rank_icon"  />
+        <TextView
+            android:id="@+id/aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignTop="@id/aboutus_icon"
+            android:text="关于我们"
+            android:background="@drawable/btn_check_label_background"
+            android:layout_toRightOf="@id/favor_icon"
+            android:layout_alignLeft="@id/favor"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+		
+        <TextView
+            android:id="@+id/favor"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignLeft="@+id/favor_icon"
+            android:layout_alignTop="@+id/favor_icon"
+            android:background="@drawable/btn_check_label_background"
+            android:text="我的收藏"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+    <ListView   
+        android:id="@+id/category_menu_list"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:padding="3dp"  
+        android:fadingEdge="none"   
+        android:transcriptMode="disabled"   
+        android:cacheColorHint="@null"   
+        android:divider="@drawable/ic_line"/>  
+
+</LinearLayout>

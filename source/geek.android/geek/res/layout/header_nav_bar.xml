@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+   <RelativeLayout
+        android:id="@+id/browser_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="vertical" 
+        android:background="@style/header_bar" >
+
+        <ImageButton
+            android:id="@+id/browser_back"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/ic_back" />
+		
+        <TextView
+            android:id="@+id/login_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="极客头条"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:onClick="share"
+            android:src="@drawable/ic_menu_moreoverflow_normal_holo_dark"/>
+   
+    </RelativeLayout>	
+
+</LinearLayout>

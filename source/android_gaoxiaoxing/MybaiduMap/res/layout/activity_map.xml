@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapsView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_location"
+        android:onClick="location" />
+
+    <com.test.baidumap.myview.ButtonGroup
+        android:id="@+id/btn_menu"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_alignParentRight="true"
+         >
+
+        <Button
+            android:id="@+id/btns_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/btns_item"
+            android:textSize="10dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="探索周边" />
+
+        <Button
+            android:id="@+id/btns_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/btns_1"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btns_item"
+            android:textSize="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="我的学校" />
+
+        <Button
+            android:id="@+id/btns_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/btns_item"
+            android:textSize="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="继续添加" />
+
+        <Button
+            android:id="@+id/btns_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/btns_item"
+            android:textSize="10dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_alignParentRight="true"
+            android:text="同上" />
+             
+    </com.test.baidumap.myview.ButtonGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_above="@+id/selecter"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/zoom_in"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_zoom_in"
+            android:onClick="onZoom" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cutline" />
+
+        <Button
+            android:id="@+id/zoom_out"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_zoom_out"
+            android:onClick="onZoom" />
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/selecter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="学校名称"/>
+        
+        
+    </RelativeLayout>
+
+</RelativeLayout>
