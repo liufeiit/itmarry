@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dyj"
-    android:versionCode="100004"
-    android:versionName="1.0.0004" >
+    android:versionCode="110022"
+    android:versionName="1.1.0022" >
 
     <supports-screens
         android:anyDensity="true"
@@ -52,6 +52,17 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name="com.dyj.push.pushApplication"
@@ -123,7 +134,7 @@
             android:value="zaQGNbUd7r5FhUwmXGpuoZS3" />
         <meta-data
             android:name="map_api_key"
-            android:value="4lXxKQ3bax4OOPK3gPEOilvd" />
+            android:value="Dsaj97sVnKTvayCOSOI5RAfS" />
 
         <activity
             android:name="com.dyj.FullscreenActivity"
@@ -133,7 +144,8 @@
         </activity>
         <activity
             android:name="com.dyj.IndexActivity"
-            android:label="@string/title_activity_index" >
+            android:label="@string/title_activity_index"
+            android:theme="@style/AppTheme" >
         </activity>
         <activity
             android:name="com.dyj.tabs.RwggTab"
@@ -149,6 +161,7 @@
         </activity>
         <activity
             android:name="com.dyj.tabs.PutRwTab"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_put_rw_tab" >
         </activity>
         <activity
@@ -163,6 +176,40 @@
             android:name="com.dyj.tabs.LsRwTab"
             android:label="@string/title_activity_ls_rw_tab" >
         </activity>
+        <activity android:name="com.dyj.tabs.GetZcbhTab" >
+        </activity>
+        <activity android:name="com.dyj.tabs.GetJsrTab" >
+        </activity>
+        <activity android:name="com.dyj.tabs.GetTelTab" >
+        </activity>
+        <activity android:name="com.dyj.tabs.getCfddTab" >
+        </activity>
+        <activity android:name="com.dyj.AccountActivity" >
+        </activity>
+        <activity
+            android:name="com.dyj.tabs.GetSeachKeyForRwggTab"
+            android:label="@string/title_activity_get_seach_key_for_rwgg_tab" >
+        </activity>
+        <activity
+            android:name="com.dyj.tabs.ListMessageTab"
+            android:label="@string/title_activity_list_message_tab" >
+        </activity>
+        <activity
+            android:name="com.dyj.DispMessageTab"
+            android:label="@string/title_activity_disp_message_tab" >
+        </activity>
+        <activity
+            android:name="com.dyj.tabs.LjghTab"
+            android:label="@string/title_activity_ljgh_tab" >
+        </activity>
+        <activity
+            android:name="com.dyj.tabs.DaoHangTab"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:label="@string/title_activity_ljgh_tab" >
+        </activity>
+        <activity
+            android:name="com.dyj.tabs.BNavigatorActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"/>
     </application>
 
 </manifest>
