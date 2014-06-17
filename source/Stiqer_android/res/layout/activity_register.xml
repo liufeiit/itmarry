@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000"
+    android:orientation="vertical"
+     >
+
+      <EditText
+          android:id="@+id/register_UserName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/username"
+          android:paddingLeft="10dp"
+          android:singleLine="true"
+       />
+      
+      <EditText
+          android:id="@+id/register_Email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/email_name"
+          android:paddingLeft="10dp"
+          android:singleLine="true"
+       />
+      
+      <EditText
+          android:id="@+id/register_Password"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="textPassword"
+          android:hint="@string/password"
+          android:paddingLeft="10dp"
+          android:singleLine="true"
+       />
+      
+      <EditText
+          android:id="@+id/register_rePassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="textPassword"
+          android:hint="@string/repassword"
+          android:paddingLeft="10dp"
+          android:singleLine="true"
+       />
+      
+      <Button
+          android:id="@+id/register_Submit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/register"
+          />
+</LinearLayout>

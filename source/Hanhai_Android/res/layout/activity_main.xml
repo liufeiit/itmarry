@@ -1,0 +1,115 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/home_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:background="@drawable/tit_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="@string/title_activity_main"
+                android:id="@+id/tiltleText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#eeeeee"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip" >
+
+            <RadioGroup
+                android:id="@+id/main_menu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="@drawable/tab_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio0"
+                    style="@style/main_tab_bottom"
+                    android:layout_marginLeft="2dip"
+                    android:background="@drawable/main_bottom_bg"
+                    android:checked="true"
+                    android:drawableTop="@drawable/tab_home_checks"
+                    android:paddingTop="3dip"
+                    android:tag="radio0"
+                    android:text="首页" />
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/tab_scan_checks"
+                    android:paddingTop="3dip"
+                    android:tag="radio1"
+                    android:text="@string/title_activity_main" />
+
+                <RadioButton
+                    android:id="@+id/radio2"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/tab_search_checks"
+                    android:paddingTop="3dip"
+                    android:tag="radio2"
+                    android:text="@string/title_activity_main" />
+
+                <RadioButton
+                    android:id="@+id/radio3"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/tab_shopping_checks"
+                    android:paddingTop="3dip"
+                    android:tag="radio3"
+                    android:text="@string/title_activity_main" />
+
+                <RadioButton
+                    android:id="@+id/radio4"
+                    style="@style/main_tab_bottom"
+                    android:layout_marginRight="4dip"
+                    android:drawableTop="@drawable/tab_more_checks"
+                    android:paddingTop="3dip"
+                    android:tag="radio4"
+                    android:text="@string/title_activity_main" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dip"
+                android:background="@drawable/up_number_bg"
+                android:paddingLeft="8dip"
+                android:textColor="#ffffff"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</TabHost>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:background="@color/bg_feed"
+    android:orientation="vertical" >  
+    
+  <RelativeLayout  
+       android:layout_width="match_parent"  
+       android:layout_height="49dp"
+       android:background="@color/white"  
+       android:gravity="center_vertical" >  
+
+       <Button  
+          android:id="@+id/m_back_btn"  
+          android:layout_width="55dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+          android:background="@drawable/camera_back_btn"
+        />
+        <TextView  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"  
+            android:textColor="@color/green"
+            android:text="Messages"
+            android:textSize="26sp"
+             /> 
+     </RelativeLayout>
+     <View
+        android:layout_width="fill_parent"  
+        android:layout_height="1dp"
+        android:background="@drawable/top_bar_line"
+        android:layout_marginBottom="10dp"
+     />
+     
+  <ProgressBar
+      android:layout_width="wrap_content"  
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="10dp"
+      android:id="@+id/noti_progressbar"
+      android:visibility="gone"
+   />
+  <com.hongkong.stiqer.widget.RefreshableView
+        android:id="@+id/refreshable_view"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent">
+  <ListView
+      android:layout_width="match_parent"  
+      android:layout_height="wrap_content"
+      android:id="@+id/noti_listview"
+      android:dividerHeight="15dp"
+    />  
+</com.hongkong.stiqer.widget.RefreshableView>
+</LinearLayout>  

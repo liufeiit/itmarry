@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.anddev.amatidev.pvb"
+    android:versionCode="24"
+    android:versionName="1.2.3" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".PlantsVsBugs"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.openfeint.internal.ui.IntroFlow"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="IntroFlow"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.openfeint.api.ui.Dashboard"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Dashboard"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.openfeint.internal.ui.Settings"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Settings"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.openfeint.internal.ui.NativeBrowser"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="NativeBrowser"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Test for my app"
+        android:targetPackage="org.anddev.amatidev.pvb.obj" />
+
+</manifest>

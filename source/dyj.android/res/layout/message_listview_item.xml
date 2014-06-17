@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:textSize="20dip"
+        android:textStyle="bold"
+        android:text="fffff" />
+    <TextView
+        android:id="@+id/dateline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:text="发布时间：今天" />
+
+</LinearLayout>

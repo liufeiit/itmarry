@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity" >
+    
+    <RelativeLayout android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:background="#696969"
+        android:layout_height="50dp">
+        
+        <TextView 
+            android:id="@+id/bbs_title_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="10dp"
+            android:textColor="#ffffff"
+            android:text="位于"/>
+        
+        <TextView 
+            android:id="@+id/bbs_title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/bbs_title_start"
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            android:text="什么什么的学校"/>
+        
+        <Button 
+            android:id="@+id/write"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="编辑"/>
+        
+        <Button 
+            android:id="@+id/bbs_exit"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:onClick="exit"
+            android:text="退出"/>
+        
+    </RelativeLayout>
+
+    <ListView 
+        android:layout_below="@id/title_bar"
+        android:id="@+id/Msg_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+</RelativeLayout>

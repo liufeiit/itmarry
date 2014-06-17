@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
+    android:id="@+id/fav_layout_wrap"
+    android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:id="@+id/fav_image"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/corners"
+            />
+
+        <TextView
+            android:id="@+id/fav_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#FF41494C"
+            android:layout_toRightOf="@id/fav_image"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:textSize="16sp" />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/fav_image"
+            android:layout_marginLeft="3dp"
+            android:orientation="horizontal" 
+            >
+             <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/store_type"
+                android:visibility="gone"
+             /> 
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/prom_des"
+                android:visibility="gone"
+              />
+      </LinearLayout>
+</RelativeLayout>

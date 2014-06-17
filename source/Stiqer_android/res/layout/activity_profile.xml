@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+         android:id="@+id/layout_wrap"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        
+        <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingTop="8dp"
+           android:paddingLeft="8dp"
+           android:paddingBottom="8dp"
+           android:orientation="horizontal"
+        >
+           <ImageView
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:src="@drawable/profile_photo_bg"
+               android:id="@+id/photo_image"
+            />
+           
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Add a profile picture"
+               android:layout_marginTop="40dp"
+               android:textStyle="bold"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/grey"
+               android:textSize="14sp"
+           />
+            
+        </LinearLayout>
+        
+        <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dp"
+          android:background="@color/grey"
+         />
+        
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="15dp"
+       >
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Name"
+              android:textColor="@color/grey"
+              android:textSize="14sp"
+              android:textStyle="bold"
+            />
+         <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="What your friends call you"
+              android:background="@color/white"
+              android:maxLines="1" 
+              android:textColor="@color/grey"
+              android:layout_marginLeft="80dp"
+              android:textSize="14sp"
+              android:id="@+id/profile_name"
+             />
+      </RelativeLayout>   
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dp"
+          android:background="@color/grey"
+          />
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="15dp"
+       >
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Username"
+              android:textColor="@color/grey"
+              android:textSize="14sp"
+              android:textStyle="bold"
+          />
+         
+         <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="Your display name in Stiqer"
+              android:background="@color/white"
+              android:textColor="@color/grey"
+              android:layout_marginLeft="80dp"
+              android:maxLines="1" 
+              android:textSize="14sp"
+              android:id="@+id/profile_username"
+             />
+      </RelativeLayout>   
+      
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dp"
+          android:background="@color/grey"
+       />
+       
+       <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingTop="8dp"
+          android:paddingLeft="8dp"
+          android:paddingBottom="8dp"
+       >
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Birthday"
+              android:textColor="@color/grey"
+              android:textSize="14sp"
+              android:textStyle="bold"
+             />
+          <Spinner  
+            android:id="@+id/reg_day"  
+            android:layout_marginLeft="26dp"
+            android:layout_width="65dp"  
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_spinner_bg"
+          />  
+          
+          <Spinner  
+            android:id="@+id/reg_month"  
+            android:layout_marginLeft="10dp"
+            android:layout_width="65dp" 
+            android:layout_height="wrap_content"  
+            android:background="@drawable/profile_spinner_bg"
+          /> 
+          <Spinner  
+            android:id="@+id/reg_year"  
+            android:layout_marginLeft="10dp"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"  
+            android:background="@drawable/profile_spinner_bg"
+          /> 
+       </LinearLayout> 
+       <View
+          android:layout_width="fill_parent"
+          android:layout_height="1dp"
+          android:background="@color/grey"
+       />
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="8dp"
+       >
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Gender"
+              android:textColor="@color/grey"
+              android:textSize="14sp"
+              android:textStyle="bold"
+             />
+          <Spinner  
+            android:id="@+id/sex_spinner"  
+            android:layout_width="65dp" 
+             android:layout_marginLeft="34dp"
+            android:layout_height="wrap_content"  
+            android:background="@drawable/profile_spinner_bg"
+          />  
+       </LinearLayout>
+    </LinearLayout>
+
+    <Button
+         android:layout_width="110dp"
+         android:layout_height="110dp"
+         android:background="@drawable/profile_btn"
+         android:layout_gravity="center"
+         android:layout_marginTop="30dp"
+         android:id="@+id/profile_btn"
+      />
+    
+</LinearLayout>

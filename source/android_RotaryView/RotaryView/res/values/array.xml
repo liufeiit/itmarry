@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="icon_array">
+        <item>dianre_one_normal</item>
+        <item>dianre_two_normal</item>
+        <item>dianre_three_normal</item>
+        <item>dianre_reshui_dingzhi_normal</item>
+    </string-array>
+
+</resources>

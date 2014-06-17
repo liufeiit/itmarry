@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+     >
+         <LinearLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:background="#000000"
+         android:id="@+id/bigpic_liearlayout"
+         android:gravity="center"
+             >
+    	<ImageView 
+         android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        android:scaleType="matrix"
+         android:id="@+id/bigpic_pic"
+         android:layout_gravity="center"
+         />
+            </LinearLayout>
+         <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:layout_margin="30dp"
+         android:background="@drawable/small"
+         android:id="@+id/bigpic_back"
+         />
+     
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_alignParentLeft="true"
+         android:layout_margin="10dp"
+         android:background="@drawable/prev"
+         android:id="@+id/bigpic_prev"
+         />
+     
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_alignParentRight="true"
+         android:layout_margin="10dp"
+         android:id="@+id/bigpic_next"
+         android:background="@drawable/next"
+         />
+</RelativeLayout>

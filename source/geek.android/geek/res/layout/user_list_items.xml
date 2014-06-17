@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent" 
+	android:paddingBottom="4dip">
+
+	<ImageView
+	    android:id="@+id/user_list_item_avatar"
+	    android:layout_width="70dip"
+	    android:layout_height="70dip" 
+	    android:layout_marginTop="15dp" 
+		android:src="@drawable/ic_avatar" />
+	<LinearLayout 
+	    android:id="@+id/user_list_item_user_info"
+	    android:layout_width="wrap_content"
+	    android:layout_height="70dp"
+	    android:layout_toRightOf="@id/user_list_item_avatar"
+	    android:layout_alignTop="@id/user_list_item_avatar"
+	    android:orientation="vertical" >
+	    <TextView
+		    android:id="@+id/user_list_item_username"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="3dip"
+		    android:text="@string/username"
+		    android:textColor="#303030"
+		    android:textSize="18sp" />
+
+		<TextView
+		    android:id="@+id/user_list_item_signature"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="3dip"
+		    android:layout_marginTop="2dp"
+		    android:maxWidth="100dip"
+		    android:text="@string/signature"
+		    android:textColor="#969696"
+		    android:textSize="16sp" />
+		<TextView
+		    android:id="@+id/user_list_item_following"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="3dip"
+		    android:layout_marginTop="5dp"
+		    android:maxWidth="100dip"
+		    android:text="@string/signature"
+		    android:textColor="#969696"
+		    android:textSize="16sp" />
+	</LinearLayout>
+
+	<Button
+	    android:id="@+id/user_list_item_follow"
+	    android:layout_width="80dip"
+	    android:layout_height="40dip"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="30dp"
+	    android:text="@string/following"
+	    android:background="#F26664" />
+
+</RelativeLayout>

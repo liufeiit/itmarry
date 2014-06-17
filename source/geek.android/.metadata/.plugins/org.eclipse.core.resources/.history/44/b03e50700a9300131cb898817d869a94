@@ -1,0 +1,180 @@
+<resources>
+	<string name="action_settings">设置</string>
+    <string name="app_name">SlidingMenuDemo</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="txt_mortgage_calculator">房贷计算器</string>
+    <string name="txt_feedback">意见反馈</string>
+    <string name="txt_about_us">关于我们</string>
+    <string name="txt_check_for_updates">检查更新</string>
+    <string name="txt_city_switch">城市切换</string>
+    
+	<string name="txt_total_price">总价</string>
+	<string name="txt_unit_price">单价</string>
+	<string name="txt_area">面积</string>
+	<string name="txt_monthly_rent">月租</string>
+	<string name="txt_apartment">户型</string>
+    
+    <string name="txt_search">搜索</string>
+    <string name="txt_recommend">在线盘点</string>
+    <string name="txt_my_center">离线盘点</string>
+    <string name="txt_sell">查询资产</string>
+    <string name="txt_rent">台帐维护</string>
+    <string name="txt_school_district_room">盘点结果</string>
+    <string name="txt_residential_housing">数据同步</string>
+    
+    
+    <string name="warn_wether_to_exit">再按一次后退键退出应用程序!</string>
+    
+      <string name="main_menu_login">用户登录</string>
+    <string name="main_menu_logout">注销登录</string>
+    <string name="main_menu_myinfo">我的资料</string>
+    <string name="main_menu_software">开源软件</string>
+    <string name="main_menu_search">搜索</string>
+    <string name="main_menu_picshow">显示图片</string>
+    <string name="main_menu_picnoshow">隐藏图片</string>
+    <string name="main_menu_cache">清除缓存</string>
+    <string name="main_menu_email">意见反馈</string>
+    <string name="main_menu_about">关于我们</string>
+    <string name="main_menu_setting">系统设置</string>
+    <string name="main_menu_exit">退出程序</string>
+    
+    <string name="frame_title_news_lastest">最新资讯</string>
+    <string name="frame_title_news_blog">最新博客</string>
+    <string name="frame_title_news_recommend">推荐阅读</string>
+    <string name="frame_title_question_ask">问答</string>
+    <string name="frame_title_question_share">分享</string>
+    <string name="frame_title_question_other">综合</string>
+    <string name="frame_title_question_job">职业</string>
+    <string name="frame_title_question_site">站务</string>
+    <string name="frame_title_tweet_lastest">最新动弹</string>
+    <string name="frame_title_tweet_hot">热门动弹</string>
+    <string name="frame_title_tweet_my">我的动弹</string>
+    <string name="frame_title_tweet_send">动弹一下</string>
+    <string name="frame_title_active_lastest">最新动态</string>
+    <string name="frame_title_active_atme">我</string>
+    <string name="frame_title_active_comment">评论</string>
+    <string name="frame_title_active_myself">我自己</string>
+    <string name="frame_title_active_message">留言</string>
+    
+    <string name="footbar_refresh">刷新</string>
+    <string name="footbar_comment">评论</string>
+    <string name="footbar_share">分享</string>
+    <string name="footbar_favorite">收藏</string>
+    <string name="footbar_more">更多</string>
+    
+    <string name="login_dialog_logo">开源中国</string>
+    <string name="login_dialog_account">账号:</string>
+    <string name="login_dialog_account_hint">输入账号/邮箱</string>
+    <string name="login_dialog_password">密码:</string>
+    <string name="login_dialog_password_hint">输入密码</string>
+    <string name="login_dialog_reg">注册帐号</string>
+    <string name="login_dialog_login">登  录</string>
+    <string name="login_dialog_rememberPW">记住密码:</string>
+    <string name="login_dialog_autoLogin">自动登录:</string>
+    <string name="login_dialog_rememberMe">记住我的登录信息</string>
+    
+    <string name="pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_tap_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_update">最近更新：</string>
+    
+    <string name="news_detail_head_title">新闻正文</string>
+    <string name="news_detail_lable_pub">发布于</string>
+    <string name="question_detail_head_title">帖子正文</string>
+    <string name="question_pub_head_title">我要发帖</string>
+    <string name="blog_detail_head_title">博客正文</string>
+    <string name="software_detail_head_title">软件详情</string>
+    <string name="tweet_detail_head_title">动弹详情</string>
+    <string name="tweet_pub_head_title">动弹一下</string>
+    <string name="tweet_chatfooter_cancel_rcd">手指上滑，取消发送</string>
+    <string name="tweet_chatfooter_cancel_rcd_release">松开手指，取消发送</string>
+    <string name="tweet_chatfooter_too_short">录音时间太短</string>
+    <string name="message_detail_head_title">我和%s的对话</string>
+    <string name="user_center_head_title">用户空间</string>
+    
+    <string name="user_friend_head_title">我的好友</string>
+    <string name="user_friend_follower">关注(%d)</string>
+    <string name="user_friend_fans">粉丝(%d)</string>
+    
+    <string name="comment_list_head_title">网友评论</string>
+    <string name="comment_listitem_type">发布于</string>
+    <string name="comment_pub_head_title">评论回复</string>
+    <string name="comment_pub_content_hint">输入评论</string>
+    <string name="comment_reply_title">---共有 %d 条评论---</string>
+    
+    <string name="img_from_camera">手机拍照</string>
+    <string name="img_from_album">手机相册</string>
+    <string name="ui_insert_image">插入图片</string>  
+    
+    <string name="setting_head_title">系统设置</string>
+    
+    <string name="network_not_connected">网络连接失败，请检查网络设置</string>
+    <string name="xml_parser_failed">数据解析异常</string>
+    <string name="io_exception_error">文件流异常</string>
+    <string name="http_status_code_error">网络异常，错误码：%d</string>
+    <string name="http_exception_error">网络异常，请求超时</string>
+    <string name="socket_exception_error">网络异常，读取数据超时</string>
+    <string name="app_run_code_error">应用程序运行时异常</string>
+    
+    <string name="app_menu_surelogout">确定退出程序吗？</string>
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+    
+    <string name="app_error">应用程序错误</string>
+    <string name="app_error_message">很抱歉，应用程序出现错误，即将退出。\n请提交错误报告，我们会尽快修复这个问题！</string>
+    <string name="submit_report">提交报告</string>
+    
+    <string name="load_more">更多</string>
+    <string name="load_ing">加载中···</string>
+    <string name="load_full">已加载全部</string>
+    <string name="load_empty">暂无数据</string>
+    <string name="load_error">加载数据出错</string>
+    
+    <string name="new_data_toast_message">有 %d 条更新</string>
+    <string name="new_data_toast_none">没有新更新</string>
+    
+    <string name="select">选择</string>
+    <string name="share">分享</string>
+    <string name="sharing">分享中...</string>
+    <string name="publishing">发布中...</string>
+    <string name="choose_image">请选择图片文件！</string>
+    <string name="delete_image">确定删除该图片吗？</string>
+    <string name="delete_tweet">确定删除该动弹吗？</string>
+    <string name="delete_blog">确定删除该博客吗？</string>
+    <string name="republish_tweet">网络超时，是否重新发布动弹？</string>
+    <string name="clearwords">清除文字吗？</string>
+    
+    <string name="msg_load_is_null">读取失败，可能已被删除</string>
+    <string name="msg_load_audio_fail">读取语音文件失败</string>
+    <string name="msg_login_email_error">无效的邮箱地址</string>
+    <string name="msg_login_email_null">请输入邮箱</string>
+    <string name="msg_login_pwd_null">请输入密码</string>
+    <string name="msg_login_success">登录成功</string>
+    <string name="msg_login_fail">登录失败</string>
+    <string name="msg_login_error">用户未登录 或 密码错误</string>
+    <string name="msg_load_userface_fail">用户头像加载失败</string>
+    <string name="msg_load_image_fail">图片加载失败</string>
+    <string name="msg_read_detail_fail">无法获取文章信息</string>
+    <string name="msg_noaccess_delete">您没有删除权限</string>
+   	
+    <!-- LoginSina -->
+    <string name="sinalogin_check_account">账号不能为空</string>
+    <string name="sinalogin_check_pass">密码不能为空</string>
+    <string name="sinalogin_check_server">服务器验证中...</string>
+    
+    <!-- sina share message -->
+    <string name="OAUTH_ERROR">服务器验证失败</string>
+	<string name="OAUTH_RequestToken_ACCESS">第三方应用验证成功</string>
+	<string name="OAUTH_RequestToken_ERROR">第三方应用验证失败</string>
+	<string name="OAUTH_AccessToken_ACCESS">用户授权登录成功</string>
+	<string name="OAUTH_AccessToken_ERROR">用户授权登录失败</string>
+	<string name="OAUTH_AccessToken_SXPIRED">授权已过期，请重新授权登录</string>
+	<string name="Weibo_Message_NULL">分享数据不能为空</string>
+	<string name="Weibo_Message_LONG">已超出140个字</string>
+	<string name="Weibo_Share_Success">微博分享成功</string>
+	<string name="Weibo_Share_Error">微博分享失败</string>
+	<string name="Weibo_Share_Repeat">已经分享过了</string>
+    
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel">cancel</string>
+    <string name="finish">finish</string>
+    <string name="sharing">sharing…</string>
+    <string name="share_to">share to</string>
+	<string name="share">share</string>
+	<string name="multi_share">multi share</string>
+	<string name="share_completed">share completed</string>
+	<string name="share_canceled">share canceled</string>
+	<string name="select_one_plat_at_least">请选择一个目标平台</string>
+	<string name="list_friends">%s的朋友</string>
+	<string name="share_failed">分享失败</string>
+	
+</resources>

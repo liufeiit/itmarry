@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.gaoxiaoxing.view.CustomActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/edit_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/green"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="预览线路"
+        android:textColor="@color/text_color"
+        android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/road_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/edit_preview"
+        android:layout_below="@+id/actionbar"
+        android:divider="@null"
+        android:dividerHeight="0px"
+         />
+
+</RelativeLayout>

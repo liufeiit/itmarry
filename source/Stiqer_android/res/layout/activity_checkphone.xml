@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_feed"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Spinner  
+       android:id="@+id/phone_quhao"  
+       android:layout_width="65dp"  
+       android:layout_height="wrap_content"
+       android:background="@drawable/profile_spinner_bg"
+    />
+    
+    <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/input_phone_number"
+      />
+    
+    <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/btn_input_phone"
+       android:text="Get the check code"
+     />
+   
+    <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/check_phone_number"
+      />
+    
+    <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" 
+       android:id="@+id/btn_check_phone"
+       android:text="Verify the check code"
+     />
+    
+</LinearLayout>

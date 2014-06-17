@@ -1,0 +1,109 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:3494), pid=4224, tid=4996
+#  Error: ShouldNotReachHere()
+#
+# JRE version: 6.0_45-b06
+# Java VM: Java HotSpot(TM) Client VM (20.45-b01 mixed mode windows-x86 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00269400):  JavaThread "Unknown thread" [_thread_in_vm, id=4996, stack(0x00280000,0x002d0000)]
+
+Stack: [0x00280000,0x002d0000],  sp=0x002cf86c,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x13490a]
+V  [jvm.dll+0x12f3fb]
+V  [jvm.dll+0x1676e]
+V  [jvm.dll+0x17faf]
+V  [jvm.dll+0x27565]
+V  [jvm.dll+0x27da6]
+V  [jvm.dll+0x28155]
+V  [jvm.dll+0x281e9]
+V  [jvm.dll+0x282ac]
+V  [jvm.dll+0x2832a]
+V  [jvm.dll+0x2840d]
+V  [jvm.dll+0x286d9]
+V  [jvm.dll+0x6cdd3]
+V  [jvm.dll+0x6d1ac]
+V  [jvm.dll+0xfa79c]
+V  [jvm.dll+0x1190eb]
+V  [jvm.dll+0x9f4e0]
+C  [javaw.exe+0x1657]
+C  [javaw.exe+0x1e2c]
+C  [javaw.exe+0x8624]
+C  [kernel32.dll+0x1338a]  BaseThreadInitThunk+0x12
+C  [ntdll.dll+0x39f72]  RtlInitializeExceptionChain+0x63
+C  [ntdll.dll+0x39f45]  RtlInitializeExceptionChain+0x36
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00269400 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=4996, stack(0x00280000,0x002d0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x00400000 - 0x00425000 	C:\Program Files (x86)\Java\jre6\bin\javaw.exe
+0x77400000 - 0x77580000 	C:\Windows\SysWOW64\ntdll.dll
+0x76070000 - 0x76180000 	C:\Windows\syswow64\kernel32.dll
+0x76fb0000 - 0x76ff7000 	C:\Windows\syswow64\KERNELBASE.dll
+0x76310000 - 0x763b0000 	C:\Windows\syswow64\ADVAPI32.dll
+0x76ce0000 - 0x76d8c000 	C:\Windows\syswow64\msvcrt.dll
+0x76250000 - 0x76269000 	C:\Windows\SysWOW64\sechost.dll
+0x76500000 - 0x765f0000 	C:\Windows\syswow64\RPCRT4.dll
+0x74e30000 - 0x74e90000 	C:\Windows\syswow64\SspiCli.dll
+0x74e20000 - 0x74e2c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x75250000 - 0x75350000 	C:\Windows\syswow64\USER32.dll
+0x761b0000 - 0x76240000 	C:\Windows\syswow64\GDI32.dll
+0x773d0000 - 0x773da000 	C:\Windows\syswow64\LPK.dll
+0x76270000 - 0x7630d000 	C:\Windows\syswow64\USP10.dll
+0x75fe0000 - 0x76040000 	C:\Windows\system32\IMM32.DLL
+0x76430000 - 0x764fc000 	C:\Windows\syswow64\MSCTF.dll
+0x7c340000 - 0x7c396000 	C:\Program Files (x86)\Java\jre6\bin\msvcr71.dll
+0x6d810000 - 0x6dac0000 	C:\Program Files (x86)\Java\jre6\bin\client\jvm.dll
+0x71b30000 - 0x71b62000 	C:\Windows\system32\WINMM.dll
+0x71f10000 - 0x71f5c000 	C:\Windows\system32\apphelp.dll
+0x6d7c0000 - 0x6d7cc000 	C:\Program Files (x86)\Java\jre6\bin\verify.dll
+0x6d330000 - 0x6d34f000 	C:\Program Files (x86)\Java\jre6\bin\java.dll
+0x6d800000 - 0x6d80f000 	C:\Program Files (x86)\Java\jre6\bin\zip.dll
+0x75230000 - 0x75235000 	C:\Windows\system32\PSAPI.DLL
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK -Xbootclasspath:C:\Users\jay\study\android\adt-bundle-windows-x86-20140321\sdk\platforms\android-19\android.jar 
+java_command: dreajay.android.safe.util.Test
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_45
+CLASSPATH=.;C:\Program Files (x86)\Java\jdk1.6.0_45\lib
+PATH=C:/Program Files (x86)/Java/jre6/bin/client;C:/Program Files (x86)/Java/jre6/bin;C:/Program Files (x86)/Java/jre6/lib/i386;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Java\jdk1.6.0_45\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\apache-tomcat-6.0.37\bin;C:\Users\jay\study\android\adt-bundle-windows-x86-20140321\sdk\platform-tools;C:\Users\jay\study\android\adt-bundle-windows-x86-20140321\sdk\tools;C:\Users\jay\study\android\adt-bundle-windows-x86-20140321\eclipse;
+USERNAME=jay
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 4098764k(1623652k free), swap 8195664k(4608504k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.45-b01) for windows-x86 JRE (1.6.0_45-b06), built on Mar 26 2013 13:40:03 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Sun May 25 16:43:35 2014
+elapsed time: 0 seconds
+

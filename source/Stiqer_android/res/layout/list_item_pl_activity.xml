@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        
+     <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/white"
+         >   
+          <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:layout_marginTop="5dp"
+               android:src="@drawable/dot_gray"
+               android:layout_alignParentLeft="true"
+               android:id="@+id/grey_dot_icon"
+              />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:id="@+id/ac_des"
+               android:layout_toRightOf="@id/grey_dot_icon"
+              />  
+           
+          <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:textStyle="bold"
+               android:id="@+id/ac_store_name"
+               android:layout_toRightOf="@id/ac_des"
+              />
+          
+          <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="10dp"
+               android:textSize="11sp"
+               android:id="@+id/ac_time"
+              />
+        </RelativeLayout>    
+</LinearLayout>

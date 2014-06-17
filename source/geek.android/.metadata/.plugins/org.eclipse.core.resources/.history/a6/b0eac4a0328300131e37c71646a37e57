@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.com.wanshangle.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.com.wanshangle.android.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <!--以下为必须的权限 -->
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+	<!--以下为可选的权限 -->
+	<!--该权限实现拨打电话功能，不需要此功能的开发者可以不添加该权限-->
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<!--该权限实现发注册短信功能，不需要获取用户短信号码的开发者可以不添加该权限-->
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<!--该权限实现读/写短/彩信箱功能，不需要此功能的开发者可以不添加该权限，这两项权限不能只配置其中一项，需要一起配置-->
+	<uses-permission android:name="android.permission.WRITE_SMS" />
+	<uses-permission android:name="android.permission.READ_SMS" />
+	<!-- 配置的第三方参数属性 -->
+	<meta-data android:name="appid" android:value="VzTAix6Ctp9hWKr83WuAc8" />
+	<meta-data android:name="appkey" android:value="Jola9iRQDmApRQRqqcLeG1" />
+	<meta-data android:name="appsecret" android:value="vtocEtThQ6A0tA8GRqyuc7" />
+	<activity android:name="com.igexin.sdk.SdkActivity"
+	 	android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	 	android:taskAffinity="android.task.SdkActivityTask"
+	 	android:excludeFromRecents="true"
+	 	android:process="com.example.tuixin.pushservice">
+          	<intent-filter>
+          		<action android:name="com.igexin.action.popupact.com.example.tuixin" />
+          		<category android:name="android.intent.category.DEFAULT" />
+          	</intent-filter>
+          </activity>
+          <service android:label="NotifyCenterAIDL"
+          	android:name="com.igexin.sdk.coordinator.SdkMsgService"   
+          	android:process="com.example.tuixin.pushservice"
+          	android:exported="true">
+          </service>
+          
+          <receiver android:name="com.igexin.sdk.coordinator.NotificationCenterAIDLReceiver">
+          	<intent-filter>
+       		<action android:name="com.igexin.sdk.action.refreshls" />
+       	</intent-filter>
+       </receiver>
+          
+       <service android:label="NotifyCenter"
+       	android:name="com.igexin.sdk.SdkMainService"
+       	android:process="com.example.tuixin.pushservice"
+       	android:exported="false">
+       </service>
+       <receiver android:name="com.igexin.sdk.SdkReceiver">
+       	<intent-filter>
+       		<action android:name="android.intent.action.BOOT_COMPLETED" />
+       		<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+       		<action android:name="android.intent.action.USER_PRESENT" />
+       	</intent-filter>
+       </receiver>
+       <service android:name="sdk.download.DownloadService" 
+       	android:process="com.example.tuixin.pushservice" />
+       <receiver android:exported="false" android:name="sdk.download.DownloadReceiver">
+       	<intent-filter>
+       		<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+       	</intent-filter>
+       </receiver>
+       <provider android:authorities="sdk.download.com.example.tuixin"
+       	android:process="com.example.tuixin.pushservice"
+       	android:name="sdk.download.DownloadProvider"/>
+
+
+</manifest>

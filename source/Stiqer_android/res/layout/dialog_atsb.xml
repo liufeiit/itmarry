@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF3F3F5"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lv_atsb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:dividerHeight="5dp"
+        android:divider="@drawable/atsb_divider"
+        >
+    </ListView>
+
+</LinearLayout>

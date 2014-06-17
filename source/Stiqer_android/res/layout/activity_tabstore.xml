@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_feed" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        
+        <RelativeLayout  
+            android:id="@+id/header"  
+            android:layout_width="match_parent"  
+            android:layout_height="49dp"
+            android:background="@color/white"  
+            android:gravity="center_vertical" >  
+  
+        <Button  
+            android:id="@+id/back_btn"  
+            android:layout_width="55dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/camera_back_btn"
+         />  
+       </RelativeLayout>
+       
+       <View
+          android:layout_width="fill_parent"  
+          android:layout_height="1dp"
+        android:background="@drawable/top_bar_line"
+       />
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+           <RadioGroup
+                android:id="@+id/main_tab_group"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="top"
+                android:background="@color/white"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/user_tab_photo"
+                    android:layout_weight="1.0"    
+                    android:text="Top Photos"
+                    style="@style/MMTabButton"
+                    android:checked="true"/>
+                
+                <RadioButton
+                    android:id="@+id/user_tab_rank"
+                    android:layout_weight="1.0"
+                    style="@style/MMTabButton"
+                    android:text="Top Fans" />
+
+            </RadioGroup>
+          </FrameLayout>
+        
+          <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+          <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</TabHost> 

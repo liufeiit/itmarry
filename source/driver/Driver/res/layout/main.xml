@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"  
+    android:background="@drawable/background"  
+    >
+
+    <!-- 左下- 功能3 -->
+    <Button
+        android:id="@+id/btn_action3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" 
+        android:layout_marginLeft="40px" 
+        android:layout_marginBottom="20px"  
+        android:background="@drawable/c2" />
+    
+    <!-- 启动按钮 -->
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Go" 
+        android:background="@null"  
+        android:textColor="#f00" />
+    
+    <!-- 右下- 功能4 -->
+    <Button
+        android:id="@+id/btn_action4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"  
+        android:layout_alignParentRight="true" 
+        android:layout_marginRight="40px" 
+        android:layout_marginBottom="20px"  
+        android:background="@drawable/d2" />
+
+    <!-- 重力感应变化显示输出 -->
+    <TextView
+        android:id="@+id/tv_sensorchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true"
+        android:text="Large Text" 
+        android:visibility="gone" 
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <!-- 右上1- 功能1 -->
+    <Button
+        android:id="@+id/btn_action1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        android:layout_marginLeft="90px" 
+        android:background="@drawable/a1" />
+
+    <!-- 右上2- 功能2 -->
+
+    <Button
+        android:id="@+id/btn_action2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_action1" 
+        android:layout_marginLeft="30px"  
+        android:layout_marginTop="20px"  
+        android:background="@drawable/b2" />
+
+</RelativeLayout>

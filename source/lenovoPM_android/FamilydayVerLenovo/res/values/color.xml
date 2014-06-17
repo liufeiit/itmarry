@@ -1,0 +1,13 @@
+<resources>
+    <color name="picinfo_name">#9E9E9E</color>
+ 	<color name="picinfo_time">#9E9E9E</color>
+    <color name="picinfo_img">#A3D526</color>
+    
+   <color name="main_gridview_item_1">#1F5C23</color>
+    <color name="main_gridview_item_2">#A7D500</color>
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="green">#008000</color><!--绿色 -->
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="graywhite">#cccccc</color>
+
+</resources>
