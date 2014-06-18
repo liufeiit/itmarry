@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\work\\itmarry\\source\\AutoAccept-for-android\\src\\com\\android\\internal\\telephony\\ITelephony.aidl
+ * Original file: /home/lf/working/itmarry/source/AutoAccept-for-android/src/com/android/internal/telephony/ITelephony.aidl
  */
 package com.android.internal.telephony;
 /**  

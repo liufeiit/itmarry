@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/daily_forecast_item_height"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/padding_xs" >
+
+    <com.example.text.WeatherTypefacedTextView
+        style="@style/Label.Shadow"
+        weather:typeface="fonts/Roboto-Light.ttf"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:text="星期三"
+         />
+
+    <ImageView
+        android:layout_width="0dip"
+        android:layout_height="32.0dip"
+        android:layout_weight="1"
+        android:src="@drawable/ds_fair_day" />
+
+    <com.example.text.WeatherTypefacedTextView
+        style="@style/Label.Shadow"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="31"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <com.example.text.WeatherTypefacedTextView
+        style="@style/Label.Shadow"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="26"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+</LinearLayout>
