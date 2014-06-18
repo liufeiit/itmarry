@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    style="@style/WeatherModule" >
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/precp_label"
+        style="@style/Label"
+        android:layout_marginTop="@dimen/negative_margin_md"
+        android:text="降雨量"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <ImageView
+        android:id="@id/divider"
+        style="@style/Line.Solid"
+        android:layout_below="@id/precp_label" />
+
+    <ImageView
+        android:id="@id/drag_handle"
+        style="@style/Scrubber" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <include
+            android:id="@+id/precp1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            layout="@layout/precipitation_item" />
+
+        <ImageView
+            android:id="@+id/vert_div1"
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="12.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/vertical_dotted_line" />
+
+        <include
+            android:id="@+id/precp2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            layout="@layout/precipitation_item" />
+
+        <ImageView
+            android:id="@+id/vert_div2"
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="12.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/vertical_dotted_line" />
+
+        <include
+            android:id="@+id/precp3"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            layout="@layout/precipitation_item" />
+
+        <ImageView
+            android:id="@+id/vert_div3"
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="12.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/vertical_dotted_line" />
+
+        <include
+            android:id="@+id/precp4"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            layout="@layout/precipitation_item" />
+    </LinearLayout>
+
+</RelativeLayout>

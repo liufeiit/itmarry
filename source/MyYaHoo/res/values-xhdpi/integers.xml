@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="weather_vertical_scroll_divider">60</integer>
+</resources>

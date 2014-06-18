@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+   <!--  <TextView
+        android:id="@+id/ivTitleName"
+        style="@style/A1_Font"
+        android:layout_width="match_parent"
+        android:layout_height="46dip"
+        android:background="@drawable/chat_title_bg_repeat"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="" />
+ -->
+    <ListView
+        android:id="@+id/menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sidebar_footer_background_dark"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/sidebar_item_separator_dark" />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="drag_handle" type="id"/>
+    <item name="details_icon" type="id"/>
+    <item name="widget_left_button_spacer" type="id"/>
+    <item name="widget_location_and_icon_wrapper" type="id"/>
+    <item name="scrollview" type="id"/>
+    <item name="selected_view" type="id"/>
+
+</resources>

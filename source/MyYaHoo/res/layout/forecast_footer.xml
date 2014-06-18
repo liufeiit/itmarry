@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    android:id="@+id/five_ten"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/wunder_logo_item_height"
+    android:layout_marginTop="5dip"
+    android:layout_marginBottom="@dimen/negative_margin_sm" >
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/five_day"
+        style="@style/Label.Medium"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/day_spacing"
+        android:layout_marginTop="@dimen/margin_xs"
+        android:text="5d"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <ImageView
+        android:id="@+id/vert_div"
+        android:layout_width="1.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/five_day"
+        android:layout_alignTop="@id/five_day"
+        android:layout_toRightOf="@id/five_day"
+        android:paddingBottom="2.0dip"
+        android:paddingTop="2.0dip"
+        android:scaleType="fitXY"
+        android:src="@color/forecast_gray" />
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/ten_day"
+        style="@style/Label.Medium"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/day_spacing"
+        android:layout_marginTop="@dimen/margin_xs"
+        android:layout_toRightOf="@id/vert_div"
+        android:text="10d"
+        android:textColor="@color/forecast_gray"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <ImageView
+        android:id="@+id/underground_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/margin_xs"
+        android:src="@drawable/wunderground_logo" />
+
+</RelativeLayout>

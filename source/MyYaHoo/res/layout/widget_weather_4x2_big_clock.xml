@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weather_widget"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:paddingBottom="@dimen/widget_marginTopBottom" >
+
+    <RelativeLayout
+        android:id="@+id/widget_flickr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="2.0dip" >
+
+        <LinearLayout
+            android:id="@+id/widget_flickr_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/widget_copyright_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/copywrite_13x13" />
+
+            <TextView
+                android:id="@+id/widget_flickr_author_text"
+                style="@style/YahooText.Widget42.FlickrAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1.0dip"
+                android:gravity="center" />
+
+                android:fontFamily="sans-serif"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="2.0dip"
+                android:src="@drawable/flickr_38x12" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/widget_flickr"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/widget_margin" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/white_border"
+            android:padding="0.5dip" >
+
+            <ImageView
+                android:id="@+id/widget_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/widget_gradient"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/gradient_a40_1x390" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/widget_severe_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/widget_alert_view_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="1.0dip"
+            android:layout_marginLeft="1.0dip"
+            android:layout_marginRight="1.0dip"
+            android:layout_marginTop="-7.0dip"
+            android:background="@color/alert_translucent_red"
+            android:visibility="gone" 
+            >
+
+            <TextView
+                android:id="@+id/widget_description_severe"
+                style="@style/YahooText.WidgetAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:singleLine="true"
+                android:text="恶劣天气示警" />
+
+                android:fontFamily="sans-serif"
+            <ImageView
+                android:id="@+id/widget_servere_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/widget_alert_icon_right_margin"
+                android:layout_toLeftOf="@id/widget_description_severe"
+                android:src="@drawable/alert_22x22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/widget_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/widget_severe_wrapper"
+            android:background="@android:color/transparent"
+            android:paddingTop="@dimen/widget_padding"
+            >
+            android:visibility="gone" 
+
+            <ImageButton
+                android:id="@+id/widget_ybang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:paddingBottom="15.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="15.0dip"
+                android:src="@drawable/y_bang_48x28" />
+
+            <ImageButton
+                android:id="@+id/widget_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:paddingBottom="5.0dip"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="@dimen/widget_padding"
+                android:src="@drawable/refresh_27x27_1" />
+
+            <ProgressBar
+                android:id="@+id/widget_refresh_progress"
+                android:layout_width="@dimen/widget_refresh_icon_size"
+                android:layout_height="@dimen/widget_refresh_icon_size"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="@dimen/widget_padding"
+                android:background="@android:color/transparent"
+                android:indeterminateDrawable="@drawable/refresh_icon_anim"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/widget_left_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/widget_left_button_spacer"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:paddingBottom="15.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="30.0dip"
+                android:paddingTop="15.0dip"
+                android:src="@drawable/arrow_left_16x30" />
+
+            <ImageButton
+                android:id="@+id/widget_right_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:paddingBottom="15.0dip"
+                android:paddingLeft="30.0dip"
+                android:paddingRight="10.0dip"
+                android:paddingTop="15.0dip"
+                android:src="@drawable/arrow_right_16x30" />
+                android:layout_above="@id/widget_right_button_spacer"
+
+            <TextView
+                android:id="@+id/local_date"
+                style="@style/YahooText.Widget42.DigitalClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5.0dip"
+                android:gravity="center" />
+                android:alpha="0.8"
+                android:fontFamily="sans-serif"
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/widget_location_and_icon_wrapper" >
+
+                <TextView
+                    android:id="@id/local_time"
+                    style="@style/YahooText.Widget42.BigTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false" />
+                    android:alpha="0.8"
+                    android:fontFamily="sans-serif-light"
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/widget_temperature_big"
+                style="@style/YahooText.Widget42.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/widget_padding"
+                android:ellipsize="none"
+                android:includeFontPadding="false"
+                android:maxLines="1" />
+                android:fontFamily="sans-serif-light"
+
+            <LinearLayout
+                android:id="@+id/widget_location_and_icon_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/widget_padding"
+                android:layout_marginLeft="@dimen/widget_padding"
+                android:layout_marginRight="@dimen/widget_padding"
+                android:layout_toLeftOf="@id/widget_temperature_big"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/widget_location_wrapper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/widget_current_location_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:src="@drawable/current_loc_active_26x26" />
+
+                    <TextView
+                        android:id="@+id/widget_location"
+                        style="@style/YahooText.Widget42.Location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true" />
+                        android:fontFamily="sans-serif-light"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/widget_4x2_icon_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <include
+                        android:id="@+id/widget_weather_icon_layout"
+                        android:layout_width="24.0dip"
+                        android:layout_height="24.0dip"
+                        layout="@layout/widget_weather_icon" />
+
+                    <TextView
+                        android:id="@+id/widget_description"
+                        style="@style/YahooText.Widget42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="1.0dip"
+                        android:layout_marginLeft="3.0dip"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:inputType="none"
+                        android:singleLine="true" />
+                        android:fontFamily="sans-serif"
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/widget_4x2_weather_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/widget_4x2_weather_info_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="22.0sp" />
+                    android:fontFamily="sans-serif-light"
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/widget_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/widget_error_text"
+        style="@style/YahooText.Widget.ErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8.0dip"
+        android:visibility="invisible" />
+
+</RelativeLayout>

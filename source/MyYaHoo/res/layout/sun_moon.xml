@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    style="@style/WeatherModule"
+    android:paddingBottom="0.0dip" >
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/sunmoon_label"
+        style="@style/Label"
+        android:layout_marginTop="@dimen/negative_margin_md"
+        android:text="太阳和月亮"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <ImageView
+        android:id="@id/divider"
+        style="@style/Line.Solid"
+        android:layout_below="@id/sunmoon_label"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@id/drag_handle"
+        style="@style/Scrubber" />
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/moonphase_label"
+        style="@style/Label.Medium"
+        android:layout_height="@dimen/moon_icon_size"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/divider"
+        android:layout_marginLeft="6.0dip"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="新月"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <ImageView
+        android:id="@+id/moonphase"
+        android:layout_width="@dimen/moon_icon_size"
+        android:layout_height="@dimen/moon_icon_size"
+        android:layout_below="@id/divider"
+        android:layout_marginBottom="20.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_toLeftOf="@id/moonphase_label"
+        android:src="@drawable/ic_moonphase_0" />
+
+    <View
+        android:id="@+id/sunView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sun_view_height"
+        android:layout_below="@id/divider"
+        android:layout_marginLeft="@dimen/sunview_margin"
+        android:layout_marginRight="@dimen/sunview_margin" />
+    <!--
+         <com.yahoo.mobile.client.android.weather.ui.view.SunView
+        xmlns:weather="http://schemas.android.com/apk/res/com.yahoo.mobile.client.android.weather"
+        android:id="@+id/sunView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sun_view_height"
+        android:layout_below="@id/divider"
+        android:layout_marginLeft="@dimen/sunview_margin"
+        android:layout_marginRight="@dimen/sunview_margin"
+        weather:animationSpeed="0.005"
+        weather:arcWidth="@dimen/sun_arc_width"
+        weather:fillColor="#33fbd72f"
+        weather:leftOffset="@dimen/sun_arc_leftOffset"
+        weather:lineDarkColor="#bb404040"
+        weather:lineLightColor="#ffa0a0a0"
+        weather:startAngle="10.0"
+        weather:sunBallColor="#ffddba00"
+        weather:sunBallRadius="@dimen/sun_ball_radius"
+        weather:sunPosition="0.0"
+        weather:sunRise="10:00"
+        weather:sunSet="15:23"
+        weather:timeTextSize="@dimen/text_md"
+        weather:topOffset="@dimen/sun_arc_topOffset" />
+    -->
+
+</RelativeLayout>
