@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/top_part"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/weather_background"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/clear_n" />
+
+        <ImageView
+            android:id="@+id/weather_background_blurred"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/clear_n_blur" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/gradient_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gradient_bottom"
+        android:scaleType="fitXY" />
+
+    <com.example.text.TouchDispatchView
+        android:id="@+id/touch_intercept_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.way.draglistview.DragSortListView
+            xmlns:dslv="http://schemas.android.com/apk/res/com.example.text"
+            android:id="@+id/drag_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/margin_sm"
+            android:layout_marginRight="@dimen/margin_sm"
+            android:layout_marginTop="@dimen/weather_topbar_padding"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0dip"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="10.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:paddingBottom="0.0dip"
+            android:paddingLeft="0.0dip"
+            android:paddingTop="0.0dip"
+            android:scrollbars="none"
+            dslv:collapsed_height="2.0dip"
+            dslv:drag_enabled="true"
+            dslv:drag_handle_id="@id/drag_handle"
+            dslv:drag_scroll_start="0.33"
+            dslv:drag_start_mode="onLongPress"
+            dslv:float_alpha="0.6"
+            dslv:max_drag_scroll_speed="0.5"
+            dslv:remove_enabled="false"
+            dslv:remove_mode="flingRemove"
+            dslv:slide_shuffle_speed="0.3"
+            dslv:sort_enabled="true"
+            dslv:track_drag_sort="true"
+            dslv:use_default_controller="true" />
+
+        <!-- <com.handmark.pulltorefresh.library.PullToRefreshScrollView -->
+
+        <com.way.pulltorefresh.PullToRefreshScrollView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="pullDownFromTop" >
+
+            <RelativeLayout
+                android:id="@+id/topbar"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip" >
+
+                <ImageView
+                    android:id="@+id/gradient_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/gradient_top"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/sidebarButton"
+                    android:layout_width="48dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="@dimen/topbar_icon_size"
+                    android:minWidth="@dimen/topbar_icon_size"
+                    android:paddingBottom="@dimen/padding_md"
+                    android:paddingLeft="@dimen/padding_lg"
+                    android:paddingRight="@dimen/padding_sm"
+                    android:paddingTop="@dimen/padding_lg"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sidebar_icon" />
+
+                <ImageView
+                    android:id="@+id/addLocationButton"
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/padding_md"
+                    android:layout_marginLeft="@dimen/padding_lg"
+                    android:layout_marginRight="@dimen/padding_lg"
+                    android:layout_marginTop="@dimen/padding_lg2"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/plus_icon" />
+
+                <RelativeLayout
+                    android:id="@+id/location_wrapper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/addLocationButton"
+                    android:layout_toRightOf="@id/sidebarButton" >
+
+                    <com.example.text.WeatherTypefacedTextView
+                        android:id="@+id/location"
+                        style="@style/Label.Shadow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_sm"
+                        android:text="深圳"
+                        weather:typeface="fonts/Roboto-Light.ttf" />
+
+                    <ImageView
+                        android:id="@+id/curr_loc_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/location"
+                        android:layout_alignTop="@id/location"
+                        android:layout_marginTop="-2.0dip"
+                        android:layout_toLeftOf="@id/location"
+                        android:layout_toStartOf="@id/location"
+                        android:paddingRight="3.0dip"
+                        android:paddingTop="3.0dip"
+                        android:src="@drawable/current_loc_active_26x26" />
+                        android:visibility="gone" 
+
+                    <com.example.text.WeatherTypefacedTextView
+                        android:id="@+id/local_time"
+                        style="@style/Label.Shadow.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0.0dip"
+                        android:text="01:19 CST"
+                        weather:typeface="fonts/Roboto-Light.ttf" />
+
+                    <ImageView
+                        android:id="@+id/title_alert_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/local_time"
+                        android:layout_alignTop="@id/local_time"
+                        android:layout_below="@id/location"
+                        android:layout_toLeftOf="@id/local_time"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:paddingRight="5.0dip"
+                        android:src="@drawable/alerts_red_27"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.way.pulltorefresh.PullToRefreshScrollView>
+    </com.example.text.TouchDispatchView>
+
+</RelativeLayout>

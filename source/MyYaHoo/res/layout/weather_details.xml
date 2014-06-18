@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    style="@style/WeatherModule" >
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/details_label"
+        style="@style/Label"
+        android:layout_marginTop="@dimen/negative_margin_md"
+        android:text="详细信息"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+    <ImageView
+        android:id="@+id/divider"
+        style="@style/Line.Solid"
+        android:layout_below="@id/details_label"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/drag_handle"
+        style="@style/Scrubber" />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/feelslike"
+        style="@style/Label"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/divider"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding_xs"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/feelslike_label"
+        style="@style/Label.Medium"
+        android:layout_alignBottom="@id/feelslike"
+        android:layout_alignTop="@id/feelslike"
+        android:layout_below="@id/divider"
+        android:layout_marginLeft="@dimen/margin_md"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@id/details_icon"
+        android:gravity="center"
+        android:text="体感温度"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+    <ImageView
+        android:id="@+id/dotline1"
+        style="@style/Line.Dotted"
+        android:layout_alignLeft="@id/feelslike_label"
+        android:layout_below="@id/feelslike_label" />
+
+    <ImageView
+        android:id="@+id/details_icon"
+        android:layout_width="@dimen/details_icon_size"
+        android:layout_height="@dimen/details_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/dotline1"
+        android:layout_below="@id/divider"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_xs"
+        android:layout_marginTop="0.0dip"
+        android:src="@drawable/scatttered_thundershowers_day" />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/humidity"
+        style="@style/Label"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/dotline1"
+        android:layout_marginLeft="5.0dip"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding_xs"
+        android:paddingTop="@dimen/padding_xs"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/humidity_label"
+        style="@style/Label.Medium"
+        android:layout_alignBottom="@id/humidity"
+        android:layout_alignLeft="@id/feelslike_label"
+        android:layout_alignTop="@id/humidity"
+        android:layout_below="@id/dotline1"
+        android:layout_marginRight="5.0dip"
+        android:gravity="center"
+        android:text="湿度"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+    <ImageView
+        android:id="@+id/dotline2"
+        style="@style/Line.Dotted"
+        android:layout_alignLeft="@id/feelslike_label"
+        android:layout_below="@id/humidity" />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/visibility"
+        style="@style/Label"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/dotline2"
+        android:layout_marginLeft="5.0dip"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding_xs"
+        android:paddingTop="@dimen/padding_xs"
+        weather:typeface="fonts/Roboto-Light.ttf"
+         />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/visibility_label"
+        style="@style/Label.Medium"
+        android:layout_alignBottom="@id/visibility"
+        android:layout_alignLeft="@id/feelslike_label"
+        android:layout_alignTop="@id/visibility"
+        android:layout_below="@id/dotline2"
+        android:layout_marginRight="5.0dip"
+        android:gravity="center"
+        android:text="能见度"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+    <ImageView
+        android:id="@+id/dotline3"
+        style="@style/Line.Dotted"
+        android:layout_alignLeft="@id/feelslike_label"
+        android:layout_below="@id/visibility" />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/uv"
+        style="@style/Label"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/dotline3"
+        android:layout_marginLeft="5.0dip"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding_xs"
+        android:paddingTop="@dimen/padding_xs"
+        weather:typeface="fonts/Roboto-Light.ttf"
+         />
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/uv_label"
+        style="@style/Label.Medium"
+        android:layout_alignBottom="@id/uv"
+        android:layout_alignLeft="@id/feelslike_label"
+        android:layout_alignTop="@id/uv"
+        android:layout_below="@id/dotline3"
+        android:layout_marginRight="5.0dip"
+        android:gravity="center"
+        android:text="紫外线指数"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/uv_desc"
+        style="@style/Label.Medium"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@id/uv"
+        android:layout_alignTop="@id/uv"
+        android:layout_below="@id/dotline3"
+        android:layout_marginRight="5.0dip"
+        android:layout_toLeftOf="@id/uv"
+        android:gravity="center"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+    <ImageView
+        android:id="@+id/dotline4"
+        style="@style/Line.Dotted"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/uv" />
+
+     <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/today_night"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dotline4"
+        android:layout_marginBottom="@dimen/negative_margin_sm"
+        android:layout_marginTop="@dimen/margin_sm"
+        android:paddingTop="0.0dip"
+        android:text="今天 - %1$s"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_md"
+        weather:typeface="fonts/Roboto-Light.ttf" 
+        />
+
+</RelativeLayout>

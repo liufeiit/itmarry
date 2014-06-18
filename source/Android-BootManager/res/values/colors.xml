@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="listItem_selected">#ff007ff1</color>
+    <color name="listItem_bg">#ffeeeeee</color>
+    <color name="content_bg">#00c9cfd8</color>
+    <color name="first_text_color">#ff222222</color>
+    <color name="second_text_color">#ff666666</color>
+    <color name="backgroundcolor">#fff1eef4</color>
+    <color name="transp">#00000000</color>
+    <color name="listDividerColor">#ffff0000</color>
+    <color name="orange">#ffffa600</color>
+    <color name="lightgray">#ffa7a7a7</color>
+</resources>

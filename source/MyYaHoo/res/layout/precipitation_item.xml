@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/precipitation_item_height"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/precipitation"
+        style="@style/Label"
+        android:layout_marginTop="-5.0dip"
+        android:text="30%"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <ImageView
+        android:id="@+id/prec_icon"
+        android:layout_width="@dimen/hourly_icon_size"
+        android:layout_height="@dimen/hourly_icon_size"
+        android:layout_above="@id/temperature"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="5.0dip"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rain_ico_30" />
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/time_frame"
+        style="@style/Label.Medium"
+        android:text="夜间"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+</LinearLayout>

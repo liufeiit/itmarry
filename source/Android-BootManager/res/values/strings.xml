@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BootManager</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="launch_name">启动加速</string>
+    <string name="about">Android启动管理器-启动加速界面清爽，操作简单，还有搜索与排序功能，并可以禁止系统内置程序开机自启等等！赶快下载优化你的手机，体验飞一般的感觉！</string>
+    <string name="UMEmptyFbNotAllowed">请输入你的反馈内容</string>
+    <string name="UMContentTooLong">超过140字了，再简短一些吧</string>
+    <string name="UMFbList_ListItem_State_ReSend">失败,轻触以重发</string>
+    <string name="UMFbList_ListItem_State_Sending">发送中...</string>
+    <string name="UMFbList_ListItem_State_Fail">发送失败</string>
+    <string name="UMFb_Atom_State_Sending">发送中...</string>
+    <string name="UMFb_Atom_State_Resend">发送失败,轻触以重发</string>
+    <string name="UMFeedbackUmengTitle">反馈意见</string>
+    <string name="UMFeedbackListTitle">我的反馈</string>
+    <string name="UMFeedbackConversationTitle">反馈问题</string>
+    <string name="UMFeedbackTitle">每条建议都将帮助我们做得更好。</string>
+    <string name="UMFeedbackContent">请输入您的反馈意见</string>
+    <string name="UMFeedbackSummit">提交</string>
+    <string name="UMViewThread">查看反馈</string>
+    <string name="UMNewReplyAlertTitle">您的反馈收到了回复</string>
+    <string name="UMDeleteThread">删除反馈</string>
+    <string name="UMViewFeedback">查看反馈</string>
+    <string name="UMDeleteFeedback">删除反馈</string>
+    <string name="UMResendFeedback">重发反馈</string>
+    <string name="UMDeleteMsg">删除信息</string>
+    <string name="UMNewReplyFlick">有新的回复</string>
+    <string name="UMNewReplyTitle">有新的回复</string>
+    <string name="UMNewReplyHint">点击查看</string>
+    <string name="UMBreak_Network">未联网</string>
+    <string name="UMUpdateTitle">应用程序有新版本更新</string>
+    <string name="UMNewVersion">最新版本:</string>
+    <string name="UMGprsCondition">（提示：非WIFI环境）</string>
+    <string name="UMUpdateNow">立即更新</string>
+    <string name="UMAppUpdate">应用更新</string>
+    <string name="UMUpdatingNow">正在更新应用程序...</string>
+    <string name="UMNotNow">以后再说</string>
+    <string name="UMToast_IsUpdating">正在更新中....</string>
+    <string name="UMDialog_InstallAPK">最新版本已下载，是否安装？</string>
+</resources>

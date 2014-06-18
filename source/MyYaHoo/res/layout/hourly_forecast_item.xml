@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    style="@style/ForecastHourly"
+    android:layout_width="@dimen/hourly_forecast_item_height"
+    android:layout_height="@dimen/hourly_forecast_item_height"
+    android:gravity="center"
+    android:paddingLeft="4.0dip"
+    android:paddingRight="4.0dip" >
+
+    <LinearLayout
+        android:id="@+id/hourlyView"
+        android:layout_width="@dimen/hourly_forecast_item_height"
+        android:layout_height="@dimen/hourly_forecast_item_height"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.example.text.WeatherTypefacedTextView
+            android:id="@+id/time"
+            style="@style/Label.Shadow"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="01:00"
+            weather:typeface="fonts/Roboto-Light.ttf" 
+            android:textSize="@dimen/text_md" />
+
+        <ImageView
+            android:id="@+id/hourly_weather"
+            android:layout_width="@dimen/hourly_icon_size"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:src="@drawable/ds_fair_day" />
+
+        <com.example.text.WeatherTypefacedTextView
+            android:id="@+id/temp"
+            style="@style/Label.Shadow"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+             android:gravity="center"
+            android:text="27°"
+            weather:typeface="fonts/Roboto-Light.ttf" 
+            android:textSize="@dimen/text_md" />
+    </LinearLayout>
+
+</FrameLayout>

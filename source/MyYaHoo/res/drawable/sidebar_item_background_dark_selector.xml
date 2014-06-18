@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/sidebar_item_background_activated_dark" />
+    <item android:state_checked="true" android:drawable="@color/sidebar_item_background_activated_dark" />
+    <item android:drawable="@drawable/sidebar_row_dark" />
+    <item android:state_middle="true" android:drawable="@drawable/sidebar_item_selected_layerlist_dark" />
+</selector>

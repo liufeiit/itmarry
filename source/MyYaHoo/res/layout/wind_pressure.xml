@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather="http://schemas.android.com/apk/res/com.example.text"
+    style="@style/WeatherModule" >
+
+    <com.example.text.WeatherTypefacedTextView
+        android:id="@+id/wind_pressure_label"
+        style="@style/Label"
+        android:layout_marginTop="@dimen/negative_margin_md"
+        android:text="风速和气压"
+        weather:typeface="fonts/Roboto-Light.ttf" />
+
+    <ImageView
+        android:id="@id/divider"
+        style="@style/Line.Solid"
+        android:layout_below="@id/wind_pressure_label"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@id/drag_handle"
+        style="@style/Scrubber" />
+
+    <View
+        android:id="@+id/windView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wind_view_height"
+        android:layout_below="@id/divider"
+        android:paddingTop="0.0dip" />
+    <!--
+         <com.yahoo.mobile.client.android.weather.ui.view.WindView
+        xmlns:weather="http://schemas.android.com/apk/res/com.yahoo.mobile.client.android.weather"
+        android:id="@+id/windView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wind_view_height"
+        android:layout_below="@id/divider"
+        android:paddingTop="0.0dip"
+        weather:barometerTickSpacing="@dimen/barometerTickSpacing"
+        weather:bigPoleX="@dimen/big_pole_x"
+        weather:labelFontSize="@dimen/text_lg"
+        weather:numericFontSize="@dimen/text_md"
+        weather:poleBottomY="@dimen/pole_bottom_y"
+        weather:pressure="28.5"
+        weather:pressureLineY="@dimen/pressure_line_y"
+        weather:pressureTextX="@dimen/margin_sm"
+        weather:pressureTextY="@dimen/pressure_text_y"
+        weather:smallPoleX="@dimen/small_pole_x"
+        weather:windTextX="@dimen/wind_text_x"
+        weather:windTextY="@dimen/wind_text_y" />    -->
+
+</RelativeLayout>
