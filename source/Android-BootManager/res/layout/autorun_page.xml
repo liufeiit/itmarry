@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" 
+        android:id="@id/page" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" />
+    <Button android:textColor="@android:color/white" 
+        android:id="@id/btnAppOffer" 
+        android:background="@drawable/btn_appoffer_selector" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginRight="65.0dip" 
+        android:text="精品推荐" 
+        android:shadowColor="#7f000000" 
+        android:shadowDx="2.0" 
+        android:shadowDy="2.0" 
+        android:shadowRadius="2.0" 
+        android:layout_alignParentRight="true" 
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

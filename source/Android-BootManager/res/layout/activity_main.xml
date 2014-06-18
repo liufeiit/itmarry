@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.itjiehun.bootmanager.widget.ActionBar android:id="@id/actionBar" 
+        android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" 
+        android:layout_weight="1.0">
+        <android.support.v4.view.ViewPager android:id="@id/viewPager" 
+            android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/tagLayout" 
+            android:layout_width="fill_parent" android:layout_height="wrap_content" 
+            android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/tagImage" android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" android:src="@drawable/tag" 
+                android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/app_name" />
+            <ImageView android:visibility="invisible" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:scaleType="center" android:layout_weight="1.0" 
+                android:contentDescription="@string/app_name" />
+            <ImageView android:visibility="invisible" android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" android:scaleType="center" 
+                android:layout_weight="1.0" 
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RadioGroup android:orientation="horizontal" android:id="@id/tabbar" 
+        android:background="@drawable/bar" android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <RadioButton android:id="@id/radio0" android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" android:checked="true" 
+            android:text="个人软件" android:drawableTop="@drawable/tab_user_selector" 
+            android:layout_weight="1.0" style="@style/tab_item_style" />
+        <RadioButton android:id="@id/radio1" android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" android:text="内置软件" 
+            android:drawableTop="@drawable/tab_system_selector" 
+            android:layout_weight="1.0" style="@style/tab_item_style" />
+        <RadioButton android:id="@id/radio2" android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" android:text="参数设置" 
+            android:drawableTop="@drawable/tab_set_selector" 
+            android:layout_weight="1.0" 
+            style="@style/tab_item_style" />
+    </RadioGroup>
+</LinearLayout>
