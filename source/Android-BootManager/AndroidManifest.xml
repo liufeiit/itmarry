@@ -19,7 +19,7 @@
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/activityTheme" 
-		android:name="MyApplication">
+		android:name="BootApplication">
         <activity
             android:name="com.itjiehun.bootmanager.ui.MainActivity"
             android:label="@string/app_name" >
