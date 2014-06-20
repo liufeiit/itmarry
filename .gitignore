@@ -5,7 +5,7 @@ deploy/
 proguard/
 
 # Package Files #
-bin
+bin/*
 gen
 .DS_Store
 

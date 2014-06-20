@@ -1,9 +1,0 @@
-# view AndroidManifest.xml #generated:25
--keep class com.itjiehun.fan.MainActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:38
--keep class com.umeng.update.UpdateDialogActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:36
--keep class com.umeng.update.net.DownloadingService { <init>(...); }
-
