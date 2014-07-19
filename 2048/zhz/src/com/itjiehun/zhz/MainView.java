@@ -445,7 +445,7 @@ public class MainView extends View {
 			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
 				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 			}*/
-			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
+//			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 		} else if (game.gameLost()) {
 			displayOverlay = loseGameOverlay;
 			/*String ads = MobclickAgent.getConfigParams(mainActivity, UmengStatic.BAIDU_ADS);
@@ -453,7 +453,7 @@ public class MainView extends View {
 			if ("1".equals(ads) || "on".equalsIgnoreCase(ads) || "true".equalsIgnoreCase(ads)) {
 				AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 			}*/
-			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
+//			AppConnect.getInstance(mainActivity).showOffers(mainActivity);
 		}
 
 		if (displayOverlay != null) {
